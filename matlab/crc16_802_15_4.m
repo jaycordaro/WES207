@@ -1,28 +1,26 @@
 function [FCS] = crc16_802_15_4(Message)
+% calculate 802.15.4 CRC-16
+% see 7.2.11 and figure 7-4 for BACKWARDS ITU-T CRC 
+% reference vector test_vec=[0 1 zeros(1,15) 1 0 1 0 1 1 0];
+% should produce [0 0 1 0 0 1 1 1 1 0 0 1 1 1 1 0]
+% Sam Weismuller, Eric Pae, Jay Cordaro
 
 R=[zeros(1,16)];
 
 for jj=1:length(Message)
-    JUNK=xor(Message(jj),R(1));
-    R(1)=R(2);
-    R(2)=R(3);
-    R(3)=R(4);
-    R(4)=xor(JUNK,R(5));
-    R(5)=R(6);
-    R(6)=R(7);
-    R(7)=R(8);
-    R(8)=R(9);
-    R(9)=R(10);
-    R(10)=R(11);
-    R(11)=xor(JUNK,R(12));
-    R(12)=R(13);
-    R(13)=R(14);
-    R(14)=R(15);
-    R(16)=JUNK;
+    s1=bitxor(Message(jj),R(1));    
+    s2=bitxor(s1,R(12));            
+    s3=bitxor(s1,R(5));             
+    
+    R=[R(2:16) s1];            % matlab vector notation.  start at 1, not 0
+    R(11)=s2;                   
+    R(4)=s3;                    
 end
 
 FCS=R;
 end
+
+% raised cosine pulse shape (roll-off factor = 1)
 
 
 
