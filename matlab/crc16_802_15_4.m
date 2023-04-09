@@ -20,7 +20,6 @@ end
 FCS=R;
 end
 
-% raised cosine pulse shape (roll-off factor = 1)
 
 
 
