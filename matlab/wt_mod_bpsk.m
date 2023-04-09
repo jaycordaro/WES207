@@ -55,3 +55,4 @@ for jj=1:length(R)
 spread_pkt=[spread_pkt junk];
 end
 
+% raised cosine pulse shape (roll-off factor = 1)
