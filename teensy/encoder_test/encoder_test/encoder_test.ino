@@ -21,7 +21,7 @@
 #define MAX_FRAME_SIZE 6*960
 #define MAX_PACKET_SIZE (3*1276)
 
-constexpr float BER = 1e-4;
+constexpr float BER = 0;
 
 #define MY_ASSERT(cond, message) (my_assert((cond), __LINE__, __FILE__, message))
 void my_assert(bool cond, int line, const char* file, const char* message)

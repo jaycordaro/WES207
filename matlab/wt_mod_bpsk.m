@@ -66,7 +66,7 @@ end
 % raised cosine pulse shape
 rolloff = 1;     % Rolloff factor
 span = 6;           % Filter span in symbols
-sps = 4;            % Samples per symbol
+sps = 5;            % Samples per symbol
 b = rcosdesign(rolloff, span, sps);
 
 
