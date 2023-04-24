@@ -5,11 +5,6 @@
 chirps_sym0 = [0 0 0 0 1 0 1 0 0 1 1 0 1 1 1];
 chirps_polar = to_polar(chirps_sym0);
 
-% SFD indicating the end of the preamble
-SFD = [1 1 1 0 0 1 0 1];
-SFD_polar = to_polar(SFD);
-SFD_buff = zeros(1, length(SFD_polar));
-
 % modulation parameters
 bit_rate = 40000;
 samples_per_symbol = 5;
@@ -28,7 +23,7 @@ pll = PLL_Class(true, fn, zeta, Kt, 1/bit_rate);
 % apply channel distortions
 
 % Add noise
-SNR_dB = 10;
+SNR_dB = 0;
 tx = awgn(tx_out, SNR_dB, pow2db(mean(abs(tx_out).^2)));
 
 % Phase offset
@@ -46,13 +41,20 @@ mfos = zeros(1, length(tx)); % matched filter outputs
 power = zeros(1, length(tx)); % power of matched filter window
 mfos_scaled = zeros(1, length(tx)); % matched filter outputs scaled by power
 bits = []; % demodulated data bits
-bit_mfos = []; % matched filter outputs for each chirp sequence representing a bit
+bit_mfos = []; % matched filter outputs for a given 
+
+SFD = [1 1 1 0 0 1 0 1];
+SFD_polar = to_polar(SFD);
+SFD_buff = zeros(1, length(SFD_polar));
+
 
 
 % initialize finite state machine
 rx_state = Rx_State.Acquisition;
 idx = 1;
 run_state_idx = 1;
+
+
 
 while idx <= length(tx)
     
@@ -65,30 +67,23 @@ while idx <= length(tx)
     % frequency correction
     buffer_corr = buffer_corr.*exp(-i*pll.curr_frequency/fs*[0:(length(buffer) - 1)]);
     
-    % perform matched filter
-    mfos(idx) = matched_filter(buffer_corr, mf, chirps_polar);
-    
-    % calculated power
+    [mfos(idx)] = matched_filter(buffer_corr, mf, chirps_polar);
     power(idx) = sum(abs(buffer_corr).^2);
-    
-    % generate scaled matched filter output
     mfos_scaled(idx) = abs(mfos(idx))/power(idx);
     if(power(idx) < 10)
         mfos_scaled(idx) = 0;
     end
+    
     
     % feed matched filter output into the current state if the current
     % index is the index that the state requested to be woken up on
     if idx == run_state_idx
         switch rx_state
             case Rx_State.Acquisition
-                % search for 0 bit chirp sequence
                 [rx_state, run_state_idx] = acq_state(mfos, idx, symbol_len, power(idx));
             case Rx_State.SFD_Search
-                % search for SFD at end of preamble
                 [rx_state, run_state_idx, SFD_buff, corr, polarity] = sfd_state(mfos, idx, symbol_len, SFD_polar, SFD_buff, power(idx));
             case Rx_State.Demod
-                % generate data bits
                 [rx_state, run_state_idx, output_bit] = demod_state(mfos, idx, symbol_len, polarity);
                 bits = [bits output_bit];
             otherwise
@@ -96,10 +91,7 @@ while idx <= length(tx)
         end
         
         if (rx_state == Rx_State.SFD_Search) || (rx_state == Rx_State.Demod)
-            % store the matched filter output associated with this bit
             bit_mfos = [bit_mfos mfos(idx)];
-            
-            % run PLL
             pll = runPLL(pll, mfos(idx));
         end
     end
@@ -108,29 +100,31 @@ while idx <= length(tx)
 end
 
 figure(1);
-plot(real(mfos));
-title('Real Matched Filter Outputs');
+plot(mfos_scaled);
+title('Matched Filter Output');
 
 figure(2);
-plot(mfos_scaled);
-title('Sacled Matched Filter Magnitudes');
-
-figure(3);
 plot(real(bit_mfos));
-title('Real Matched Filter Outputs Per Bit');
+title('Real portion of matched filter output');
 
 % TODO: this looks really bad, why?
-figure(4);
+figure(3);
 plot(pll.frequency_output);
 title('PLL frequency output');
 
 data = [PHR PDSU];
-
+% stem(data);
+% hold on;
+% stem(bits);
+% hold off;
+% title('Txed vs Demodulated Bits');
+% legend('Txed bits', 'Demodulated bits');
+% 
 if length(data) == length(bits)
     bit_errors = sum(xor(data, bits))
 end
 
-function corr = matched_filter(in_samps, mf, chirps_polar)
+function [corr] = matched_filter(in_samps, mf, chirps_polar)
     % performs a matched filter on each chirp, correlates each matched
     % filter output against the chirp sequence
     

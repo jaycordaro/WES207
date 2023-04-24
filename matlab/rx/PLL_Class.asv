@@ -73,12 +73,8 @@ classdef PLL_Class
         end
 
         function obj = runPLL(obj, input)
-            % clear oscilator phase state because we are operating on
-            % samples that have already been corrected with the current
-            % PLL state
             theta = 0;
             obj.oscilator_phase_prev = 0;
-            
             for idx = 1:length(input)
                 % get phase corrected input sample
                 x = input(idx);
@@ -93,8 +89,7 @@ classdef PLL_Class
                 [freq, obj] = loop_filter(obj, scaled_error);
                 obj.frequency_output = [obj.frequency_output freq/(2*pi)];
                 
-                % use numerically controlled oscilator to generate phase
-                % correction
+                % use numerically c
                 [oscilator_phase, obj] = nco(obj, (freq - obj.curr_frequency));
                 theta = -oscilator_phase;
             end
