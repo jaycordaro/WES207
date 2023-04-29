@@ -1,6 +1,7 @@
 // include the SPI library:
 #include <SPI.h>
 #include <string>
+#include "rf_registers.h"
 
 constexpr uint32_t SPICLOCKRATE = 4000000;
 
@@ -36,7 +37,12 @@ void setup() {
 
   pinMode(chipSelectPin, OUTPUT);
   digitalWrite(chipSelectPin, HIGH);
-  SPI.begin(); 
+  SPI.begin();
+
+  RF_RST reset_cmd;
+  reset_cmd.CMD = CHIP_RESET;
+
+  spiWrite(reset_cmd.address, reset_cmd.value);
 }
 
 String getCommand()
