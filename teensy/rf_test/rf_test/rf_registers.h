@@ -10,7 +10,7 @@ union RF09_IRQS
     unsigned char TRXERR : 1;
     unsigned char IQIFSF : 1;
     unsigned char : 2;
-  }
+  };
 
   uint8_t value;
 	
@@ -47,7 +47,7 @@ union RF_CFG
     unsigned char DRV : 2;
 	  unsigned char IRQP : 1;
 	  unsigned char IRQMM : 1;
-  }
+  };
 
   uint8_t value;
 
@@ -64,7 +64,7 @@ union RF_CLKO
   {  
 	  unsigned char OS : 3;  // 0x0 is off, 0x1 is 26MHz (default)
     unsigned char DRV : 2; // drive strength
-  }
+  };
 
   uint8_t value;
 	
@@ -82,7 +82,7 @@ union RF_XOC
 	  unsigned char TRIM : 4;  // 
     unsigned char DRV : 2; // drive strength
 	  unsigned char : 2;
-  }
+  };
 
   uint8_t value;
 
@@ -103,7 +103,7 @@ union RF_IQIFC0
     unsigned char DRV : 2; 
     unsigned char SF : 1;
     unsigned char EXTLB : 1;
-  }
+  };
 
   uint8_t value;
 
@@ -122,7 +122,7 @@ union RF_IQIFC1
     unsigned char    : 2;
     unsigned char CHPM : 3;  
     unsigned char FAILSF : 1;
-  }
+  };
 
   uint8_t value;
 
@@ -139,7 +139,7 @@ union RF_IQIFC2
   {
     unsigned char    : 7;
     unsigned char SYNC : 1;
-  }
+  };
 
   uint8_t value;
 
@@ -161,7 +161,7 @@ union RF09_IRQM
     unsigned char TRXERR : 1;  //  Transceiver Error Interrupt Mask
     unsigned char IQIFSF : 1;  // I/Q IF Synchronization Failure Interrupt Mask
     unsigned char : 2; 
-  }
+  };
 
   uint8_t value;
 
@@ -173,80 +173,115 @@ static_assert(sizeof(RF09_IRQM) == 1);
 
 // Transceiver Auxilliary Settings
 union RF09_AUXS
-{   
-	unsigned char PAVC : 2;  // 
-  unsigned char AVS : 1;    // 
-	unsigned char AVEN : 1;
-	unsigned char AVEXT : 1;
-	unsigned char AGCMAP : 2;
-	unsigned char EXTLNABYP : 1;
-	
+{
+  struct
+  { 
+    unsigned char PAVC : 2;  // 
+    unsigned char AVS : 1;    // 
+    unsigned char AVEN : 1;
+    unsigned char AVEXT : 1;
+    unsigned char AGCMAP : 2;
+    unsigned char EXTLNABYP : 1;
+  };
+
+  uint8_t value;
+
 	static const uint16_t address =  0x0101;
 };
 
-	// ensure size is one byte 
+// ensure size is one byte 
 static_assert(sizeof(RF09_AUXS) == 1);
 
 // transciever state
-struct RF09_STATE
-{   
-	unsigned char STATE : 3;  // 
+union RF09_STATE
+{
+  struct
+  {
+	  unsigned char STATE : 3;  // 
     unsigned char  : 5; // drive strength
+  };
+
+  uint8_t value;
 	
 	static const uint16_t address =  0x0102;
 };
 
 // carrier frequency low
-struct RF09_CCF0L
+union RF09_CCF0L
 {
+  struct
+  {
     unsigned char CCF0L : 8;
+  };
 
-    static const uint16_t address = 0x0105;
+  uint8_t value;
+
+  static const uint16_t address = 0x0105;
 };
 
 // ensure size is one byte
 static_assert(sizeof(RF09_CCF0L) == 1);
 
 // carrier frequency high
-struct RF09_CCF0H
+union RF09_CCF0H
 {
+  struct
+  {
     unsigned char CCF0H : 8;
+  };
 
-    static const uint16_t address = 0x0106;
+  uint8_t value;
+
+  static const uint16_t address = 0x0106;
 };
 
 // ensure size is one byte
 static_assert(sizeof(RF09_CCF0H) == 1);
 
 // channel number low
-struct RF09_CNL
+union RF09_CNL
 {
+  struct
+  {
     unsigned char CNL : 8;
+  };
 
-    static const uint16_t address = 0x0107;
+  uint8_t value;
+
+  static const uint16_t address = 0x0107;
 };
 
 // ensure size is one byte
 static_assert(sizeof(RF09_CNL) == 1);
 
 // channel number high
-struct RF09_CNM
+union RF09_CNM
 {
+  struct
+  {
     unsigned char CNH : 1;
     unsigned char : 6;
     unsigned char CM : 1;
+  };
 
-    static const uint16_t address = 0x0108;
+  uint8_t value;
+  
+  static const uint16_t address = 0x0108;
 };
 
 // receive filter bandwidth
-struct RF09_RXBWC
-{   
-	unsigned char BW : 4;  // 
+union RF09_RXBWC
+{ 
+  struct
+  {  
+    unsigned char BW : 4;  // 
     unsigned char IFS : 1; // 
-	unsigned char IFI : 1;
-	unsigned char : 2;
-	
+    unsigned char IFI : 1;
+    unsigned char : 2;
+  };
+
+  uint8_t value;
+
 	static const uint16_t address =  0x0109;
 };
 
@@ -254,11 +289,16 @@ struct RF09_RXBWC
 static_assert(sizeof(RF09_RXBWC) == 1);
 
 // rx sample rate and cutoff rate
-struct RF09_RXDFE
-{   
-	unsigned char SR : 4;  // 
+union RF09_RXDFE
+{ 
+  struct
+  {  
+	  unsigned char SR : 4;  // 
     unsigned char : 1; // 
-	unsigned char RCUT : 3;
+  	unsigned char RCUT : 3;
+  };
+
+  uint8_t value;
 
 	static const uint16_t address =  0x010A;
 };
@@ -267,16 +307,21 @@ struct RF09_RXDFE
 static_assert(sizeof(RF09_RXDFE) == 1);
 
 // AGC control
-struct RF09_AGCC
-{   
-	unsigned char EN : 1;  // 
+union RF09_AGCC
+{ 
+  struct
+  {  
+    unsigned char EN : 1;  // 
     unsigned char FRZC: 1; // 
-	unsigned char FRZS : 1;
-	unsigned char RST : 1;
-	unsigned char AVGS : 2;
-	unsigned char AGCI : 1;
-	unsigned char  : 1;
-	
+    unsigned char FRZS : 1;
+    unsigned char RST : 1;
+    unsigned char AVGS : 2;
+    unsigned char AGCI : 1;
+    unsigned char  : 1;
+  };
+
+  uint8_t value;
+
 	static const uint16_t address =  0x010B;
 };
 
@@ -284,10 +329,15 @@ struct RF09_AGCC
 static_assert(sizeof(RF09_AGCC) == 1);
 
 // receiver AGC gain
-struct RF09_AGCS
-{   
-	unsigned char GCW : 5;  // 
-    unsigned char TGT: 3; // 
+union RF09_AGCS
+{
+  struct
+  {
+	  unsigned char GCW : 5;  // 
+    unsigned char TGT: 3; //
+  };
+
+  uint8_t value; 
 	
 	static const uint16_t address =  0x010C;
 };
@@ -296,11 +346,16 @@ struct RF09_AGCS
 static_assert(sizeof(RF09_CNM) == 1);
 
 // received signal strength
-struct RF09_RSSI
+union RF09_RSSI
 {
+  struct
+  {
     unsigned char RSSI : 8;
+  };
 
-    static const uint16_t address = 0x010D;
+  uint8_t value;
+
+  static const uint16_t address = 0x010D;
 };
 
 // ensure size is one byte
@@ -308,33 +363,48 @@ static_assert(sizeof(RF09_RSSI) == 1);
 
 
 // energy detection mode
-struct RF09_EDC
+union RF09_EDC
 {
+  struct
+  {
     unsigned char EDM : 1;
     unsigned char : 7;
+  };
 
-    static const uint16_t address = 0x010E;
+  uint8_t value;
+  
+  static const uint16_t address = 0x010E;
 };
 
 // ensure size is one byte
 static_assert(sizeof(RF09_EDC) == 1);
 
 // energy detection mode
-struct RF09_EDD
+union RF09_EDD
 {
+  struct
+  {
     unsigned char DTB : 1;
     unsigned char DF : 7;
+  };
 
-    static const uint16_t address = 0x010F;
+  uint8_t value;
+
+  static const uint16_t address = 0x010F;
 };
 
 // ensure size is one byte
 static_assert(sizeof(RF09_EDD) == 1);
 
 // energy detection value
-struct RF09_EDV
-{   
-	unsigned char EDV : 8;  // 
+union RF09_EDV
+{
+  struct
+  {  
+	  unsigned char EDV : 8;  // 
+  };
+
+  uint8_t value;
 	
 	static const uint16_t address =  0x0110;
 };
@@ -343,10 +413,15 @@ struct RF09_EDV
 static_assert(sizeof(RF09_EDV) == 1);
 
 // random number
-struct RF09_RNDV
+union RF09_RNDV
 {   
-	unsigned char RNDV : 8;  // 
-	
+  struct
+  {
+	  unsigned char RNDV : 8;  // 
+  };
+
+	uint8_t value;
+
 	static const uint16_t address =  0x0111;
 };
 
@@ -354,119 +429,170 @@ struct RF09_RNDV
 static_assert(sizeof(RF09_RNDV) == 1);
 
 // tx filter cutoff PA ramp time
-struct RF09_TXCUTC
+union RF09_TXCUTC
 {
+  struct
+  {
     unsigned char LPFCUT : 4;
     unsigned char : 2;
     unsigned char PARAMP : 2;
+  };
 
-    static const uint16_t address = 0x0112;
+  uint8_t value;
+
+  static const uint16_t address = 0x0112;
 };
 
 // ensure size is one byte
 static_assert(sizeof(RF09_TXCUTC) == 1);
 
 // tx filter cutoff PA ramp time
-struct RF09_TXDFE
+union RF09_TXDFE
 {
+  struct
+  {
     unsigned char SR : 4;
     unsigned char DM : 1;
     unsigned char RCUT : 3;
+  };
 
-    static const uint16_t address = 0x0113;
+  uint8_t value;
+
+  static const uint16_t address = 0x0113;
 };
 
 // ensure size is one byte
 static_assert(sizeof(RF09_TXDFE) == 1);
 
 
-struct RF09_PAC
+union RF09_PAC
 {
+  struct
+  {
     unsigned char TXPWR : 5;
     unsigned char PACUR : 2;
     unsigned char  : 1;
-    static const uint16_t address =  0x0114;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address =  0x0114;
 };
 // ensure size is one byte
 static_assert(sizeof(RF09_PAC) == 1); 
 
-struct RF09_PADFE
+union RF09_PADFE
 {
+  struct
+  {
     unsigned char  : 6;
     unsigned char PADFE : 2;
+  };
 
-    static const uint16_t address =  0x0116;
+  uint8_t value;
+
+  static const uint16_t address =  0x0116;
 };
 // ensure size is one byte
 static_assert(sizeof(RF09_PADFE) == 1); 
 
-struct RF09_PLL
+union RF09_PLL
 {
+  struct
+  {
     unsigned char  : 1;
     unsigned char LS : 1;
     unsigned char  : 2;
     unsigned char LBW : 2;
     unsigned char  : 2;
+  };
 
-    static const uint16_t address =  0x0121;
+  uint8_t value;
+
+  static const uint16_t address =  0x0121;
 };
 // ensure size is one byte
 static_assert(sizeof(RF09_PLL) == 1); 
 
-struct RF09_PLLCF
+union RF09_PLLCF
 {
+  struct
+  {
     unsigned char CF : 6;
     unsigned char  : 1;
     unsigned char  : 1;
+  };
 
-    static const uint16_t address =  0x0122;
+  uint8_t value;
+
+  static const uint16_t address =  0x0122;
 };
 // ensure size is one byte
 static_assert(sizeof(RF09_PLLCF) == 1); 
 
 // control the Transmit Frequency Control Word for the In-phase (I) channel of the RF09 (sub-GHz) radio, 
 // which is related to In-phase Tx LO leakage (Local Oscillator leakage)
-struct RF09_TXCI
+union RF09_TXCI
 {
+  struct
+  {
     unsigned char DCOI : 6; // Bit 5:0 – TXCI.DCOI: DC offset calibration value I path
     unsigned char  : 1;
     unsigned char  : 1;
+  };
 
-    static const uint16_t address =  0x0125;
+  uint8_t value;
+
+  static const uint16_t address =  0x0125;
 };
 // ensure size is one byte
 static_assert(sizeof(RF09_TXCI) == 1); 
 
 // control the Transmit Frequency Control Word for the Quadrature (Q) channel of the RF09 (sub-GHz) radio
-struct RF09_TXCQ
+union RF09_TXCQ
 {
+  struct
+  {
     unsigned char DCOQ : 6; //Bit 5:0 – TXCQ.DCOQ: DC offset calibration value Q path
     unsigned char  : 1;
     unsigned char  : 1;
+  };
 
-    static const uint16_t address =  0x0126;
+  uint8_t value;
+
+  static const uint16_t address =  0x0126;
 };
 // ensure size is one byte
 static_assert(sizeof(RF09_TXCQ) == 1);
 
 // control the transmit DAC (Digital-to-Analog Converter) settings for the In-phase (I) channel of the RF09 (sub-GHz) radio
-struct RF09_TXDACI
+union RF09_TXDACI
 {
+  struct
+  {
     unsigned char TXDACID : 7;   //  Input to TXDAC data
     unsigned char ENTXDACID : 1; // Enable input to TXDAC
+  };
+
+  uint8_t value;
        
-    static const uint16_t address =  0x0127;
+  static const uint16_t address =  0x0127;
 };
 // ensure size is one byte
 static_assert(sizeof(RF09_TXDACI) == 1);
 
 // controls the operation of the transmitter's digital-to-analog converter (DAC) quadrature calibration function. 
-struct RF09_TXDACQ
+union RF09_TXDACQ
 {
+  struct
+  {
     unsigned char TXDACQD : 7; //  Input to TXDAC data
     unsigned char ENTXDACQD : 1; //Enable input to TXDAC
-    
-    static const uint16_t address =  0x0128;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address =  0x0128;
 };
 // ensure size is one byte
 static_assert(sizeof(RF09_TXDACQ) == 1);
