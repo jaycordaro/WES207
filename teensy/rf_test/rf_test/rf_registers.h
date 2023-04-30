@@ -206,6 +206,40 @@ union RF09_STATE
 	static const uint16_t address =  0x0102;
 };
 
+// ensure size is one byte
+static_assert(sizeof(RF09_STATE) == 1);
+
+union RF09_CMD
+{
+  struct
+  {
+    unsigned char CMD : 3;
+    unsigned char : 5;
+  };
+
+  uint8_t value;
+	
+	static const uint16_t address =  0x0103;
+};
+
+// ensure size is one byte
+static_assert(sizeof(RF09_CMD) == 1);
+
+union RF09_CS
+{
+  struct
+  {
+    unsigned char CS : 8;
+  };
+
+  uint8_t value;
+	
+	static const uint16_t address =  0x0104;
+};
+
+// ensure size is one byte
+static_assert(sizeof(RF09_CS) == 1);
+
 // carrier frequency low
 union RF09_CCF0L
 {
