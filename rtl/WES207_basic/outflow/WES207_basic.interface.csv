@@ -1,0 +1,23 @@
+
+# Efinity Interface Configuration
+# Version: 2022.2.322.4.7
+# Date: 2023-05-06 13:40
+
+# Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
+
+# [required | optional] (input|output|clkout), x, y, z, __bypass__|[~|!]<clock>, [[~|!]<pin_name>] | __vcc__ | __gnd__
+output, 160, 167, 0, __bypass__, gpo_pins[0]
+output, 160, 142, 0, __bypass__, gpo_pins[1]
+output, 160, 132, 0, __bypass__, gpo_pins[2]
+output, 160, 107, 0, __bypass__, gpo_pins[3]
+output, 160, 102, 0, __bypass__, gpo_pins[4]
+output, 160, 94, 2, __bypass__, gpo_pins[5]
+output, 160, 27, 0, __bypass__, gpo_pins[6]
+input, 160, 99, 3, __bypass__, INPUT_CLK
+output, 160, 184, 2, __bypass__, led0
+output, 160, 182, 0, __bypass__, led1
+output, 160, 14, 2, __bypass__, MISO
+input, 160, 7, 1, __bypass__, MOSI
+input, 0, 17, 1, __bypass__, reset_n
+input, 160, 12, 1, __bypass__, SCLK
+input, 160, 17, 1, __bypass__, SSB

@@ -1,0 +1,498 @@
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 05, 2023 14:40:50
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0012 VERI-INFO] undeclared symbol 'sync_sclk_fe', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_clk_divide.sv:55)
+[EFX-0012 VERI-INFO] undeclared symbol 'osc_clk', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:53)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:74)
+[EFX-0012 VERI-INFO] undeclared symbol 'addr_dv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:76)
+[EFX-0012 VERI-INFO] undeclared symbol 'rxdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:78)
+[EFX-0012 VERI-INFO] undeclared symbol 'rw_out', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:79)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:85)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:86)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:96)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:97)
+[EFX-0012 VERI-INFO] undeclared symbol 'txdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:168)
+[EFX-0012 VERI-INFO] compiling module 'i2s_top' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:1)
+[EFX-0010 VERI-ERROR] instantiating unknown module 'my_rom' (VERI-1063) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:40)
+[EFX-0012 VERI-INFO] module 'i2s_top' remains a black box due to errors in its contents (VERI-1073) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:1)
+[EFX-0021 ERROR] Verific elaboration of module 'i2s_top' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 05, 2023 19:39:55
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0012 VERI-INFO] undeclared symbol 'sync_sclk_fe', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_clk_divide.sv:55)
+[EFX-0012 VERI-INFO] undeclared symbol 'osc_clk', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:53)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:74)
+[EFX-0012 VERI-INFO] undeclared symbol 'addr_dv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:76)
+[EFX-0012 VERI-INFO] undeclared symbol 'rxdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:78)
+[EFX-0012 VERI-INFO] undeclared symbol 'rw_out', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:79)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:85)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:86)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:96)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:97)
+[EFX-0012 VERI-INFO] undeclared symbol 'txdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:168)
+[EFX-0012 VERI-INFO] compiling module 'i2s_top' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:1)
+[EFX-0010 VERI-ERROR] instantiating unknown module 'my_rom' (VERI-1063) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:40)
+[EFX-0012 VERI-INFO] module 'i2s_top' remains a black box due to errors in its contents (VERI-1073) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:1)
+[EFX-0021 ERROR] Verific elaboration of module 'i2s_top' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 11:34:39
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0012 VERI-INFO] undeclared symbol 'txdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:168)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:75)
+[EFX-0012 VERI-INFO] undeclared symbol 'addr_dv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:77)
+[EFX-0012 VERI-INFO] undeclared symbol 'rxdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:79)
+[EFX-0012 VERI-INFO] undeclared symbol 'rw_out', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:80)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:86)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:87)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:97)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:98)
+[EFX-0012 VERI-INFO] compiling module 'WES207_top' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:1)
+[EFX-0012 VERI-INFO] compiling module 'spi_slave' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:1)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0012 VERI-INFO] compiling module 'led' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:25)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0012 VERI-INFO] compiling module 'gpo' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\gpo.sv:1)
+[EFX-0012 VERI-INFO] compiling module 'regwrap' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:27)
+[EFX-0256 WARNING] The primary output port 'sclk_out' wire 'sclk_out' is not driven.
+[EFX-0256 WARNING] The primary output port 'ws_out' wire 'ws_out' is not driven.
+[EFX-0000 INFO] ... Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0256 WARNING] The primary output port 'sclk_out' wire 'sclk_out' is not driven.
+[EFX-0256 WARNING] The primary output port 'ws_out' wire 'ws_out' is not driven.
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'sclk_out'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:13)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'ws_out'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:14)
+[EFX-0200 WARNING] Removing redundant signal : word_data[15]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[14]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[13]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[12]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[11]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[10]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[9]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[8]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "WES207_top"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "spi_slave" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "spi_slave" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "led" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "led" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 39 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Clock Network INPUT_CLK with 88 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Sequential Optimization deduced 29 equivalent points.
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 6s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 120, ed: 353, lv: 3, pw: 238.12
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Clock Network n3 with 87 loads will be considered for retiming optimization.
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+[EFX-0000 INFO] Resource Summary 
+[EFX-0000 INFO] =============================== 
+[EFX-0000 INFO] EFX_ADD         : 	27
+[EFX-0000 INFO] EFX_LUT4        : 	120
+[EFX-0000 INFO] EFX_FF          : 	87
+[EFX-0000 INFO] EFX_GBUFCE      : 	1
+[EFX-0000 INFO] =============================== 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 11:57:48
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0012 VERI-INFO] undeclared symbol 'txdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:168)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:73)
+[EFX-0012 VERI-INFO] undeclared symbol 'addr_dv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:75)
+[EFX-0012 VERI-INFO] undeclared symbol 'rxdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:77)
+[EFX-0012 VERI-INFO] undeclared symbol 'rw_out', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:78)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:84)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:85)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:95)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:96)
+[EFX-0012 VERI-INFO] compiling module 'WES207_top' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:1)
+[EFX-0012 VERI-INFO] compiling module 'spi_slave' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:1)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0012 VERI-INFO] compiling module 'led' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:25)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0012 VERI-INFO] compiling module 'gpo' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\gpo.sv:1)
+[EFX-0012 VERI-INFO] compiling module 'regwrap' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:27)
+[EFX-0000 INFO] ... Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : word_data[15]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[14]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[13]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[12]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[11]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[10]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[9]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[8]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "WES207_top"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "spi_slave" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "spi_slave" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "led" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "led" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 39 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Clock Network INPUT_CLK with 88 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Sequential Optimization deduced 28 equivalent points.
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 5s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 120, ed: 353, lv: 3, pw: 237.88
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Clock Network n3 with 87 loads will be considered for retiming optimization.
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 1s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+[EFX-0000 INFO] Resource Summary 
+[EFX-0000 INFO] =============================== 
+[EFX-0000 INFO] EFX_ADD         : 	27
+[EFX-0000 INFO] EFX_LUT4        : 	120
+[EFX-0000 INFO] EFX_FF          : 	87
+[EFX-0000 INFO] EFX_GBUFCE      : 	1
+[EFX-0000 INFO] =============================== 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 11:59:13
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0012 VERI-INFO] undeclared symbol 'txdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:168)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:74)
+[EFX-0012 VERI-INFO] undeclared symbol 'addr_dv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:76)
+[EFX-0012 VERI-INFO] undeclared symbol 'rxdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:78)
+[EFX-0012 VERI-INFO] undeclared symbol 'rw_out', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:79)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:85)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:86)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:96)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:97)
+[EFX-0012 VERI-INFO] compiling module 'WES207_top' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:1)
+[EFX-0012 VERI-INFO] compiling module 'spi_slave' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:1)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0012 VERI-INFO] compiling module 'led' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:25)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0012 VERI-INFO] compiling module 'gpo' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\gpo.sv:1)
+[EFX-0012 VERI-INFO] compiling module 'regwrap' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:27)
+[EFX-0000 INFO] ... Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "WES207_top"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "spi_slave" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "spi_slave" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "led" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "led" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 39 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" end (Real time : 1s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Clock Network INPUT_CLK with 88 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Sequential Optimization deduced 28 equivalent points.
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 5s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 120, ed: 353, lv: 3, pw: 237.88
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Clock Network n3 with 87 loads will be considered for retiming optimization.
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+[EFX-0000 INFO] Resource Summary 
+[EFX-0000 INFO] =============================== 
+[EFX-0000 INFO] EFX_ADD         : 	27
+[EFX-0000 INFO] EFX_LUT4        : 	120
+[EFX-0000 INFO] EFX_FF          : 	87
+[EFX-0000 INFO] EFX_GBUFCE      : 	1
+[EFX-0000 INFO] =============================== 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 13:40:04
+///////////////////////////////////
+
+[EFX-0012 VERI-INFO] default VHDL library search path is now "C:/Efinity/2022.2/sim_models/vhdl/packages/vhdl_2008" (VHDL-1504) 
+[EFX-0012 VERI-INFO] undeclared symbol 'txdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:168)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:74)
+[EFX-0012 VERI-INFO] undeclared symbol 'addr_dv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:76)
+[EFX-0012 VERI-INFO] undeclared symbol 'rxdv', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:78)
+[EFX-0012 VERI-INFO] undeclared symbol 'rw_out', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:79)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:85)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_led', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:86)
+[EFX-0012 VERI-INFO] undeclared symbol 'tx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:96)
+[EFX-0012 VERI-INFO] undeclared symbol 'rx_en_gpo', assumed default net type 'wire' (VERI-2561) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:97)
+[EFX-0012 VERI-INFO] compiling module 'WES207_top' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:1)
+[EFX-0012 VERI-INFO] compiling module 'spi_slave' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:1)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0012 VERI-INFO] compiling module 'led' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:25)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0012 VERI-INFO] compiling module 'gpo' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\gpo.sv:1)
+[EFX-0012 VERI-INFO] compiling module 'regwrap' (VERI-1018) (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:27)
+[EFX-0000 INFO] ... Setting Synthesis Option: mode=speed
+[EFX-0012 VERI-INFO] compiling module 'EFX_ADD' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:6)
+[EFX-0012 VERI-INFO] compiling module 'EFX_FF' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:19)
+[EFX-0012 VERI-INFO] compiling module 'EFX_COMB4' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:36)
+[EFX-0012 VERI-INFO] compiling module 'EFX_GBUFCE' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:46)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IDDR' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:55)
+[EFX-0012 VERI-INFO] compiling module 'EFX_ODDR' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:69)
+[EFX-0012 VERI-INFO] compiling module 'EFX_IOBUF' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:85)
+[EFX-0012 VERI-INFO] compiling module 'EFX_LUT4' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:97)
+[EFX-0012 VERI-INFO] compiling module 'EFX_MULT' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:105)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP48' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:140)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP24' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:196)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DSP12' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:249)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_4K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:302)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_5K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:362)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM_5K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:434)
+[EFX-0012 VERI-INFO] compiling module 'RAMB5' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:539)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM_10K' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:601)
+[EFX-0012 VERI-INFO] compiling module 'EFX_RAM10' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:693)
+[EFX-0012 VERI-INFO] compiling module 'EFX_DPRAM10' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:794)
+[EFX-0012 VERI-INFO] compiling module 'EFX_SRL8' (VERI-1018) (C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v:924)
+[EFX-0000 INFO] ... Pre-synthesis checks begin
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
+[EFX-0000 INFO] ... NameSpace init begin
+[EFX-0000 INFO] ... NameSpace init end (Real time : 0s)
+[EFX-0000 INFO] ... Mapping design "WES207_top"
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "spi_slave" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "spi_slave" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "led" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "led" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" begin
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 39 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Flat synthesis begin
+[EFX-0000 INFO] ... Flat synthesis end (Real time : 0s)
+[EFX-0000 INFO] ... Flat optimizations begin
+[EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
+[EFX-0000 INFO] ... Check and break combinational loops begin
+[EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
+[EFX-0000 INFO] ... Sequential Optimization begin
+[EFX-0000 INFO] ... Clock Network INPUT_CLK with 88 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Sequential Optimization deduced 28 equivalent points.
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 5s)
+[EFX-0000 INFO] ... SOP modeling begin
+[EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
+[EFX-0000 INFO] ... LUT mapping begin
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 120, ed: 353, lv: 3, pw: 237.88
+[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization begin
+[EFX-0000 INFO] ... Clock Network n3 with 87 loads will be considered for retiming optimization.
+[EFX-0000 INFO] ... Performed 0 retime moves.
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 1s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
+[EFX-0000 INFO] Resource Summary 
+[EFX-0000 INFO] =============================== 
+[EFX-0000 INFO] EFX_ADD         : 	27
+[EFX-0000 INFO] EFX_LUT4        : 	120
+[EFX-0000 INFO] EFX_FF          : 	87
+[EFX-0000 INFO] EFX_GBUFCE      : 	1
+[EFX-0000 INFO] =============================== 
