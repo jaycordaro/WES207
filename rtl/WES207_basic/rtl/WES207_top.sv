@@ -15,8 +15,6 @@ module WES207_top(
 		
 		
 	logic clk;
-	//logic [15:0] word_data;
-	//logic [4:0] addr;
 	logic [6:0] reg_addr;
 	
 	logic [7:0] tx_d;
@@ -29,35 +27,7 @@ module WES207_top(
 	logic [7:0] data_from_led;
 	
 	assign clk = INPUT_CLK;
-	
-	//logic [31:0] word_data;
-	
-	/*my_rom	my_rom_inst (
-		.rd_addr_i		(addr),	
-		.rd_clk_i		(clk),
-		.rd_en_i		(1'b1), 
-		.rd_clk_en_i	(1'b1),
-		.rst_i			(reset_n),
-		.rd_data_o		(word_data)
-	);*/
-		
-	/*i2s_play i2s_play_inst(
-		.clk 			(clk),
-		.sclk			(sclk),
-		.reset_n 		(reset_n),
-		.addr			(addr),
-		.word_data		(word_data),
-		.ws				(ws),
-		.sdo			(sdo)	
-	);*/
 
-
-	/*my_pll2 my_pll_inst(.clki_i(osc_clk),
-						.rstn_i(reset_n),
-						.clkop_o(clk),
-						.lock_o( ));
-	*/
-	
 	spi_slave #(
 	.pktsz(16),
 	.header(8),
@@ -119,13 +89,5 @@ regwrap regwrap_inst (
 	.data_to_gpo	(data_to_gpo),
 	.data_to_led	(data_to_led)
 	);
-	
-    /*i2s_clk_divide spi_clk_divide_inst(
-    .clk(clk),
-    .reset_n(reset_n),
-    .sclk_out(sclk_out),
-    .ws_out(ws_out)
-	);*/
-	
 	
 endmodule : WES207_top
