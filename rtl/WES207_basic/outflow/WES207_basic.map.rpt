@@ -1,0 +1,96 @@
+Synthesis report for project WES207_basic
+Generated at: May 06, 2023 13:40:04
+Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
+
+### ### ### ### ### ### ### ### ### ### ### ### ### ### ###
+Top-level Entity Name : WES207_top
+
+### ### File List (begin) ### ### ###
+C:\Efinity\2022.2\project\WES207_basic\rtl\gpo.sv
+C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv
+C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv
+C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv
+### ### File List (end) ### ### ###
+
+
+### ### EFX_FF CE enables (begin) ### ### ###
+Total number of enable signals: 10
+Total number of FFs with enable signals: 45
+CE signal <ceg_net37>, number of controlling flip flops: 5
+CE signal <ceg_net5>, number of controlling flip flops: 3
+CE signal <ceg_net20>, number of controlling flip flops: 1
+CE signal <ceg_net77>, number of controlling flip flops: 8
+CE signal <ceg_net98>, number of controlling flip flops: 8
+CE signal <ceg_net31>, number of controlling flip flops: 1
+CE signal <ceg_net34>, number of controlling flip flops: 1
+CE signal <rx_en_led>, number of controlling flip flops: 8
+CE signal <led_inst/LessThan_21/n48>, number of controlling flip flops: 2
+CE signal <rx_en_gpo>, number of controlling flip flops: 8
+### ### EFX_FF CE enables (end) ### ### ###
+
+### ### EFX_FF SR set/reset (begin) ### ### ###
+Total number of set/reset signals: 1
+Total number of FFs with set/reset signals: 87
+SR signal <reset_n>, number of controlling flip flops: 87
+### ### EFX_FF SR set/reset (end) ### ### ###
+
+### ### Module Resource Usage Distribution Estimates (begin) ### ###
+
+**Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
+
+Module                              FFs        ADDs        LUTs      RAMs DSP/MULTs
+---------------------------         ---        ----        ----      ---- ---------
+WES207_top:WES207_top             87(0)       27(0)      120(0)      0(0)      0(0)
+ +spi_slave_inst:spi_slave       37(37)        4(4)      45(45)      0(0)      0(0)
+ +led_inst:led                   42(42)      23(23)      43(43)      0(0)      0(0)
+ +gpo_inst:gpo                     8(8)        0(0)      14(14)      0(0)      0(0)
+ +regwrap_inst:regwrap             0(0)        0(0)      18(18)      0(0)      0(0)
+
+### ### Module Resource Usage Distribution Estimates (end) ### ###
+
+
+### ### Clock Load Distribution Report (begin) ### ###
+
+     Clock     Flip-Flops   Memory Ports    Multipliers
+     -----     ----------   ------------    -----------
+ INPUT_CLK             87              0              0
+
+### ### Clock Load Distribution Report (end) ### ###
+
+### ### EFX Flow Options (begin) ### ### ###
+
+family : Trion
+device : T20F256
+project : WES207_basic
+project-xml : C:/Efinity/2022.2/project/WES207_basic/WES207_basic.xml
+root : WES207_top
+I : C:/Efinity/2022.2/project/WES207_basic
+output-dir : C:/Efinity/2022.2/project/WES207_basic/outflow
+work-dir : C:/Efinity/2022.2/project/WES207_basic/work_syn
+write-efx-verilog : C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.map.v
+binary-db : C:/Efinity/2022.2/project/WES207_basic/WES207_basic.vdb
+insert-ios : 0
+max-carry-cascade : 240
+max_mult : -1
+max_ram : -1
+mode : speed
+veri_options : verilog_mode=sv_09,vhdl_mode=vhdl_2008
+
+### ### EFX Flow Options (end) ### ### ###
+
+### ### Resource Summary (begin) ### ### ### 
+INPUT  PORTS    : 	5
+OUTPUT PORTS    : 	10
+
+EFX_ADD         : 	27
+EFX_LUT4        : 	120
+   1-2  Inputs  : 	56
+   3    Inputs  : 	15
+   4    Inputs  : 	49
+EFX_FF          : 	87
+EFX_GBUFCE      : 	1
+### ### Resource Summary (end) ### ### ###
+
+Plain synthesis (without verilog dump and post-map checks) time : 6s
+Elapsed synthesis time : 6s

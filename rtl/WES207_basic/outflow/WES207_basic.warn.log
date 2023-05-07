@@ -1,0 +1,130 @@
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 05, 2023 14:40:50
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 05, 2023 19:39:55
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 11:34:39
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0256 WARNING] The primary output port 'sclk_out' wire 'sclk_out' is not driven.
+[EFX-0256 WARNING] The primary output port 'ws_out' wire 'ws_out' is not driven.
+[EFX-0256 WARNING] The primary output port 'sclk_out' wire 'sclk_out' is not driven.
+[EFX-0256 WARNING] The primary output port 'ws_out' wire 'ws_out' is not driven.
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'sclk_out'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:13)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'ws_out'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:14)
+[EFX-0200 WARNING] Removing redundant signal : word_data[15]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[14]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[13]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[12]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[11]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[10]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[9]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[8]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+[EFX-0200 WARNING] Removing redundant signal : word_data[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:19)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 11:57:48
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : word_data[15]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[14]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[13]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[12]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[11]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[10]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[9]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[8]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : word_data[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 11:59:13
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 13:40:04
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)

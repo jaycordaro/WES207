@@ -1,0 +1,40 @@
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 05, 2023 14:40:50
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] instantiating unknown module 'my_rom' (VERI-1063) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:40)
+[EFX-0021 ERROR] Verific elaboration of module 'i2s_top' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 05, 2023 19:39:55
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] instantiating unknown module 'my_rom' (VERI-1063) (C:\Efinity\2022.2\project\WES207_basic\rtl\i2s_top.sv:40)
+[EFX-0021 ERROR] Verific elaboration of module 'i2s_top' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 11:34:39
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 11:57:48
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 11:59:13
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 06, 2023 13:40:04
+///////////////////////////////////
+

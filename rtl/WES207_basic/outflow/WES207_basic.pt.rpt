@@ -1,0 +1,205 @@
+
+Efinity Interface Designer Report
+Version: 2022.2.322.4.7
+Date: 2023-05-06 13:40
+
+Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
+
+Device: T20F256
+Project: WES207_basic
+
+Package: 256-ball FBGA (final)
+Timing Model: I4 (final)
+Configuration Mode: active (x1)
+
+---------- Table of Contents (begin) ----------
+   1. Periphery Usage Summary
+   2. Generated Output Files
+   3. I/O Banks Summary
+   4. Global Connection Summary
+   5. Clock Region Usage Summary
+   6. Dual-Function Configuration Pin Usage
+   7. GPIO Usage Summary
+   8. PLL Usage Summary
+   9. LVDS Rx Usage Summary
+   10. LVDS Tx Usage Summary
+   11. Clock Mux Usage Summary
+   12. Configuration Control Usage Summary
+   13. JTAG Usage Summary
+---------- Table of Contents (end) ------------
+
+---------- 1. Periphery Usage Summary (begin) ----------
+clkmux: 2 / 2 (100.0%)
+control: 0 / 1 (0.0%)
+gpio: 15 / 141 (10.64%)
+jtag: 0 / 2 (0.0%)
+lvds_bg: 0 / 1 (0.0%)
+lvds_rx: 0 / 14 (0.0%)
+lvds_tx: 0 / 13 (0.0%)
+pll: 0 / 5 (0.0%)
+---------- Periphery Usage Summary (end) ----------
+
+---------- 2. Generated Output Files (begin) ----------
+Interface Configuration: WES207_basic.interface.csv
+Peripheral Block Configuration: WES207_basic.lpf
+Pinout Report: WES207_basic.pinout.rpt
+Pinout CSV: WES207_basic.pinout.csv
+Timing Report: WES207_basic.pt_timing.rpt
+Timing SDC Template: WES207_basic.pt.sdc
+Verilog Template: WES207_basic_template.v
+Option Register File: WES207_basic_or.ini
+---------- Generated Output Files (end) ----------
+
+---------- 3. I/O Banks Summary (begin) ----------
+
++----------+-------------+
+| I/O Bank | I/O Voltage |
++----------+-------------+
+|    1A    |    3.3 V    |
+|  1B_1C   |    3.3 V    |
+|  1D_1E   |    3.3 V    |
+| 3A_3B_3C |    3.3 V    |
+|  3D_3E   |    3.3 V    |
+|    4A    |    3.3 V    |
+|    4B    |    3.3 V    |
+|    BR    |    1.2 V    |
+|    TL    |    1.2 V    |
+|    TR    |    1.2 V    |
++----------+-------------+
+
+---------- I/O Banks Summary (end) ----------
+
+---------- 4. Global Connection Summary (begin) ----------
+
++-----------+---------------+------+
+|  Pin Name |    Resource   | Type |
++-----------+---------------+------+
+| INPUT_CLK | GPIOR_125.ALT | GCLK |
++-----------+---------------+------+
+
+---------- Global Connection Summary (end) ----------
+
+---------- 5. Clock Region Usage Summary (begin) ----------
+
++--------------+----------------+
+| Clock Region | Used/Available |
++--------------+----------------+
+|      B       |      0/16      |
+|      L0      |      0/4       |
+|      L1      |      0/4       |
+|      L2      |      0/4       |
+|      R0      |      0/4       |
+|      R1      |      0/4       |
+|      R2      |      0/4       |
+|      T       |      0/16      |
++--------------+----------------+
+
+---------- Clock Region Usage Summary (end) ----------
+
+---------- 6. Dual-Function Configuration Pin Usage (begin) ----------
+
++---------------+----------+
+| Instance Name | Function |
++---------------+----------+
+|  gpo_pins[3]  |  CDI21   |
+|  gpo_pins[6]  |  CBUS1   |
+|      led0     |  CDI25   |
+|      led1     |  CDI24   |
+|      MOSI     |  TEST_N  |
++---------------+----------+
+
+---------- Dual-Function Configuration Pin Usage (end) ----------
+
+---------- 7. GPIO Usage Summary (begin) ----------
+
+Global Unused Setting: input with weak pullup
+
++---------------+-----------+--------+----------+--------------+----------+----------------------+-----------------------+-------------+
+| Instance Name |  Resource |  Mode  | Register | Clock Region | I/O Bank |     I/O Standard     |        Pad Name       | Package Pin |
++---------------+-----------+--------+----------+--------------+----------+----------------------+-----------------------+-------------+
+|  gpo_pins[0]  | GPIOR_111 | output |          |              | 3A_3B_3C | 3.3 V LVTTL / LVCMOS |       GPIOR_111       |     F12     |
+|  gpo_pins[1]  | GPIOR_117 | output |          |              | 3A_3B_3C | 3.3 V LVTTL / LVCMOS |    GPIOR_117_CTRL14   |     G13     |
+|  gpo_pins[2]  | GPIOR_120 | output |          |              | 3A_3B_3C | 3.3 V LVTTL / LVCMOS |    GPIOR_120_CLK15    |     E15     |
+|  gpo_pins[3]  | GPIOR_122 | output |          |              | 3A_3B_3C | 3.3 V LVTTL / LVCMOS | GPIOR_122_CLK13_CDI21 |     F15     |
+|  gpo_pins[4]  | GPIOR_124 | output |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |    GPIOR_124_CLK11    |     G15     |
+|  gpo_pins[5]  | GPIOR_127 | output |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |     GPIOR_127_CLK8    |     G14     |
+|  gpo_pins[6]  | GPIOR_150 | output |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |    GPIOR_150_CBUS1    |     L14     |
+|   INPUT_CLK   | GPIOR_125 | input  |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |    GPIOR_125_CLK10    |     H13     |
+|      led0     | GPIOR_104 | output |          |              | 3A_3B_3C | 3.3 V LVTTL / LVCMOS |    GPIOR_104_CDI25    |     D14     |
+|      led1     | GPIOR_105 | output |          |              | 3A_3B_3C | 3.3 V LVTTL / LVCMOS |    GPIOR_105_CDI24    |     E13     |
+|      MISO     | GPIOR_155 | output |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |       GPIOR_155       |     P15     |
+|      MOSI     | GPIOR_158 | input  |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |    GPIOR_158_TEST_N   |     L12     |
+|    reset_n    |  GPIOL_02 | input  |          |              |    1A    | 3.3 V LVTTL / LVCMOS |        GPIOL_02       |      P2     |
+|      SCLK     | GPIOR_156 | input  |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |       GPIOR_156       |     M14     |
+|      SSB      | GPIOR_154 | input  |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |       GPIOR_154       |     N16     |
++---------------+-----------+--------+----------+--------------+----------+----------------------+-----------------------+-------------+
+
+
+Input GPIO Configuration:
+=========================
+
++---------------+-----------+---------------------+-----------------+--------------+-----------------+------+
+| Instance Name | Input Pin | Alternate Input Pin | Input Clock Pin | Pull Up/Down | Schmitt Trigger | DDIO |
++---------------+-----------+---------------------+-----------------+--------------+-----------------+------+
+|   INPUT_CLK   | INPUT_CLK |                     |                 |     none     |     Disable     | none |
+|      MOSI     |    MOSI   |                     |                 |     none     |     Disable     | none |
+|    reset_n    |  reset_n  |                     |                 |     none     |     Disable     |      |
+|      SCLK     |    SCLK   |                     |                 |     none     |     Disable     | none |
+|      SSB      |    SSB    |                     |                 |     none     |     Disable     | none |
++---------------+-----------+---------------------+-----------------+--------------+-----------------+------+
+
+Output GPIO Configuration:
+==========================
+
++---------------+-------------+------------------+----------------+-----------+------+
+| Instance Name |  Output Pin | Output Clock Pin | Drive Strength | Slew Rate | DDIO |
++---------------+-------------+------------------+----------------+-----------+------+
+|  gpo_pins[0]  | gpo_pins[0] |                  |       1        |  Disable  | none |
+|  gpo_pins[1]  | gpo_pins[1] |                  |       1        |  Disable  | none |
+|  gpo_pins[2]  | gpo_pins[2] |                  |       1        |  Disable  | none |
+|  gpo_pins[3]  | gpo_pins[3] |                  |       1        |  Disable  | none |
+|  gpo_pins[4]  | gpo_pins[4] |                  |       1        |  Disable  | none |
+|  gpo_pins[5]  | gpo_pins[5] |                  |       1        |  Disable  | none |
+|  gpo_pins[6]  | gpo_pins[6] |                  |       1        |  Disable  | none |
+|      led0     |     led0    |                  |       3        |  Disable  | none |
+|      led1     |     led1    |                  |       3        |  Disable  | none |
+|      MISO     |     MISO    |                  |       1        |  Disable  | none |
++---------------+-------------+------------------+----------------+-----------+------+
+
+---------- GPIO Usage Summary (end) ----------
+
+---------- 8. PLL Usage Summary (begin) ----------
+
+No PLL was configured
+
+---------- PLL Usage Summary (end) ----------
+
+---------- 9. LVDS Rx Usage Summary (begin) ----------
+
+No LVDS Rx was configured
+
+---------- LVDS Rx Usage Summary (end) ----------
+
+---------- 10. LVDS Tx Usage Summary (begin) ----------
+
+No LVDS Tx was configured
+
+---------- LVDS Tx Usage Summary (end) ----------
+
+---------- 11. Clock Mux Usage Summary (begin) ----------
+
+No Clock Mux was configured
+
+---------- Clock Mux Usage Summary (end) ----------
+
+---------- 12. Configuration Control Usage Summary (begin) ----------
+
+No Configuration Control was configured
+
+---------- Configuration Control Usage Summary (end) ----------
+
+---------- 13. JTAG Usage Summary (begin) ----------
+
+No JTAG was configured
+
+---------- JTAG Usage Summary (end) ----------
