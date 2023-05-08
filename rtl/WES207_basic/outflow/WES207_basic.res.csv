@@ -1,0 +1,12 @@
+sep=\t
+Module Resource Usage Distribution Estimates
+Generated at: May 06, 2023 13:40:04
+
+Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
+
+Module	         FFs	        ADDs	        LUTs	      RAMs	 DSP/MULTs
+WES207_top:WES207_top      	      87(0)	      27(0)	     120(0)	     0(0)	     0(0)	
+ +spi_slave_inst:spi_slave 	     37(37)	       4(4)	     45(45)	     0(0)	     0(0)	
+ +led_inst:led             	     42(42)	     23(23)	     43(43)	     0(0)	     0(0)	
+ +gpo_inst:gpo             	       8(8)	       0(0)	     14(14)	     0(0)	     0(0)	
+ +regwrap_inst:regwrap     	       0(0)	       0(0)	     18(18)	     0(0)	     0(0)	

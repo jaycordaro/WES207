@@ -1,0 +1,52 @@
+
+Efinix Static Timing Analysis Report
+Version: 2022.2.322.4.7
+Date: Sat May 06 13:40:34 2023
+
+Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
+
+Top-level Entity Name: WES207_basic
+
+SDC Filename: C:/Efinity/2022.2/project/WES207_basic/WES207constrain.sdc
+
+Timing Model: I4
+	temperature : -40C to 100C
+	voltage : 1.2V +/-50mV
+	speedgrade : 4
+	technology : s40ll
+	status : final
+
+---------- Table of Contents (begin) ----------
+   1. Clock Frequency Summary
+   2. Clock Relationship Summary
+   3. Path Details for Max Critical Paths
+   4. Path Details for Min Critical Paths
+---------- Table of Contents (end) ------------
+
+---------- 1. Clock Frequency Summary (begin) ----------
+
+User target constrained clocks
+ Clock Name  Period (ns)  Frequency (MHz)   Waveform      Targets
+ INPUT_CLK      13.000        76.923      {0.000 6.500}       
+
+Maximum possible analyzed clocks frequency
+ Clock Name  Period (ns)  Frequency (MHz)     Edge
+
+
+---------- Clock Frequency Summary (end) ---------------
+
+---------- 2. Clock Relationship Summary (begin) ----------
+
+
+NOTE: Values are in nanoseconds.
+
+---------- Clock Relationship Summary (end) ---------------
+
+---------- 3. Path Details for Max Critical Paths (begin) ----------
+
+---------- Path Details for Max Critical Paths (end) ---------------
+
+---------- 4. Path Details for Min Critical Paths (begin) ----------
+
+---------- Path Details for Min Critical Paths (end) ---------------
+

@@ -1,6 +1,6 @@
 fs_out = 16e3;
 
-filename = 'music/output_16000bps';
+filename = 'speech/output_6000bps';
 fileID = fopen([filename '.bin'],'r');
 aud2 = fread(fileID, 'int16', 'l');
 fclose(fileID);
