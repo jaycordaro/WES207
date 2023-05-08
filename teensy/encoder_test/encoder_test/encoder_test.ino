@@ -19,7 +19,7 @@
 #define BITRATE 6000
 
 #define MAX_FRAME_SIZE 6*960
-#define MAX_PACKET_SIZE (3*1276)
+#define MAX_PACKET_SIZE 120
 
 constexpr float BER = 0;
 
@@ -191,7 +191,7 @@ void setup() {
     frame_size = opus_decode(decoder, cbits, nbBytes, out, MAX_FRAME_SIZE, 0);
     MY_ASSERT(frame_size > 0, "decoder failed");
 
-    Serial.printf("Frame %d decoded %d bytes \n", itr_count++, frame_size);
+    Serial.printf("Frame %d decoded %d bytes encoded %d bytes \n", itr_count++, frame_size, nbBytes);
 
     /* Convert to little-endian ordering. */
     for(i=0;i<CHANNELS*frame_size;i++)
