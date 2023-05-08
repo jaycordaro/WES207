@@ -10,7 +10,7 @@ git clone https://github.com/FrankBoesing/Arduino-Teensy-Codec-lib
 
 Set the USE_SPI macro to 0 is SPI is not hooked up to the FGPA.
 
-## Usage: 
+## Usage
 1. Copy Input.bin onto an SD card
 2. Insert SD card into Teensy
 3. Flash code onto teensy with Arduino IDE if not done yet.
