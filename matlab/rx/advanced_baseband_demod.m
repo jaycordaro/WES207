@@ -28,7 +28,7 @@ pll = PLL_Class(true, fn, zeta, Kt, 1/bit_rate);
 % apply channel distortions
 
 % Add noise
-SNR_dB = 10;
+SNR_dB = 0;
 tx = awgn(tx_out, SNR_dB, pow2db(mean(abs(tx_out).^2)));
 
 % Phase offset
