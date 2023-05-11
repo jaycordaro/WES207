@@ -1,6 +1,8 @@
 module WES207_top(
-		input INPUT_CLK,
+		//input INPUT_CLK,
+		input pll_clk,
 		input reset_n,
+		input tx_slowclk,    // slowclk to LVDS block
 		//input logic sclk,
 		//input logic ws,
 		//output logic sdo,
@@ -10,11 +12,11 @@ module WES207_top(
 		input logic MOSI,
 		output logic MISO,
 		output logic [6:0] gpo_pins
-		 
 		);
 		
-		
 	logic clk;
+	//logic clk_90;
+
 	logic [6:0] reg_addr;
 	
 	logic [7:0] tx_d;
@@ -26,7 +28,15 @@ module WES207_top(
 	logic [7:0] data_to_led;
 	logic [7:0] data_from_led;
 	
-	assign clk = INPUT_CLK;
+	logic tx_slowclk;
+	
+	assign clk = pll_clk;
+	//assign clk_90 = pll_clk_90;
+	
+	//assign tx_en_lvds = 1'b1;
+	
+	logic [1:0] to_lvds;
+	//logic tx_en_lvds;
 
 	spi_slave #(
 	.pktsz(16),
@@ -74,9 +84,21 @@ regwrap regwrap_inst (
     .clk     		(clk),
     .reset_n 		(reset_n),
 	.rx_en_gpo		(rx_en_gpo),
+	.rx_en_status		 (rx_en_status),
+	.rx_en_tx_packet_len (rx_en_tx_packet_len),
+	.rx_en_tx_packet	 (rx_en_tx_packet),
+	.rx_en_rx_packet_len (rx_en_rx_packet_len),
+	.rx_en_rx_packet	 (rx_en_rx_packet),
 	.rx_en_led		(rx_en_led),
+	.rx_en_dac		(rx_en_dac),
 	.tx_en_gpo		(tx_en_gpo),
+	.tx_en_status	(tx_en_status),
+	.tx_en_tx_packet_len (tx_en_tx_packet_len),
+	.tx_en_tx_packet	 (tx_en_tx_packet),
+	.tx_en_rx_packet_len (tx_en_rx_packet_len),
+	.tx_en_rx_packet	 (tx_en_rx_packet),
 	.tx_en_led		(tx_en_led),
+	.tx_en_dac		(tx_en_dac),
 	.tx_d			(tx_d),
 	.tx_en			(tx_en),
 	.reg_addr		(reg_addr),
@@ -85,9 +107,32 @@ regwrap regwrap_inst (
 	.rw_out			(rw_out),
 	.rx_d			(rx_d),
 	.data_from_gpo	(data_from_gpo),
+	.data_from_status_reg 		 (data_from_status_reg),
+	.data_from_tx_packet_len_reg (data_from_tx_packet_len_reg),
+	.data_from_tx_packet_reg 	 (data_from_tx_packet_reg),
+	.data_from_rx_packet_len_reg (data_from_rx_packet_len_reg),
+	.data_from_rx_packet_reg 	 (data_from_rx_packet_reg),
 	.data_from_led	(data_from_led),
+	.data_from_dac	(data_from_dac),
 	.data_to_gpo	(data_to_gpo),
-	.data_to_led	(data_to_led)
+	.data_to_status_reg (data_to_status_reg),
+	.data_to_tx_packet_len_reg	(data_to_tx_packet_len_reg),
+	.data_to_tx_packet_reg		(data_to_tx_packet_reg),
+	.data_to_rx_packet_len_reg	(data_to_rx_packet_len_reg),
+	.data_to_rx_packet_reg		(data_to_rx_packet_reg),
+	.data_to_led	(data_to_led),
+	.data_to_dac	(data_to_dac)
 	);
+	
+tx_dac_fsm tx_dac_fsm_inst (
+	.clk				(tx_slowclk),
+	.reset_n 			(reset_n),
+	.rd_en				(tx_en_dac),
+	.wr_en				(rx_en_dac),
+	.dacreg_data_in		(data_to_dac),
+	.dacreg_data_out	(data_from_dac),
+	.to_lvds			(to_lvds)
+	);
+	
 	
 endmodule : WES207_top

@@ -1,15 +1,12 @@
-// spi_tb
+// lvds_tb
 // jay cordaro
-//
-// Testbench for spi.sv module
+// 
+// testbench for tx_dac_fsm.sv module
 
-`timescale 1ns / 100ps
-
-module spi_tb2();
+module lvds_tb();
 
 logic clk;
 logic reset_n;
-
 logic SCLK;
 logic SSB;
 logic MOSI;
@@ -21,13 +18,26 @@ logic [7:0] rx_d;
 logic rxdv;
 logic [7:0] check_data;
 
-	logic [7:0] data_from_gpo;
+logic [7:0] data_from_gpo;
 
-	logic [7:0] data_to_gpo;
-	logic [7:0] data_to_led;
-	logic [7:0] data_from_led;
+logic [7:0] data_to_gpo;
+logic [7:0] data_to_led;
+logic [7:0] data_to_dac;
+logic [7:0] data_from_dac;
+logic [7:0] data_from_led;
+logic [1:0] to_lvds;
 
-logic [6:0] gpo_pins;
+tx_dac_fsm tx_dac_fsm_inst (
+	.clk				(clk),
+	.reset_n 			(reset_n),
+	//.tx_en			(tx_en),
+	.rd_en				(tx_en_dac),
+	.wr_en				(rx_en_dac),
+	.dacreg_data_in		(data_to_dac),
+	.dacreg_data_out	(data_from_dac),
+	.to_lvds 			(to_lvds)	
+	);
+	
 spi_slave #(
   .pktsz   ( 16 ),
   .header  ( 8 ),
@@ -51,34 +61,23 @@ spi_slave #(
   .rw_out	(rw_out)
 	);
 	
-led led_inst(
-	.clk  			(clk),
-	.reset_n 		(reset_n),
-	.rd_en 			(tx_en_led),
-	.wr_en			(rx_en_led),
-	.data_in		(data_to_led),
-	.data_out		(data_from_led),
-	.led0       	(led0),
-	.led1       	(led1)
-	);
-	
-gpo gpo_inst(
-	.clk  			(clk),
-	.reset_n 		(reset_n),
-	.rd_en 			(tx_en_gpo),
-	.wr_en			(rx_en_gpo),
-	.data_in		(data_to_gpo),
-	.data_out		(data_from_gpo),
-	.gpo_pins		(gpo_pins)
-	);
-	
 regwrap regwrap_inst (
     .clk     		(clk),
     .reset_n 		(reset_n),
 	.rx_en_gpo		(rx_en_gpo),
+	.rx_en_status		 (rx_en_status),
+	.rx_en_tx_packet_len (rx_en_tx_packet_len),
+	.rx_en_tx_packet	 (rx_en_tx_packet),
+	.rx_en_rx_packet_len (rx_en_rx_packet_len),
+	.rx_en_rx_packet	 (rx_en_rx_packet),
 	.rx_en_led		(rx_en_led),
 	.rx_en_dac		(rx_en_dac),
 	.tx_en_gpo		(tx_en_gpo),
+	.tx_en_status	(tx_en_status),
+	.tx_en_tx_packet_len (tx_en_tx_packet_len),
+	.tx_en_tx_packet	 (tx_en_tx_packet),
+	.tx_en_rx_packet_len (tx_en_rx_packet_len),
+	.tx_en_rx_packet	 (tx_en_rx_packet),
 	.tx_en_led		(tx_en_led),
 	.tx_en_dac		(tx_en_dac),
 	.tx_d			(tx_d),
@@ -89,15 +88,24 @@ regwrap regwrap_inst (
 	.rw_out			(rw_out),
 	.rx_d			(rx_d),
 	.data_from_gpo	(data_from_gpo),
+	.data_from_status_reg 		 (data_from_status_reg),
+	.data_from_tx_packet_len_reg (data_from_tx_packet_len_reg),
+	.data_from_tx_packet_reg 	 (data_from_tx_packet_reg),
+	.data_from_rx_packet_len_reg (data_from_rx_packet_len_reg),
+	.data_from_rx_packet_reg 	 (data_from_rx_packet_reg),
 	.data_from_led	(data_from_led),
 	.data_from_dac	(data_from_dac),
 	.data_to_gpo	(data_to_gpo),
+	.data_to_tx_packet_len_reg	(data_to_tx_packet_len_reg),
+	.data_to_tx_packet_reg		(data_to_tx_packet_reg),
+	.data_to_rx_packet_len_reg	(data_to_rx_packet_len_reg),
+	.data_to_rx_packet_reg		(data_to_rx_packet_reg),
 	.data_to_led	(data_to_led),
 	.data_to_dac	(data_to_dac)
 	);
-		
+	
+always #15 clk = ~clk; 
 
-  	always #10 clk = ~clk;  
 
 task do_spi_read;
 	input [7:0] from_host;
@@ -192,62 +200,45 @@ task do_spi_write;
 	end
 endtask
 
-
+task do_transmit_lvds;
+	begin
 	
-  initial begin   // 
+	do_spi_write(16'b0100_0110_0000_0001);  // turn TX_EN on
+	#5000
+
+	do_spi_write(16'b0100_0110_0000_0000);  // turn TX_EN off
+	
+	end
+endtask
+	
+	 initial 
+	 begin   // 
   
   
  // create 50MHz clock
-    $dumpfile("clk_tb.vcd");
+    $dumpfile("lvds_tb.vcd");
 	$display($time, " << Starting the Simulation >>");
     $dumpvars;
 	#3 clk = 1'b0;
 	
-	#4 reset_n = 0;
-	#10 MOSI=1'b0;
-	#40 reset_n = 1;
-	$display($time, " << spi_write >>");
-	do_spi_write(16'b0100_1100_1111_1010);
+	#40 reset_n = 0;
+	#40 MOSI=1'b0;
+	#88 reset_n = 1;
 
-	MOSI= 1'b1;
+	$display($time, " << start lvds transaction >>");
 	#50
-	$display($time, " << spi_read >>");
-	do_spi_read(8'b1100_0100, 8'b1111_1010);  // check if 
-	MOSI= 1'b1;
-	#50
-	$display($time, " << spi_read >>");
-	do_spi_read(8'b1100_1100, 8'b1111_1010);
 	MOSI= 1'b1;
 	
 	#50
-	$display($time, " << spi_write >>");
-	do_spi_write(16'b0100_1101_1100_0011);
+	do_transmit_lvds();
+	#400
+	do_transmit_lvds();
+	#500
+	do_transmit_lvds();
+	#666
+	do_transmit_lvds();
 	MOSI= 1'b1;
-	
-	#50
-	$display($time, " << spi_write >>");
-	do_spi_read(8'b1100_1101, 8'b1100_0011);
-	MOSI= 1'b1;
-	
-	#50 
-	$display($time, " << spi_write >>");
-	do_spi_write(16'b0111_0101_1010_0101);
-	MOSI= 1'b1;
-	
-	#50
-	$display($time, " << spi_read >>");
-	do_spi_read(8'b1111_0101, 8'b1010_0101);
-	
-	#50 
-	$display($time, " << spi_write >>");
-	do_spi_write(16'b0111_0101_1101_1111);
-	MOSI= 1'b1;
-	
-	#50
-	$display($time, " << spi_read >>");
-	do_spi_read(8'b1111_0101, 8'b1101_1111);
-	MOSI= 1'b1;
-	
-	
+
 	end
-endmodule
+	
+endmodule 
