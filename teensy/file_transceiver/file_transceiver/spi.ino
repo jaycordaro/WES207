@@ -7,7 +7,7 @@ constexpr uint8_t writeFpga = 0x00;
 constexpr uint8_t readFpga = 0x80;
 
 const int chipSelectPinRF = 10;
-const int chipSelectPinFpga = 37;
+const int chipSelectPinFpga = 0;
 
 void spi_init() {
   pinMode(chipSelectPinRF, OUTPUT);
@@ -16,6 +16,7 @@ void spi_init() {
   pinMode(chipSelectPinFpga, OUTPUT);
   digitalWrite(chipSelectPinFpga, HIGH);
   SPI.begin();
+  SPI1.begin();
 }
 
 void spiWriteRF(uint16_t address, uint8_t value) {
@@ -47,29 +48,29 @@ uint8_t spiReadRF(uint16_t address) {
 }
 
 void spiWriteFpga(uint8_t address, uint8_t value) {
-  SPI.beginTransaction(SPISettings(SPICLOCKRATE, MSBFIRST, SPI_MODE0));
+  SPI1.beginTransaction(SPISettings(SPICLOCKRATE, MSBFIRST, SPI_MODE0));
 
   digitalWrite(chipSelectPinFpga, LOW);
 
-  SPI.transfer(writeFpga | address);
+  SPI1.transfer(writeFpga | address);
 
-  SPI.transfer(value);
+  SPI1.transfer(value);
 
   digitalWrite(chipSelectPinFpga, HIGH);
-  SPI.endTransaction();
+  SPI1.endTransaction();
 }
 
 uint8_t spiReadFpga(uint8_t address) {
-  SPI.beginTransaction(SPISettings(SPICLOCKRATE, MSBFIRST, SPI_MODE0));
+  SPI1.beginTransaction(SPISettings(SPICLOCKRATE, MSBFIRST, SPI_MODE0));
 
   digitalWrite(chipSelectPinFpga, LOW);
 
-  SPI.transfer(readFpga | address);
+  SPI1.transfer(readFpga | address);
 
-  uint8_t res = SPI.transfer(0);
+  uint8_t res = SPI1.transfer(0);
 
   digitalWrite(chipSelectPinFpga, HIGH);
-  SPI.endTransaction();
+  SPI1.endTransaction();
 
   return res;
 }
