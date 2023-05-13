@@ -15,27 +15,29 @@ Running Placement and Routing for Family "Trion", Device "T20F256" ...
 ***** Beginning stage netlist pre-processing ... *****
 Successfully Read in Verific binary Netlist dump file "C:/Efinity/2022.2/project/WES207_basic/WES207_basic.vdb".
 ***** Beginning VDB Netlist Checker ... *****
-VDB Netlist Checker took 0.0021691 seconds.
+VDB Netlist Checker took 0.0028862 seconds.
 	VDB Netlist Checker took 0 seconds (approximately) in total CPU time.
-VDB Netlist Checker virtual memory usage: begin = 13.136 MB, end = 13.14 MB, delta = 0.004 MB
-	VDB Netlist Checker peak virtual memory usage = 52.284 MB
-VDB Netlist Checker resident set memory usage: begin = 23.116 MB, end = 23.296 MB, delta = 0.18 MB
-	VDB Netlist Checker peak resident set memory usage = 61.804 MB
+VDB Netlist Checker virtual memory usage: begin = 13.244 MB, end = 13.248 MB, delta = 0.004 MB
+	VDB Netlist Checker peak virtual memory usage = 52.264 MB
+VDB Netlist Checker resident set memory usage: begin = 23.316 MB, end = 23.496 MB, delta = 0.18 MB
+	VDB Netlist Checker peak resident set memory usage = 61.892 MB
 ***** Ending VDB Netlist Checker ... *****
 Reading core interface constraints from 'C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.interface.csv'.
 Successfully processed interface constraints file "C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.interface.csv".
+Creating interface clock pin tx_fastclk.
+Creating interface clock buffer tx_fastclk~CLKBUF.
 Found 0 constant generator nets.
 Pass 0: Swept away 0 nets with no fanout.
 Pass 0: Swept away 0 blocks with no fanout.
 Swept away 0 nets and 0 blocks in total.
 Removed 0 LUT buffers.
 Successfully created VPR logical netlist from Verific binary DataBase file "C:/Efinity/2022.2/project/WES207_basic/WES207_basic.vdb".
-Netlist pre-processing took 0.013289 seconds.
+Netlist pre-processing took 0.0262631 seconds.
 	Netlist pre-processing took 0 seconds (approximately) in total CPU time.
-Netlist pre-processing virtual memory usage: begin = 13.136 MB, end = 13.264 MB, delta = 0.128 MB
-	Netlist pre-processing peak virtual memory usage = 52.284 MB
-Netlist pre-processing resident set memory usage: begin = 22.88 MB, end = 23.828 MB, delta = 0.948 MB
-	Netlist pre-processing peak resident set memory usage = 61.804 MB
+Netlist pre-processing virtual memory usage: begin = 13.12 MB, end = 13.248 MB, delta = 0.128 MB
+	Netlist pre-processing peak virtual memory usage = 52.264 MB
+Netlist pre-processing resident set memory usage: begin = 22.968 MB, end = 24.072 MB, delta = 1.104 MB
+	Netlist pre-processing peak resident set memory usage = 61.892 MB
 ***** Ending stage netlist pre-processing *****
 
 ***** Beginning stage pre-packing ... *****
@@ -44,24 +46,24 @@ Netlist pre-processing resident set memory usage: begin = 22.88 MB, end = 23.828
 ***** Beginning stage packing ... *****
 Generate proto netlist for file "C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.001 seconds
 Creating IO constraints file 'C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.io_place'
-Packing took 0.0049337 seconds.
+Packing took 0.0029861 seconds.
 	Packing took 0 seconds (approximately) in total CPU time.
-Packing virtual memory usage: begin = 19.624 MB, end = 19.624 MB, delta = 0 MB
-	Packing peak virtual memory usage = 52.284 MB
-Packing resident set memory usage: begin = 30.836 MB, end = 31.068 MB, delta = 0.232 MB
-	Packing peak resident set memory usage = 61.804 MB
+Packing virtual memory usage: begin = 19.788 MB, end = 19.788 MB, delta = 0 MB
+	Packing peak virtual memory usage = 52.264 MB
+Packing resident set memory usage: begin = 31.112 MB, end = 31.324 MB, delta = 0.212 MB
+	Packing peak resident set memory usage = 61.892 MB
 ***** Ending stage packing *****
 
 ***** Beginning stage packed netlist loading ... *****
 Read proto netlist file C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.net_proto
 Read proto netlist for file "C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.006 seconds
-Setup net and block data structure took 0.01 seconds
-Packed netlist loading took 0.0347153 seconds.
+Setup net and block data structure took 0.005 seconds
+Packed netlist loading took 0.0223792 seconds.
 	Packed netlist loading took 0 seconds (approximately) in total CPU time.
-Packed netlist loading virtual memory usage: begin = 19.624 MB, end = 21.248 MB, delta = 1.624 MB
-	Packed netlist loading peak virtual memory usage = 60.404 MB
-Packed netlist loading resident set memory usage: begin = 31.076 MB, end = 32.796 MB, delta = 1.72 MB
-	Packed netlist loading peak resident set memory usage = 71.844 MB
+Packed netlist loading virtual memory usage: begin = 19.788 MB, end = 22.44 MB, delta = 2.652 MB
+	Packed netlist loading peak virtual memory usage = 61.616 MB
+Packed netlist loading resident set memory usage: begin = 31.332 MB, end = 34.08 MB, delta = 2.748 MB
+	Packed netlist loading peak resident set memory usage = 73.128 MB
 ***** Ending stage packed netlist loading *****
 
 ***** Beginning stage pre-placement ... *****
@@ -81,12 +83,11 @@ Writing IO placement constraints to 'C:/Efinity/2022.2/project/WES207_basic/outf
 Reading placement constraints from 'C:/Efinity/2022.2/project/WES207_basic/outflow\WES207_basic.interface.io'.
 
 Reading placement constraints from 'C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.io_place'.
-WARNING(1): Clock driver INPUT_CLK should use the dedicated clock pad.
 ***** Ending stage initial placement *****
 
 ***** Beginning stage placement ... *****
 Create C:/Efinity/2022.2/project/WES207_basic/outflow\WES207_basic_after_qp.qdelay
-WARNING(2): No constrained clocks found. Qplacer will be run with timing driven mode disabled.
+WARNING(1): No constrained clocks found. Qplacer will be run with timing driven mode disabled.
 QPLACER STATIC DB USAGE DISABLED
 NumRegions 1
 Starting Global Placer with 16 threads ...
@@ -94,86 +95,87 @@ Starting Global Placer with 16 threads ...
  ----------     -------  --------------     -------
   Iteration       WHPWL Worst Slack (ps) Convergence
  ----------     -------  --------------     -------
-          1        1303     -2147483647        21.9%
-          2        1085     -2147483647        29.6%
-          3         939     -2147483647        36.5%
-          4         897     -2147483647        41.4%
-          5         804     -2147483647        48.7%
-          6         847     -2147483647        50.8%
-          7         905     -2147483647        58.8%
-          8         954     -2147483647        65.9%
-          9         780     -2147483647        76.9%
-         10         701     -2147483647        83.9%
-         11         655     -2147483647        87.2%
-         12         641     -2147483647        89.3%
-         13         610     -2147483647        92.2%
-         14         622     -2147483647        92.2%
-         15         607     -2147483647        92.2%
-         16         594     -2147483647        93.0%
-         17         588     -2147483647        93.4%
-         18         598     -2147483647        93.4%
-         19         590     -2147483647        94.5%
-         20         602     -2147483647        95.7%
-         21         590     -2147483647        98.2%
-         22         656     -2147483647        98.2%
-         23         669     -2147483647        98.2%
-         24         706     -2147483647        98.5%
-         25         720     -2147483647        99.2%
-         26         704     -2147483647        99.6%
-         27         737     -2147483647        99.6%
+          1        1919     -2147483647        15.2%
+          2        1337     -2147483647        23.7%
+          3        1104     -2147483647        32.2%
+          4        1016     -2147483647        38.8%
+          5        1093     -2147483647        42.0%
+          6        1135     -2147483647        47.2%
+          7        1134     -2147483647        55.8%
+          8        1007     -2147483647        62.8%
+          9         959     -2147483647        70.1%
+         10         851     -2147483647        81.9%
+         11         816     -2147483647        87.0%
+         12         820     -2147483647        89.8%
+         13         831     -2147483647        89.8%
+         14         821     -2147483647        90.6%
+         15         806     -2147483647        90.6%
+         16         842     -2147483647        91.5%
+         17         847     -2147483647        91.5%
+         18         850     -2147483647        92.8%
+         19         835     -2147483647        94.1%
+         20         847     -2147483647        94.3%
+         21         878     -2147483647        95.0%
+         22         788     -2147483647        95.0%
+         23         795     -2147483647        97.2%
+         24         795     -2147483647        99.6%
+         25         798     -2147483647        99.6%
+         26         798     -2147483647       100.1%
+         27         792     -2147483647       100.1%
+         28         792     -2147483647       100.1%
 Starting Annealer
 
  ----------     -------  --------------     -------
   Iteration       WHPWL  Delay Max (ps)     R Limit
  ----------     -------  --------------     -------
-          0         590              NA        30.0
-          1         500              NA        30.0
-          2         930              NA        30.0
-          3         972              NA        30.0
-          4         833              NA        30.0
-          5         687              NA        30.0
-          6         702              NA        30.0
-          7         696              NA        30.0
-          8         644              NA        30.0
-          9         534              NA        30.0
-         10         581              NA        30.0
-         11         573              NA        30.0
-         12         575              NA        30.0
-         13         492              NA        30.0
-         14         473              NA        30.0
-         15         457              NA        30.0
-         16         452              NA        30.0
-         17         456              NA        30.0
-         18         409              NA        30.0
-         19         434              NA        30.0
-         20         409              NA        30.0
-         21         397              NA        30.0
-         22         400              NA        30.0
-         23         410              NA        30.0
-         24         386              NA        30.0
-         25         386              NA        30.0
-         26         389              NA        30.0
-         27         378              NA        30.0
-         28         382              NA        30.0
-         29         364              NA        29.5
-         30         364              NA        29.1
-         31         350              NA        28.5
-         32         338              NA        26.5
+          0         788              NA        30.0
+          1         758              NA        30.0
+          2        1302              NA        30.0
+          3        1298              NA        30.0
+          4        1184              NA        30.0
+          5         954              NA        30.0
+          6         963              NA        30.0
+          7         854              NA        30.0
+          8         915              NA        30.0
+          9         827              NA        30.0
+         10         724              NA        30.0
+         11         733              NA        30.0
+         12         691              NA        30.0
+         13         606              NA        30.0
+         14         675              NA        30.0
+         15         597              NA        30.0
+         16         580              NA        30.0
+         17         537              NA        30.0
+         18         547              NA        30.0
+         19         534              NA        30.0
+         20         522              NA        30.0
+         21         514              NA        30.0
+         22         491              NA        30.0
+         23         484              NA        30.0
+         24         470              NA        30.0
+         25         460              NA        30.0
+         26         475              NA        30.0
+         27         447              NA        30.0
+         28         436              NA        30.0
+         29         442              NA        29.9
+         30         441              NA        29.4
+         31         406              NA        29.0
+         32         385              NA        26.9
 No timing data to generate C:/Efinity/2022.2/project/WES207_basic/outflow\WES207_basic_after_qp.qdelay
-Placement successful: 163 cells are placed
-Peak congestion smeared over 1/4 of the chip is 0.0124712 at 142,15
-Congestion-weighted HPWL per net: 1.2098
+Placement successful: 251 cells are placed
+Peak congestion smeared over 1/4 of the chip is 0.00973977 at 0,0
+Congestion-weighted HPWL per net: 0.929588
 
 Reading placement constraints from 'C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.qplace'.
-Finished Realigning Types (24 blocks needed type change)
+Finished Realigning Types (40 blocks needed type change)
 
 Completed placement consistency check successfully.
 Successfully created FPGA place file 'C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.place'
-Placement took 4.42149 seconds.
-	Placement took 0.9375 seconds (approximately) in total CPU time.
-Placement virtual memory usage: begin = 21.248 MB, end = 40.336 MB, delta = 19.088 MB
-	Placement peak virtual memory usage = 191.544 MB
-Placement resident set memory usage: begin = 32.804 MB, end = 46.316 MB, delta = 13.512 MB
-	Placement peak resident set memory usage = 195.056 MB
+Placement took 2.29131 seconds.
+	Placement took 0.921875 seconds (approximately) in total CPU time.
+Placement virtual memory usage: begin = 22.44 MB, end = 41.808 MB, delta = 19.368 MB
+	Placement peak virtual memory usage = 196.056 MB
+Placement resident set memory usage: begin = 34.088 MB, end = 47.856 MB, delta = 13.768 MB
+	Placement peak resident set memory usage = 199.584 MB
 ***** Ending stage placement *****
 

@@ -38,3 +38,116 @@
 // May 06, 2023 13:40:04
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 07, 2023 01:06:28
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] Post-synthesis netlist has only vcc and gnd nets. Legal, but will cause router to crash. 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 07, 2023 01:07:09
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 21:32:23
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] 'pll_clk_90' is not declared (VERI-1128) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:32)
+[EFX-0010 VERI-ERROR] module 'WES207_top' is ignored due to previous errors (VERI-1072) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:107)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 21:33:02
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:44:47
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:45:47
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:47:56
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:49:51
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:51:19
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:30:36
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VERI-1137) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0010 VERI-ERROR] module 'WES207_top' is ignored due to previous errors (VERI-1072) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:119)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:32:47
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VERI-1137) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:134)
+[EFX-0010 VERI-ERROR] module 'WES207_top' is ignored due to previous errors (VERI-1072) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:138)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:34:33
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VERI-1137) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:134)
+[EFX-0010 VERI-ERROR] module 'WES207_top' is ignored due to previous errors (VERI-1072) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:138)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:36:55
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near '.' (VERI-1137) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:135)
+[EFX-0010 VERI-ERROR] module 'WES207_top' is ignored due to previous errors (VERI-1072) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:139)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:37:30
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 12, 2023 06:55:55
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 12, 2023 18:38:47
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 12, 2023 18:48:44
+///////////////////////////////////
+

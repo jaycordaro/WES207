@@ -1,13 +1,19 @@
 
 # Efinity Interface Designer SDC
 # Version: 2022.2.322.4.7
-# Date: 2023-05-06 13:40
+# Date: 2023-05-12 18:49
 
 # Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 
 # Device: T20F256
 # Project: WES207_basic
 # Timing Model: I4 (final)
+
+# PLL Constraints
+#################
+create_clock -period 15.6098 pll_clk
+create_clock -waveform {3.9024 11.7073} -period 15.6098 tx_fastclk
+create_clock -period 15.6098 tx_slowclk
 
 # GPIO Constraints
 ####################
@@ -41,3 +47,8 @@
 # set_output_delay -clock <CLOCK> -min <MIN CALCULATION> [get_ports {led1}]
 # set_output_delay -clock <CLOCK> -max <MAX CALCULATION> [get_ports {MISO}]
 # set_output_delay -clock <CLOCK> -min <MIN CALCULATION> [get_ports {MISO}]
+
+# LVDS Tx Constraints
+####################
+set_output_delay -clock tx_slowclk -max -4.030 [get_ports {lvds_tx_inst1_DATA[1] lvds_tx_inst1_DATA[0]}]
+set_output_delay -clock tx_slowclk -min -2.135 [get_ports {lvds_tx_inst1_DATA[1] lvds_tx_inst1_DATA[0]}]

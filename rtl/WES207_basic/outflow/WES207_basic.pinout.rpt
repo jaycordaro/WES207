@@ -1,7 +1,7 @@
 
 # Efinity Pinout Report
 # Version: 2022.2.322.4.7
-# Date: 2023-05-06 13:40
+# Date: 2023-05-12 18:49
 
 # Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 
@@ -139,7 +139,7 @@
 |    H10     |         --GND--         |          GND          |     Power     |                      |                  |          |             |         Ground        |
 |    H11     |         --GND--         |          GND          |     Power     |                      |                  |          |             |         Ground        |
 |    H12     |        --UNUSED--       |       GPIOR_139       |     Input     |                      |      3.3 V       |  3D_3E   | weak pullup |        User IO        |
-|    H13     |        INPUT_CLK        |    GPIOR_125_CLK10    |     Input     | 3.3 V LVTTL / LVCMOS |      3.3 V       |  3D_3E   |             |      User IO/GCLK     |
+|    H13     |        --UNUSED--       |    GPIOR_125_CLK10    |     Input     |                      |      3.3 V       |  3D_3E   | weak pullup |      User IO/GCLK     |
 |    H14     |        --UNUSED--       |    GPIOR_128_CTRL11   |     Input     |                      |      3.3 V       |  3D_3E   | weak pullup |     User IO/GCTRL     |
 |    H15     |        --UNUSED--       |    GPIOR_129_CTRL10   |     Input     |                      |      3.3 V       |  3D_3E   | weak pullup |     User IO/GCTRL     |
 |    H16     |        --UNUSED--       |    GPIOR_130_CTRL9    |     Input     |                      |      3.3 V       |  3D_3E   | weak pullup |     User IO/GCTRL     |
@@ -187,15 +187,15 @@
 |    L10     |         --VCC--         |        VCCIO4A        |     Power     |                      |                  |    4A    |             |      VCCIO Power      |
 |    L11     |         --VCC--         |        VCCIO4A        |     Power     |                      |                  |    4A    |             |      VCCIO Power      |
 |    L12     |    --TEST_N-- / MOSI    |    GPIOR_158_TEST_N   |     Input     | 3.3 V LVTTL / LVCMOS |      3.3 V       |  3D_3E   |             | User IO/Configuration |
-|    L13     |        --UNUSED--       |    GPIOR_157_PLLIN    |     Input     |                      |      3.3 V       |  3D_3E   | weak pullup |   User IO/PLL_CLKIN   |
+|    L13     |        INPUT_CLK        |    GPIOR_157_PLLIN    |     Input     | 3.3 V LVTTL / LVCMOS |      3.3 V       |  3D_3E   |             |   User IO/PLL_CLKIN   |
 |    L14     | --CBUS1-- / gpo_pins[6] |    GPIOR_150_CBUS1    |     Output    | 3.3 V LVTTL / LVCMOS |      3.3 V       |  3D_3E   |             | User IO/Configuration |
 |    L15     |        --UNUSED--       |       GPIOR_147       |     Input     |                      |      3.3 V       |  3D_3E   | weak pullup |        User IO        |
 |    L16     |        --UNUSED--       |       GPIOR_143       |     Input     |                      |      3.3 V       |  3D_3E   | weak pullup |        User IO        |
 |     M1     |         --TMS--         |          TMS          |     Input     |                      |      3.3 V       |    1A    |             |     Configuration     |
 |     M2     |         --TCK--         |          TCK          |     Input     |                      |      3.3 V       |    1A    |             |     Configuration     |
 |     M3     |         --CCK--         |      GPIOL_01_CCK     |     Input     |                      |      3.3 V       |    1A    | weak pullup | User IO/Configuration |
-|     M4     |        --UNUSED--       |      GPIOB_TXP00      |               |                      |                  |    4B    |             |        User IO        |
-|     M5     |        --UNUSED--       |      GPIOB_TXN00      |               |                      |                  |    4B    |             |        User IO        |
+|     M4     |    lvds_tx_inst1.TXP    |      GPIOB_TXP00      |     Output    |                      |                  |    4B    |             |        User IO        |
+|     M5     |    lvds_tx_inst1.TXN    |      GPIOB_TXN00      |     Output    |                      |                  |    4B    |             |        User IO        |
 |     M6     |        --UNUSED--       |      GPIOB_TXP05      |               |                      |                  |    4B    |             |        User IO        |
 |     M7     |        --UNUSED--       |      GPIOB_TXN05      |               |                      |                  |    4B    |             |        User IO        |
 |     M8     |        --UNUSED--       |      GPIOB_TXP11      |               |                      |                  |    4B    |             |        User IO        |
@@ -230,7 +230,7 @@
 |     P5     |        --UNUSED--       |      GPIOB_TXN04      |               |                      |                  |    4B    |             |        User IO        |
 |     P6     |        --UNUSED--       |      GPIOB_TXN06      |               |                      |                  |    4B    |             |        User IO        |
 |     P7     |        --UNUSED--       |      GPIOB_TXN09      |               |                      |                  |    4B    |             |        User IO        |
-|     P8     |        --UNUSED--       |      GPIOB_TXN12      |               |                      |                  |    4B    |             |        User IO        |
+|     P8     |    lvds_tx_inst2.TXN    |      GPIOB_TXN12      |     Output    |                      |                  |    4B    |             |        User IO        |
 |     P9     |        --UNUSED--       |      GPIOB_RXP00      |               |                      |                  |    4A    |             |        User IO        |
 |    P10     |        --UNUSED--       |      GPIOB_RXP03      |               |                      |                  |    4A    |             |        User IO        |
 |    P11     |        --UNUSED--       |      GPIOB_RXN06      |               |                      |                  |    4A    |             |        User IO        |
@@ -246,7 +246,7 @@
 |     R5     |        --UNUSED--       |      GPIOB_TXP07      |               |                      |                  |    4B    |             |        User IO        |
 |     R6     |        --UNUSED--       |      GPIOB_TXP08      |               |                      |                  |    4B    |             |        User IO        |
 |     R7     |         --GND--         |          GND          |     Power     |                      |                  |          |             |         Ground        |
-|     R8     |        --UNUSED--       |      GPIOB_TXP12      |               |                      |                  |    4B    |             |        User IO        |
+|     R8     |    lvds_tx_inst2.TXP    |      GPIOB_TXP12      |     Output    |                      |                  |    4B    |             |        User IO        |
 |     R9     |        --UNUSED--       |      GPIOB_RXN00      |               |                      |                  |    4A    |             |        User IO        |
 |    R10     |         --GND--         |          GND          |     Power     |                      |                  |          |             |         Ground        |
 |    R11     |        --UNUSED--       |      GPIOB_RXN04      |               |                      |                  |    4A    |             |        User IO        |

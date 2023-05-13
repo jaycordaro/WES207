@@ -1,0 +1,111 @@
+m255
+K4
+z2
+!s11f vlog 2021.4 2021.10, Oct 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/lscc/radiant/2022.1/modeltech/win32loem
+vlvds_tb
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1683789567
+!i10b 1
+!s100 zz1QIP[<6nJ]Q526D;RVY2
+I;:Y2iS1h[7cX[GW6GcBRj3
+S1
+Z1 dC:/Efinity/2022.2/project/WES207_basic/rtl
+w1683789555
+8C:/Efinity/2022.2/project/WES207_basic/rtl/lvds_tb.sv
+FC:/Efinity/2022.2/project/WES207_basic/rtl/lvds_tb.sv
+!i122 22
+L0 6 239
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OT;L;2021.4;73
+r1
+!s85 0
+31
+!s108 1683789567.000000
+!s107 C:/Efinity/2022.2/project/WES207_basic/rtl/lvds_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Efinity/2022.2/project/WES207_basic/rtl/lvds_tb.sv|
+!s101 -O0
+!i113 1
+Z4 o-work work -sv -O0
+Z5 tCvgOpt 0
+vregwrap
+R0
+!s110 1683819447
+!i10b 1
+!s100 lkP]hO^8AVaZKeg?>oYaY0
+IWc19T825ZKfHz06P1cY]Z0
+S1
+R1
+w1683790586
+8C:/Efinity/2022.2/project/WES207_basic/rtl/regwrap.sv
+FC:/Efinity/2022.2/project/WES207_basic/rtl/regwrap.sv
+!i122 24
+L0 27 129
+R2
+R3
+r1
+!s85 0
+31
+!s108 1683819447.000000
+!s107 C:/Efinity/2022.2/project/WES207_basic/rtl/regwrap.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Efinity/2022.2/project/WES207_basic/rtl/regwrap.sv|
+!s101 -O0
+!i113 1
+R4
+R5
+vspi_slave
+R0
+!s110 1683744054
+!i10b 1
+!s100 1l3ojWhSRzJPUde^cfRNP2
+Ic01CN4]lPBoiGeRTDEIzG2
+S1
+R1
+w1682880075
+8C:/Efinity/2022.2/project/WES207_basic/rtl/spi_slave.sv
+FC:/Efinity/2022.2/project/WES207_basic/rtl/spi_slave.sv
+!i122 18
+L0 1 172
+R2
+R3
+r1
+!s85 0
+31
+!s108 1683744054.000000
+!s107 C:/Efinity/2022.2/project/WES207_basic/rtl/spi_slave.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Efinity/2022.2/project/WES207_basic/rtl/spi_slave.sv|
+!s101 -O0
+!i113 1
+R4
+R5
+vtx_dac_fsm
+R0
+!s110 1683743480
+!i10b 1
+!s100 RO;=`APTGZn=k_;FU3`WR0
+IDPhajlA5k3kOfYLMF<E9S3
+S1
+R1
+w1683743476
+8C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv
+FC:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv
+!i122 15
+L0 26 191
+R2
+R3
+r1
+!s85 0
+31
+!s108 1683743479.000000
+!s107 C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv|
+!s101 -O0
+!i113 1
+R4
+R5

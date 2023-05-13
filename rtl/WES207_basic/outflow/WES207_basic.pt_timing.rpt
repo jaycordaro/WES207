@@ -1,7 +1,7 @@
 
 Efinity Interface Designer Timing Report
 Version: 2022.2.322.4.7
-Date: 2023-05-06 13:40
+Date: 2023-05-12 18:49
 
 Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 
@@ -9,7 +9,19 @@ Device: T20F256
 Project: WES207_basic
 Timing Model: I4 (final)
 
----------- 1. GPIO Timing Report (begin) ----------
+---------- 1. PLL Timing Report (begin) ----------
+
++------------+-------------+-----------------------+
+|   Clock    | Period (ns) | Phase Shift (degrees) |
++------------+-------------+-----------------------+
+|  pll_clk   |   15.6098   |           0           |
+| tx_fastclk |   15.6098   |           90          |
+| tx_slowclk |   15.6098   |           0           |
++------------+-------------+-----------------------+
+
+---------- PLL Timing Report (end) ----------
+
+---------- 2. GPIO Timing Report (begin) ----------
 
 Non-registered GPIO Configuration:
 ===================================
@@ -35,3 +47,16 @@ Non-registered GPIO Configuration:
 +---------------+-------------+-----------+----------+----------+
 
 ---------- GPIO Timing Report (end) ----------
+
+---------- 3. LVDS Tx Timing Report (begin) ----------
+
+LVDS Tx Clkout Configuration
+=============================
+
++---------------+------------+--------------+----------+----------+
+| Instance Name | Clock Pin  |  Parameter   | Max (ns) | Min (ns) |
++---------------+------------+--------------+----------+----------+
+| lvds_tx_inst2 | tx_fastclk | GPIO_CLK_OUT |  6.426   |  3.213   |
++---------------+------------+--------------+----------+----------+
+
+---------- LVDS Tx Timing Report (end) ----------

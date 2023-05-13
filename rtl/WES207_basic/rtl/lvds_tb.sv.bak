@@ -1,0 +1,53 @@
+// lvds_tb
+// jay cordaro
+// 
+// testbench for tx_dac_fsm.sv module
+
+module lvds_tb();
+
+logic clk;
+logic reset_n;
+logic tx_en;
+logic [1:0] to_lvds;
+
+tx_dac_fsm tx_dac_fsm_inst (
+	.clk	(clk),
+	.reset_n (reset_n),
+	.tx_en	(tx_en),
+	.to_lvds (to_lvds)
+	);
+	
+always #15 clk = ~clk; 
+
+task do_transmit_lvds;
+	begin
+	tx_en=1'b1;
+	#5000
+	tx_en=1'b0;
+	end
+endtask
+	
+	 initial begin   // 
+  
+  
+ // create 50MHz clock
+    $dumpfile("lvds_tb.vcd");
+	$display($time, " << Starting the Simulation >>");
+    $dumpvars;
+	#3 clk = 1'b0;
+	
+	#4 reset_n = 0;
+	#10 MOSI=1'b0;
+	#40 reset_n = 1;
+	#47
+
+	$display($time, " << start lvds transaction >>");
+	do_transmit_lvds();
+	#500
+	do_transmit_lvds();
+	#500
+	tx_en=1'b0;
+	
+	end
+	
+endmodule 

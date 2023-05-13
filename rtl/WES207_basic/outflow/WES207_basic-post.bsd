@@ -162,7 +162,7 @@ port (
 	GPIOR_122_CLK13_CDI21    : out bit;
 	GPIOR_123_CLK12_CDI20    : linkage bit;
 	GPIOR_124_CLK11          : out bit;
-	GPIOR_125_CLK10          : in bit;
+	GPIOR_125_CLK10          : linkage bit;
 	GPIOR_126_CLK9           : linkage bit;
 	GPIOR_127_CLK8           : out bit;
 	GPIOR_128_CTRL11         : linkage bit;
@@ -189,7 +189,7 @@ port (
 	GPIOR_154                : in bit;
 	GPIOR_155                : out bit;
 	GPIOR_156                : in bit;
-	GPIOR_157_PLLIN          : linkage bit;
+	GPIOR_157_PLLIN          : in bit;
 	GPIOR_158_TEST_N         : in bit;
 
 	-- LVDS Pins
@@ -235,7 +235,7 @@ port (
 	GPIOB_TXN10              : linkage bit;
 	GPIOB_TXN11              : linkage bit;
 	GPIOB_TXN12              : linkage bit;
-	GPIOB_TXP00              : linkage bit;
+	GPIOB_TXP00              : out bit;
 	GPIOB_TXP01              : linkage bit;
 	GPIOB_TXP02              : linkage bit;
 	GPIOB_TXP03              : linkage bit;
@@ -247,7 +247,7 @@ port (
 	GPIOB_TXP09              : linkage bit;
 	GPIOB_TXP10              : linkage bit;
 	GPIOB_TXP11              : linkage bit;
-	GPIOB_TXP12              : linkage bit;
+	GPIOB_TXP12              : out bit;
 
 	-- Configuration Pins
 
@@ -594,8 +594,8 @@ attribute BOUNDARY_REGISTER of T20F256 : entity is
 	"2 (BC_1, *, internal, X)," &
 
 	"3 (BC_1, *, internal, X)," &
-	"4 (BC_1, *, internal, 0)," &
-	"5 (BC_1, *, internal, X)," &
+	"4 (BC_1, *, control, 1)," &
+	"5 (BC_1, GPIOB_TXP00, output3, X, 4, 1, Z)," &
 
 	"6 (BC_1, *, internal, X)," &
 	"7 (BC_1, *, internal, 0)," &
@@ -690,8 +690,8 @@ attribute BOUNDARY_REGISTER of T20F256 : entity is
 	"74 (BC_1, *, internal, X)," &
 
 	"75 (BC_1, *, internal, X)," &
-	"76 (BC_1, *, internal, 0)," &
-	"77 (BC_1, *, internal, X)," &
+	"76 (BC_1, *, control, 1)," &
+	"77 (BC_1, GPIOB_TXP12, output3, X, 76, 1, Z)," &
 
 	"78 (BC_1, *, internal, X)," &
 	"79 (BC_1, *, internal, 0)," &
@@ -813,7 +813,7 @@ attribute BOUNDARY_REGISTER of T20F256 : entity is
 	"166 (BC_1, *, internal, 1)," &
 	"167 (BC_1, *, internal, X)," &
 
-	"168 (BC_1, *, internal, X)," &
+	"168 (BC_1, GPIOR_157_PLLIN, input, X)," &
 	"169 (BC_1, *, internal, 1)," &
 	"170 (BC_1, *, internal, X)," &
 
@@ -941,7 +941,7 @@ attribute BOUNDARY_REGISTER of T20F256 : entity is
 	"262 (BC_1, *, internal, 1)," &
 	"263 (BC_1, *, internal, X)," &
 
-	"264 (BC_1, GPIOR_125_CLK10, input, X)," &
+	"264 (BC_1, *, internal, X)," &
 	"265 (BC_1, *, internal, 1)," &
 	"266 (BC_1, *, internal, X)," &
 

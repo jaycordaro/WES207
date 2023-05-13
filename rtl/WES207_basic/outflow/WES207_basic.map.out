@@ -15,20 +15,46 @@ INFO: default VHDL library search path is now "C:/Efinity/2022.2/sim_models/vhdl
 -- Analyzing Verilog file 'C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv' (VERI-1482)
 C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv(168): INFO: undeclared symbol 'txdv', assumed default net type 'wire' (VERI-2561)
 -- Analyzing Verilog file 'C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv' (VERI-1482)
-C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(74): INFO: undeclared symbol 'tx_en', assumed default net type 'wire' (VERI-2561)
-C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(76): INFO: undeclared symbol 'addr_dv', assumed default net type 'wire' (VERI-2561)
-C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(78): INFO: undeclared symbol 'rxdv', assumed default net type 'wire' (VERI-2561)
-C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(79): INFO: undeclared symbol 'rw_out', assumed default net type 'wire' (VERI-2561)
-C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(85): INFO: undeclared symbol 'tx_en_led', assumed default net type 'wire' (VERI-2561)
-C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(86): INFO: undeclared symbol 'rx_en_led', assumed default net type 'wire' (VERI-2561)
-C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(96): INFO: undeclared symbol 'tx_en_gpo', assumed default net type 'wire' (VERI-2561)
-C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(97): INFO: undeclared symbol 'rx_en_gpo', assumed default net type 'wire' (VERI-2561)
-INFO: Analysis took 0.0371488 seconds.
-INFO: 	Analysis took 0 seconds (approximately) in total CPU time.
-INFO: Analysis virtual memory usage: begin = 54.752 MB, end = 55.096 MB, delta = 0.344 MB
-INFO: 	Analysis peak virtual memory usage = 55.104 MB
-INFO: Analysis resident set memory usage: begin = 56.036 MB, end = 58.376 MB, delta = 2.34 MB
-INFO: 	Analysis peak resident set memory usage = 58.376 MB
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(32): WARNING: redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(58): INFO: undeclared symbol 'tx_en', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(60): INFO: undeclared symbol 'addr_dv', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(62): INFO: undeclared symbol 'rxdv', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(63): INFO: undeclared symbol 'rw_out', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(69): INFO: undeclared symbol 'tx_en_led', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(70): INFO: undeclared symbol 'rx_en_led', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(80): INFO: undeclared symbol 'tx_en_gpo', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(81): INFO: undeclared symbol 'rx_en_gpo', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(91): INFO: undeclared symbol 'rx_en_status', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(92): INFO: undeclared symbol 'rx_en_tx_packet_len', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(93): INFO: undeclared symbol 'rx_en_tx_packet', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(94): INFO: undeclared symbol 'rx_en_rx_packet_len', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(95): INFO: undeclared symbol 'rx_en_rx_packet', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(97): INFO: undeclared symbol 'rx_en_dac', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(99): INFO: undeclared symbol 'tx_en_status', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(100): INFO: undeclared symbol 'tx_en_tx_packet_len', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(101): INFO: undeclared symbol 'tx_en_tx_packet', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(102): INFO: undeclared symbol 'tx_en_rx_packet_len', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(103): INFO: undeclared symbol 'tx_en_rx_packet', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(105): INFO: undeclared symbol 'tx_en_dac', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(114): INFO: undeclared symbol 'data_from_status_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(115): INFO: undeclared symbol 'data_from_tx_packet_len_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(116): INFO: undeclared symbol 'data_from_tx_packet_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(117): INFO: undeclared symbol 'data_from_rx_packet_len_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(118): INFO: undeclared symbol 'data_from_rx_packet_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(120): INFO: undeclared symbol 'data_from_dac', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(122): INFO: undeclared symbol 'data_to_status_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(123): INFO: undeclared symbol 'data_to_tx_packet_len_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(124): INFO: undeclared symbol 'data_to_tx_packet_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(125): INFO: undeclared symbol 'data_to_rx_packet_len_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(126): INFO: undeclared symbol 'data_to_rx_packet_reg', assumed default net type 'wire' (VERI-2561)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(128): INFO: undeclared symbol 'data_to_dac', assumed default net type 'wire' (VERI-2561)
+-- Analyzing Verilog file 'C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv' (VERI-1482)
+INFO: Analysis took 0.0093888 seconds.
+INFO: 	Analysis took 0.015625 seconds (approximately) in total CPU time.
+INFO: Analysis virtual memory usage: begin = 54.636 MB, end = 54.976 MB, delta = 0.34 MB
+INFO: 	Analysis peak virtual memory usage = 54.984 MB
+INFO: Analysis resident set memory usage: begin = 56.18 MB, end = 58.66 MB, delta = 2.48 MB
+INFO: 	Analysis peak resident set memory usage = 58.66 MB
 INFO: ***** Ending Analysis ... *****
 INFO: ***** Beginning Elaboration ... *****
 C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(1): INFO: compiling module 'WES207_top' (VERI-1018)
@@ -38,12 +64,40 @@ C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv(25): INFO: compiling module 'l
 C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv(78): WARNING: expression size 26 truncated to fit in target size 25 (VERI-1209)
 C:\Efinity\2022.2\project\WES207_basic\rtl\gpo.sv(1): INFO: compiling module 'gpo' (VERI-1018)
 C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv(27): INFO: compiling module 'regwrap' (VERI-1018)
-INFO: Elaboration took 0.0144402 seconds.
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(114): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_from_status_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(115): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_len_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(116): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(117): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_len_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(118): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(120): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_from_dac' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(122): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_to_status_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(123): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_len_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(124): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(125): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_len_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(126): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_reg' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(128): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_to_dac' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv(26): INFO: compiling module 'tx_dac_fsm' (VERI-1018)
+C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv(95): WARNING: expression size 6 truncated to fit in target size 5 (VERI-1209)
+C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv(98): WARNING: expression size 5 truncated to fit in target size 4 (VERI-1209)
+C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv(174): WARNING: latch inferred for net 'next_state[3]' (VERI-2580)
+C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv(174): WARNING: 'next_state' inside always_comb block does not represent combinational logic (VERI-1899)
+C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv(190): WARNING: latch inferred for net 'ld_sym' (VERI-2580)
+C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv(190): WARNING: 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899)
+C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv(197): WARNING: expression size 7 truncated to fit in target size 6 (VERI-1209)
+C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv(208): WARNING: expression size 7 truncated to fit in target size 6 (VERI-1209)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(136): WARNING: actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_in' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(137): WARNING: actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_out' (VERI-1330)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(114): WARNING: net 'data_from_status_reg' does not have a driver (VDB-1002)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(115): WARNING: net 'data_from_tx_packet_len_reg' does not have a driver (VDB-1002)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(116): WARNING: net 'data_from_tx_packet_reg' does not have a driver (VDB-1002)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(117): WARNING: net 'data_from_rx_packet_len_reg' does not have a driver (VDB-1002)
+C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv(118): WARNING: net 'data_from_rx_packet_reg' does not have a driver (VDB-1002)
+INFO: Elaboration took 0.0110846 seconds.
 INFO: 	Elaboration took 0 seconds (approximately) in total CPU time.
-INFO: Elaboration virtual memory usage: begin = 55.096 MB, end = 55.624 MB, delta = 0.528 MB
-INFO: 	Elaboration peak virtual memory usage = 55.624 MB
-INFO: Elaboration resident set memory usage: begin = 58.392 MB, end = 60.268 MB, delta = 1.876 MB
-INFO: 	Elaboration peak resident set memory usage = 60.268 MB
+INFO: Elaboration virtual memory usage: begin = 54.976 MB, end = 56.36 MB, delta = 1.384 MB
+INFO: 	Elaboration peak virtual memory usage = 56.36 MB
+INFO: Elaboration resident set memory usage: begin = 58.676 MB, end = 61.268 MB, delta = 2.592 MB
+INFO: 	Elaboration peak resident set memory usage = 61.268 MB
 INFO: ***** Ending Elaboration ... *****
 [EFX-0000 INFO] ... Setting Synthesis Option: mode=speed
 INFO: ***** Beginning Reading Mapping Library ... *****
@@ -68,12 +122,12 @@ C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(601): INFO: compiling module
 C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(693): INFO: compiling module 'EFX_RAM10' (VERI-1018)
 C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(794): INFO: compiling module 'EFX_DPRAM10' (VERI-1018)
 C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(924): INFO: compiling module 'EFX_SRL8' (VERI-1018)
-INFO: Reading Mapping Library took 0.0096477 seconds.
+INFO: Reading Mapping Library took 0.0101128 seconds.
 INFO: 	Reading Mapping Library took 0 seconds (approximately) in total CPU time.
-INFO: Reading Mapping Library virtual memory usage: begin = 55.816 MB, end = 56.216 MB, delta = 0.4 MB
-INFO: 	Reading Mapping Library peak virtual memory usage = 56.216 MB
-INFO: Reading Mapping Library resident set memory usage: begin = 60.78 MB, end = 61.116 MB, delta = 0.336 MB
-INFO: 	Reading Mapping Library peak resident set memory usage = 61.116 MB
+INFO: Reading Mapping Library virtual memory usage: begin = 56.608 MB, end = 57.408 MB, delta = 0.8 MB
+INFO: 	Reading Mapping Library peak virtual memory usage = 57.408 MB
+INFO: Reading Mapping Library resident set memory usage: begin = 61.808 MB, end = 62.516 MB, delta = 0.708 MB
+INFO: 	Reading Mapping Library peak resident set memory usage = 62.516 MB
 INFO: ***** Ending Reading Mapping Library ... *****
 [EFX-0000 INFO] ... Pre-synthesis checks begin
 [EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
@@ -88,28 +142,84 @@ INFO: ***** Ending Reading Mapping Library ... *****
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" end (Real time : 0s)
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" begin
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "tx_dac_fsm" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "tx_dac_fsm" end (Real time : 0s)
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" begin
 [EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
 [EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
-[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
-[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
-[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
-[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
-[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
-[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
-[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
-[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
-[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
-[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
-[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
-[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
-[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
-[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
-[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
-[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
-[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
-[EFX-0200 WARNING] Removing redundant signal : data_out[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
 [EFX-0200 WARNING] The above message was generated too many times, subsequent similar messages will be muted.
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[7]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[1]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[2]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[3]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[4]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[5]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[6]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[7]=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
 [EFX-0000 INFO] ... Clock Enable Synthesis Performed on 39 flops.
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" end (Real time : 0s)
 [EFX-0000 INFO] ... Flat optimizations begin
@@ -121,35 +231,37 @@ INFO: ***** Ending Reading Mapping Library ... *****
 [EFX-0000 INFO] ... Check and break combinational loops begin
 [EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
 [EFX-0000 INFO] ... Sequential Optimization begin
-[EFX-0000 INFO] ... Clock Network INPUT_CLK with 88 loads will be considered for sequential optimization.
-[EFX-0000 INFO] ... Sequential Optimization deduced 28 equivalent points.
-[EFX-0000 INFO] ... Sequential Optimization end (Real time : 5s)
+[EFX-0000 INFO] ... Clock Network pll_clk with 88 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Clock Network tx_slowclk with 26 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Sequential Optimization deduced 49 equivalent points.
+[EFX-0000 INFO] ... Sequential Optimization end (Real time : 10s)
 [EFX-0000 INFO] ... SOP modeling begin
 [EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
 [EFX-0000 INFO] ... LUT mapping begin
-[EFX-0000 INFO] ... LS, strategy: 3, nd: 120, ed: 353, lv: 3, pw: 237.88
-[EFX-0000 INFO] ... LUT mapping end (Real time : 0s)
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 178, ed: 471, lv: 4, pw: 334.83
+[EFX-0000 INFO] ... LUT mapping end (Real time : 1s)
 [EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
 [EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
 [EFX-0000 INFO] ... Postmap Retiming Optimization begin
 [EFX-0000 INFO] ... Clock Network n3 with 87 loads will be considered for retiming optimization.
+[EFX-0000 INFO] ... Clock Network n5 with 26 loads will be considered for retiming optimization.
 [EFX-0000 INFO] ... Performed 0 retime moves.
-[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 1s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
 [EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
 [EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
 INFO: ***** Beginning VDB Netlist Checker ... *****
-INFO: VDB Netlist Checker took 0.0018821 seconds.
+INFO: VDB Netlist Checker took 0.0027884 seconds.
 INFO: 	VDB Netlist Checker took 0 seconds (approximately) in total CPU time.
-INFO: VDB Netlist Checker virtual memory usage: begin = 69.768 MB, end = 69.768 MB, delta = 0 MB
-INFO: 	VDB Netlist Checker peak virtual memory usage = 92.392 MB
-INFO: VDB Netlist Checker resident set memory usage: begin = 76.448 MB, end = 76.492 MB, delta = 0.044 MB
-INFO: 	VDB Netlist Checker peak resident set memory usage = 96.072 MB
+INFO: VDB Netlist Checker virtual memory usage: begin = 71.296 MB, end = 71.296 MB, delta = 0 MB
+INFO: 	VDB Netlist Checker peak virtual memory usage = 93.924 MB
+INFO: VDB Netlist Checker resident set memory usage: begin = 78.552 MB, end = 78.596 MB, delta = 0.044 MB
+INFO: 	VDB Netlist Checker peak resident set memory usage = 97.976 MB
 INFO: ***** Ending VDB Netlist Checker ... *****
 -- Writing netlist 'WES207_top' to Verilog file 'C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.map.v' (VDB-1030)
 [EFX-0000 INFO] Resource Summary 
 [EFX-0000 INFO] =============================== 
-[EFX-0000 INFO] EFX_ADD         : 	27
-[EFX-0000 INFO] EFX_LUT4        : 	120
-[EFX-0000 INFO] EFX_FF          : 	87
-[EFX-0000 INFO] EFX_GBUFCE      : 	1
+[EFX-0000 INFO] EFX_ADD         : 	48
+[EFX-0000 INFO] EFX_LUT4        : 	186
+[EFX-0000 INFO] EFX_FF          : 	113
+[EFX-0000 INFO] EFX_GBUFCE      : 	2
 [EFX-0000 INFO] =============================== 

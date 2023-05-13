@@ -1,7 +1,7 @@
 
 Efinity Interface Designer Report
 Version: 2022.2.322.4.7
-Date: 2023-05-06 13:40
+Date: 2023-05-12 18:49
 
 Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 
@@ -33,10 +33,11 @@ clkmux: 2 / 2 (100.0%)
 control: 0 / 1 (0.0%)
 gpio: 15 / 141 (10.64%)
 jtag: 0 / 2 (0.0%)
-lvds_bg: 0 / 1 (0.0%)
+lvds_bg: 1 / 1 (100.0%)
 lvds_rx: 0 / 14 (0.0%)
-lvds_tx: 0 / 13 (0.0%)
-pll: 0 / 5 (0.0%)
+lvds_tx: 2 / 13 (15.38%)
+	lvds: 2
+pll: 1 / 5 (20.0%)
 ---------- Periphery Usage Summary (end) ----------
 
 ---------- 2. Generated Output Files (begin) ----------
@@ -71,11 +72,13 @@ Option Register File: WES207_basic_or.ini
 
 ---------- 4. Global Connection Summary (begin) ----------
 
-+-----------+---------------+------+
-|  Pin Name |    Resource   | Type |
-+-----------+---------------+------+
-| INPUT_CLK | GPIOR_125.ALT | GCLK |
-+-----------+---------------+------+
++------------+-----------------+------+
+|  Pin Name  |     Resource    | Type |
++------------+-----------------+------+
+|  pll_clk   | PLL_BR0.CLKOUT0 | GCLK |
+| tx_fastclk | PLL_BR0.CLKOUT1 | GCLK |
+| tx_slowclk | PLL_BR0.CLKOUT2 | GCLK |
++------------+-----------------+------+
 
 ---------- Global Connection Summary (end) ----------
 
@@ -84,7 +87,7 @@ Option Register File: WES207_basic_or.ini
 +--------------+----------------+
 | Clock Region | Used/Available |
 +--------------+----------------+
-|      B       |      0/16      |
+|      B       |      2/16      |
 |      L0      |      0/4       |
 |      L1      |      0/4       |
 |      L2      |      0/4       |
@@ -124,7 +127,7 @@ Global Unused Setting: input with weak pullup
 |  gpo_pins[4]  | GPIOR_124 | output |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |    GPIOR_124_CLK11    |     G15     |
 |  gpo_pins[5]  | GPIOR_127 | output |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |     GPIOR_127_CLK8    |     G14     |
 |  gpo_pins[6]  | GPIOR_150 | output |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |    GPIOR_150_CBUS1    |     L14     |
-|   INPUT_CLK   | GPIOR_125 | input  |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |    GPIOR_125_CLK10    |     H13     |
+|   INPUT_CLK   | GPIOR_157 | input  |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |    GPIOR_157_PLLIN    |     L13     |
 |      led0     | GPIOR_104 | output |          |              | 3A_3B_3C | 3.3 V LVTTL / LVCMOS |    GPIOR_104_CDI25    |     D14     |
 |      led1     | GPIOR_105 | output |          |              | 3A_3B_3C | 3.3 V LVTTL / LVCMOS |    GPIOR_105_CDI24    |     E13     |
 |      MISO     | GPIOR_155 | output |          |              |  3D_3E   | 3.3 V LVTTL / LVCMOS |       GPIOR_155       |     P15     |
@@ -141,7 +144,7 @@ Input GPIO Configuration:
 +---------------+-----------+---------------------+-----------------+--------------+-----------------+------+
 | Instance Name | Input Pin | Alternate Input Pin | Input Clock Pin | Pull Up/Down | Schmitt Trigger | DDIO |
 +---------------+-----------+---------------------+-----------------+--------------+-----------------+------+
-|   INPUT_CLK   | INPUT_CLK |                     |                 |     none     |     Disable     | none |
+|   INPUT_CLK   |           |      INPUT_CLK      |                 |     none     |     Disable     | none |
 |      MOSI     |    MOSI   |                     |                 |     none     |     Disable     | none |
 |    reset_n    |  reset_n  |                     |                 |     none     |     Disable     |      |
 |      SCLK     |    SCLK   |                     |                 |     none     |     Disable     | none |
@@ -170,7 +173,70 @@ Output GPIO Configuration:
 
 ---------- 8. PLL Usage Summary (begin) ----------
 
-No PLL was configured
++---------------+----------+--------------+--------------+-----------------+---------------+----------------+---------+------------+------------+
+| Instance Name | Resource | Clock Region | Clock Source | Reference Clock | Feedback Mode | Feedback Clock | Clkout0 |  Clkout1   |  Clkout2   |
++---------------+----------+--------------+--------------+-----------------+---------------+----------------+---------+------------+------------+
+|   pll_inst1   | PLL_BR0  |              |   external   |    INPUT_CLK    |    internal   |                | pll_clk | tx_fastclk | tx_slowclk |
++---------------+----------+--------------+--------------+-----------------+---------------+----------------+---------+------------+------------+
+
+Instance Name                 : pll_inst1
+Resource                      : PLL_BR0
+Clock Source                  : external
+Reference Clock Resource      : GPIOR_157
+Reference Clock               : INPUT_CLK
+Feedback Mode                 : internal
+
+Reference Clock Frequency     : 50.0000 MHz
+Reference Clock Period        : 20.0000 ns
+Multiplier (M)                : 123
+Pre-Divider (N)               : 4
+VCO Frequency                 : 1537.5000 MHz
+Post-Divider (O)              : 4
+PLL Frequency                 : 384.3750 MHz
+
+Output Clock 0
+Clock Pin Name                : pll_clk
+Output Divider                : 6
+Output Phase Shift            : 0
+Output Frequency              : 64.0625 MHz
+Output Period                 : 15.6098 ns
+
+Output Clock 1
+Clock Pin Name                : tx_fastclk
+Output Divider                : 6
+Output Phase Shift            : 90
+Output Frequency              : 64.0625 MHz
+Output Period                 : 15.6098 ns
+
+Output Clock 2
+Clock Pin Name                : tx_slowclk
+Output Divider                : 6
+Output Phase Shift            : 0
+Output Frequency              : 64.0625 MHz
+Output Period                 : 15.6098 ns
+
+Frequency calculations:
+	VCO = REFCLK * (M/N)
+	    = 50.0000 MHz * (123/4)
+	    = 1537.5000 MHz
+	PLL = VCO / O
+	    = 1537.5000 MHz / 4
+	    = 384.3750 MHz
+
+	CLKOUT0 = PLL / CLKOUT0_DIV
+	        = 384.3750 MHz / 6
+	        = 64.0625 MHz
+	CLKOUT1 = PLL / CLKOUT1_DIV
+	        = 384.3750 MHz / 6
+	        = 64.0625 MHz
+	CLKOUT2 = PLL / CLKOUT2_DIV
+	        = 384.3750 MHz / 6
+	        = 64.0625 MHz
+
+SDC Constraints:
+	create_clock -period 15.6098 pll_clk
+	create_clock -waveform {3.9024 11.7074} -period 15.6098 tx_fastclk
+	create_clock -period 15.6098 tx_slowclk
 
 ---------- PLL Usage Summary (end) ----------
 
@@ -182,13 +248,55 @@ No LVDS Rx was configured
 
 ---------- 10. LVDS Tx Usage Summary (begin) ----------
 
-No LVDS Tx was configured
++---------------+------------+-------------------------+--------------+--------------+--------+---------------+--------------------+--------------+----------------+-------+-------------+---------------+
+| Instance Name |  Resource  |        Pad Names        | Package Pins | Clock Region |  Mode  | Serialization |       Output       | Serial Clock | Parallel Clock | Reset | Output Load | Reduced Swing |
++---------------+------------+-------------------------+--------------+--------------+--------+---------------+--------------------+--------------+----------------+-------+-------------+---------------+
+| lvds_tx_inst1 | GPIOB_TX00 | GPIOB_TXN00,GPIOB_TXP00 |    M5,M4     |      B       |  out   |       2       | lvds_tx_inst1_DATA |  tx_fastclk  |   tx_slowclk   |       |      3      |    Disable    |
+| lvds_tx_inst2 | GPIOB_TX12 | GPIOB_TXN12,GPIOB_TXP12 |    P8,R8     |      B       | clkout |       2       |                    |  tx_fastclk  |   tx_slowclk   |       |      3      |    Disable    |
++---------------+------------+-------------------------+--------------+--------------+--------+---------------+--------------------+--------------+----------------+-------+-------------+---------------+
 
 ---------- LVDS Tx Usage Summary (end) ----------
 
 ---------- 11. Clock Mux Usage Summary (begin) ----------
 
-No Clock Mux was configured
++----------+-----------------+
+| Resource | Output Assigned |
++----------+-----------------+
+| CLKMUX_R |        3        |
++----------+-----------------+
+
+Resource: CLKMUX_R
+
+Clock mux assignment:
+
++-----------------+------------+----------+---------+------------+------------+---------+---------+---------+---------+---------+
+|  Input Resource | Clock Pin  |  Status  | RCLK[0] |  RCLK[1]   |  RCLK[2]   | RCLK[3] | RCLK[4] | RCLK[5] | RCLK[6] | RCLK[7] |
++-----------------+------------+----------+---------+------------+------------+---------+---------+---------+---------+---------+
+|                 |            | Selected | pll_clk | tx_fastclk | tx_slowclk |         |         |         |         |         |
+|   GPIOR_127.IN  |            |          |    -    |            |            |         |    O    |         |         |         |
+|   GPIOR_126.IN  |            |          |         |     -      |            |         |         |    O    |         |         |
+|   GPIOR_125.IN  |            |          |         |            |     -      |         |         |         |    O    |         |
+|   GPIOR_124.IN  |            |          |         |            |            |    O    |         |         |         |    O    |
+|   GPIOR_123.IN  |            |          |    -    |            |            |         |    O    |         |         |         |
+|   GPIOR_122.IN  |            |          |         |     -      |            |         |         |    O    |         |         |
+|   GPIOR_121.IN  |            |          |         |            |     -      |         |         |         |    O    |         |
+|   GPIOR_120.IN  |            |          |         |            |            |    O    |         |         |         |    O    |
+| PLL_TR0.CLKOUT0 |            |          |    -    |            |            |         |         |         |    O    |         |
+| PLL_TR0.CLKOUT1 |            |          |         |     -      |     -      |         |         |         |         |         |
+| PLL_TR0.CLKOUT2 |            |          |         |     -      |     -      |         |         |         |         |         |
+| PLL_TR1.CLKOUT0 |            |          |         |            |            |    O    |         |         |         |    O    |
+| PLL_TR1.CLKOUT1 |            |          |         |            |            |         |    O    |    O    |         |         |
+| PLL_TR1.CLKOUT2 |            |          |         |            |            |         |    O    |    O    |         |         |
+| PLL_BR0.CLKOUT0 |  pll_clk   |  Routed  |    ^    |            |            |         |         |         |         |    O    |
+| PLL_BR0.CLKOUT1 | tx_fastclk |  Routed  |         |     ^      |     -      |         |         |         |         |         |
+| PLL_BR0.CLKOUT2 | tx_slowclk |  Routed  |         |     -      |     ^      |         |         |         |         |         |
++-----------------+------------+----------+---------+------------+------------+---------+---------+---------+---------+---------+
+
+*NOTE
+ : No connection from input to mux output
+O: Available input to mux output connection
+^: Input assigned to mux output
+-: Unavailable (used) input to mux output connection
 
 ---------- Clock Mux Usage Summary (end) ----------
 

@@ -1,7 +1,7 @@
 
 // Efinity Top-level template
 // Version: 2022.2.322.4.7
-// Date: 2023-05-06 13:40
+// Date: 2023-05-12 18:49
 
 // Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 
@@ -24,10 +24,14 @@ module WES207_basic
   input SCLK,
   input SSB,
   input reset_n,
+  input pll_clk,
+  input tx_fastclk,
+  input tx_slowclk,
   output MISO,
   output [6:0] gpo_pins,
   output led0,
-  output led1
+  output led1,
+  output [1:0] lvds_tx_inst1_DATA
 );
 
 

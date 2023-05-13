@@ -11,7 +11,8 @@ module WES207_top(
 		input logic SSB,
 		input logic MOSI,
 		output logic MISO,
-		output logic [6:0] gpo_pins
+		output logic [6:0] gpo_pins,
+		output [1:0] lvds_tx_inst1_DATA
 		);
 		
 	logic clk;
@@ -36,6 +37,9 @@ module WES207_top(
 	//assign tx_en_lvds = 1'b1;
 	
 	logic [1:0] to_lvds;
+	
+	assign lvds_tx_inst1_DATA = to_lvds;
+	
 	//logic tx_en_lvds;
 
 	spi_slave #(

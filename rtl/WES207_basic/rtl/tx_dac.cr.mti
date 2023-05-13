@@ -1,0 +1,22 @@
+C:/Efinity/2022.2/project/WES207_basic/rtl/lvds_tb.sv {1 {vlog -work work -sv -stats=none C:/Efinity/2022.2/project/WES207_basic/rtl/lvds_tb.sv
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module lvds_tb
+
+Top level modules:
+	lvds_tb
+
+} {} {}} C:/Efinity/2022.2/project/WES207_basic/rtl/spi_slave.sv {1 {vlog -work work -sv -stats=none C:/Efinity/2022.2/project/WES207_basic/rtl/spi_slave.sv
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module spi_slave
+
+Top level modules:
+	spi_slave
+
+} {} {}} C:/Efinity/2022.2/project/WES207_basic/rtl/tx_dac_fsm.sv {1 {vlog -work work -sv -stats=none {C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv}
+Model Technology ModelSim - Lattice FPGA Edition vlog 2021.4 Compiler 2021.10 Oct 14 2021
+-- Compiling module tx_dac_fsm
+
+Top level modules:
+	tx_dac_fsm
+
+} {} {}}

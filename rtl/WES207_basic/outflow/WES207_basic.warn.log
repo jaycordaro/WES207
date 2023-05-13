@@ -128,3 +128,770 @@
 [EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
 [EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
 [EFX-0200 WARNING] Removing redundant signal : data_out[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 07, 2023 01:06:28
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] net 'clk' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'clk'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:17)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0011 VERI-WARNING] Input/Inout Port pll_clk is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port reset_n is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port SCLK is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port SSB is unconnected and will be removed 
+[EFX-0011 VERI-WARNING] Input/Inout Port MOSI is unconnected and will be removed 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 07, 2023 01:07:09
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:24)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 21:32:23
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 21:33:02
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:49)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:52)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:151)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:162)
+[EFX-0011 VERI-WARNING] net 'tx_en_lvds' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : clk_90. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:18)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'tx_en_lvds'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:35)
+[EFX-0011 VERI-WARNING] Input/Inout Port tx_slowclk is unconnected and will be removed 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:44:47
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:49)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:52)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:151)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:162)
+[EFX-0011 VERI-WARNING] net 'tx_en_lvds' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : clk_90. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:18)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'tx_en_lvds'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:35)
+[EFX-0011 VERI-WARNING] Input/Inout Port tx_slowclk is unconnected and will be removed 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:45:47
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:49)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:52)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:151)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:162)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : clk_90. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:18)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0011 VERI-WARNING] Input/Inout Port tx_slowclk is unconnected and will be removed 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:47:56
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:31)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:49)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:52)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:151)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:162)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : clk_90. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:18)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0011 VERI-WARNING] Input/Inout Port tx_slowclk is unconnected and will be removed 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:49:51
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:31)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:49)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:52)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:151)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:162)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : clk_90. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:18)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0011 VERI-WARNING] Input/Inout Port tx_slowclk is unconnected and will be removed 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 09, 2023 23:51:19
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:31)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:49)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:52)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:128)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:144)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:151)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:162)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:35)
+[EFX-0200 WARNING] Removing redundant signal : clk_90. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:18)
+[EFX-0200 WARNING] Removing redundant signal : data_in[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:25)
+[EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:26)
+[EFX-0011 VERI-WARNING] Input/Inout Port tx_slowclk is unconnected and will be removed 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:30:36
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:31)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:32:47
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:31)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:34:33
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:31)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:36:55
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:31)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 11, 2023 00:37:30
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:31)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_status_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:110)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:111)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:112)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:113)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_dac' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_status_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:119)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:120)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:121)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:122)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_dac' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:124)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:95)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:98)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:174)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:174)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:190)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:190)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:197)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:208)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_in' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:132)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_out' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:133)
+[EFX-0011 VERI-WARNING] net 'data_from_status_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:110)
+[EFX-0011 VERI-WARNING] net 'data_from_tx_packet_len_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:111)
+[EFX-0011 VERI-WARNING] net 'data_from_tx_packet_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:112)
+[EFX-0011 VERI-WARNING] net 'data_from_rx_packet_len_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:113)
+[EFX-0011 VERI-WARNING] net 'data_from_rx_packet_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[7]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[1]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[2]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[3]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[4]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[5]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[6]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[7]=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:110)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:111)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:112)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:113)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 12, 2023 06:55:55
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:32)
+[EFX-0011 VERI-WARNING] expression size 2 truncated to fit in target size 1 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:41)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_status_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_dac' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:120)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_status_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:122)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:123)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:124)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:125)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:126)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_dac' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:128)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:95)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:98)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:174)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:174)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:190)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:190)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:197)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:208)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_in' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:136)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_out' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:137)
+[EFX-0011 VERI-WARNING] net 'data_from_status_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0011 VERI-WARNING] net 'data_from_tx_packet_len_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0011 VERI-WARNING] net 'data_from_tx_packet_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0011 VERI-WARNING] net 'data_from_rx_packet_len_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0011 VERI-WARNING] net 'data_from_rx_packet_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[7]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[1]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[2]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[3]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[4]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[5]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[6]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[7]=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 12, 2023 18:38:47
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:32)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_status_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_dac' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:120)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_status_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:122)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:123)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:124)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:125)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:126)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_dac' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:128)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:95)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:98)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:174)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:174)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:190)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:190)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:197)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:208)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_in' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:136)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_out' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:137)
+[EFX-0011 VERI-WARNING] net 'data_from_status_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0011 VERI-WARNING] net 'data_from_tx_packet_len_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0011 VERI-WARNING] net 'data_from_tx_packet_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0011 VERI-WARNING] net 'data_from_rx_packet_len_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0011 VERI-WARNING] net 'data_from_rx_packet_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[7]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[1]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[2]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[3]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[4]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[5]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[6]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[7]=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 12, 2023 18:48:44
+///////////////////////////////////
+
+[EFX-0011 VERI-WARNING] redeclaration of ANSI port 'tx_slowclk' is not allowed (VERI-1372) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:32)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv:92)
+[EFX-0011 VERI-WARNING] expression size 26 truncated to fit in target size 25 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv:78)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_status_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_rx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_from_dac' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:120)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_status_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:122)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:123)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_tx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:124)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_len_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:125)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_reg' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:126)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'data_to_dac' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:128)
+[EFX-0011 VERI-WARNING] expression size 6 truncated to fit in target size 5 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:95)
+[EFX-0011 VERI-WARNING] expression size 5 truncated to fit in target size 4 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:98)
+[EFX-0011 VERI-WARNING] latch inferred for net 'next_state[3]' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:174)
+[EFX-0011 VERI-WARNING] 'next_state' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:174)
+[EFX-0011 VERI-WARNING] latch inferred for net 'ld_sym' (VERI-2580) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:190)
+[EFX-0011 VERI-WARNING] 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:190)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:197)
+[EFX-0011 VERI-WARNING] expression size 7 truncated to fit in target size 6 (VERI-1209) (C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv:208)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_in' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:136)
+[EFX-0011 VERI-WARNING] actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_out' (VERI-1330) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:137)
+[EFX-0011 VERI-WARNING] net 'data_from_status_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0011 VERI-WARNING] net 'data_from_tx_packet_len_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0011 VERI-WARNING] net 'data_from_tx_packet_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0011 VERI-WARNING] net 'data_from_rx_packet_len_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0011 VERI-WARNING] net 'data_from_rx_packet_reg' does not have a driver (VDB-1002) (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
+[EFX-0200 WARNING] Removing redundant signal : clk. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:28)
+[EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : reg_addr[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:47)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[1]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_gpo[0]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:52)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[7]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[6]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[5]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[4]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[3]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[2]. (C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv:53)
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_status_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_rx_packet_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[7]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[1]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[2]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[3]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[4]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[5]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[6]=0).
+[EFX-0266 WARNING] Module Instance 'tx_dac_fsm_inst' input pin tied to constant (dacreg_data_in[7]=0).
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:114)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:115)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:116)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_len_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:117)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_rx_packet_reg'. (C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv:118)
