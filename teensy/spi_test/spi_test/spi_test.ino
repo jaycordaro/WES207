@@ -4,7 +4,7 @@
 
 constexpr uint32_t SPICLOCKRATE = 4000000;
 
-const int chipSelectPin = 10;
+const int chipSelectPin = 0;
 
 #define MY_ASSERT(cond, message) (my_assert((cond), __LINE__, __FILE__, message))
 void my_assert(bool cond, int line, const char* file, const char* message)
@@ -37,6 +37,7 @@ void setup() {
   pinMode(chipSelectPin, OUTPUT);
   digitalWrite(chipSelectPin, HIGH);
   SPI.begin(); 
+  SPI1.begin();
 }
 
 String getCommand()
@@ -83,36 +84,36 @@ void loop() {
   }
 }
 
-constexpr uint16_t read = 0x0000;
-constexpr uint16_t write = 0x8000;
+constexpr uint8_t write = 0x00;
+constexpr uint8_t read = 0x80;
 
 void spiWrite(uint16_t address, uint8_t value) {
-  SPI.beginTransaction(SPISettings(SPICLOCKRATE, MSBFIRST, SPI_MODE0));
+  SPI1.beginTransaction(SPISettings(SPICLOCKRATE, MSBFIRST, SPI_MODE0));
 
   digitalWrite(chipSelectPin, LOW);
 
-  uint8_t res = SPI.transfer16(write | address);
+  uint8_t res = SPI1.transfer(write | address);
   MY_ASSERT(res == 0, make_string("Received %d on writing write address!", res));
 
-  res = SPI.transfer(value);
+  res = SPI1.transfer(value);
   MY_ASSERT(res == 0, make_string("Received %d on writing data!", res));
 
   digitalWrite(chipSelectPin, HIGH);
-  SPI.endTransaction();
+  SPI1.endTransaction();
 }
 
 uint8_t spiRead(uint16_t address) {
-  SPI.beginTransaction(SPISettings(SPICLOCKRATE, MSBFIRST, SPI_MODE0));
+  SPI1.beginTransaction(SPISettings(SPICLOCKRATE, MSBFIRST, SPI_MODE0));
 
   digitalWrite(chipSelectPin, LOW);
 
-  uint8_t res = SPI.transfer16(read | address);
+  uint8_t res = SPI1.transfer(read | address);
   MY_ASSERT(res == 0, make_string("Received %d on writing write address!", res));
 
-  res = SPI.transfer(0);
+  res = SPI1.transfer(0);
 
   digitalWrite(chipSelectPin, HIGH);
-  SPI.endTransaction();
+  SPI1.endTransaction();
 
   return res;
 }
