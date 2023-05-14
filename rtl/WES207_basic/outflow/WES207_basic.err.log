@@ -151,3 +151,139 @@
 // May 12, 2023 18:48:44
 ///////////////////////////////////
 
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 12, 2023 19:30:08
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 11:05:29
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] instantiating unknown module 'fifo' (VERI-1063) (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:166)
+[EFX-0021 ERROR] Verific elaboration of module 'WES207_top' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 11:05:50
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 12:50:09
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 12:55:55
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:01:34
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:25:46
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:37:42
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] index 7 is out of range [1:0] for 'sync_wr' (VERI-1216) (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:34)
+[EFX-0021 ERROR] Verific elaboration of module 'WES207_top' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:38:05
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] index 7 is out of range [1:0] for 'sync_wr' (VERI-1216) (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:34)
+[EFX-0021 ERROR] Verific elaboration of module 'WES207_top' failed.
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:39:21
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:43:48
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:49:27
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:53:20
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:57:34
+///////////////////////////////////
+
+[EFX-0010 VERI-ERROR] syntax error near ''0' (VERI-1137) (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:49)
+[EFX-0010 VERI-ERROR] syntax error near 'else' (VERI-1137) (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:60)
+[EFX-0010 VERI-ERROR] SystemVerilog 2009 keyword 'else' used in incorrect context (VERI-2344) (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:60)
+[EFX-0010 VERI-ERROR] module 'fifo' is ignored due to previous errors (VERI-1072) (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:94)
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 13:58:02
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 14:01:30
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 14:20:27
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 14:24:04
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 14:30:33
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 14:34:47
+///////////////////////////////////
+
+
+///////////////////////////////////
+// Efinity Synthesis Started 
+// May 14, 2023 14:38:34
+///////////////////////////////////
+

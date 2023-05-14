@@ -1,6 +1,6 @@
 # Efinity IO Placement 
-# Interface File: C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.interface.csv
-# Version:        2022.2.322.4.7
+# Interface File: C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.interface.csv
+# Version:        2022.2.322
 # Date:           Dec 18 2022
 
 # Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.

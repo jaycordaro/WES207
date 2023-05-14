@@ -26,6 +26,10 @@ logic [7:0] check_data;
 	logic [7:0] data_to_gpo;
 	logic [7:0] data_to_led;
 	logic [7:0] data_from_led;
+	logic [7:0] data_from_fifo;
+	logic [7:0] data_to_fifo;
+	logic [7:0] data_from_fifo_length;
+	logic [7:0] data_to_fifo_length;
 
 logic [6:0] gpo_pins;
 spi_slave #(
@@ -78,9 +82,13 @@ regwrap regwrap_inst (
 	.rx_en_gpo		(rx_en_gpo),
 	.rx_en_led		(rx_en_led),
 	.rx_en_dac		(rx_en_dac),
+	.rx_en_fifo   (rx_en_fifo),
+	.rx_en_fifo_length   (rx_en_fifo_length),
 	.tx_en_gpo		(tx_en_gpo),
 	.tx_en_led		(tx_en_led),
 	.tx_en_dac		(tx_en_dac),
+	.tx_en_fifo   (tx_en_fifo),
+	.tx_en_fifo_length   (tx_en_fifo_length),
 	.tx_d			(tx_d),
 	.tx_en			(tx_en),
 	.reg_addr		(reg_addr),
@@ -91,11 +99,30 @@ regwrap regwrap_inst (
 	.data_from_gpo	(data_from_gpo),
 	.data_from_led	(data_from_led),
 	.data_from_dac	(data_from_dac),
+	.data_from_fifo (data_from_fifo),
+	.data_from_fifo_length (data_from_fifo_length),
 	.data_to_gpo	(data_to_gpo),
 	.data_to_led	(data_to_led),
-	.data_to_dac	(data_to_dac)
+	.data_to_dac	(data_to_dac),
+	.data_to_fifo (data_to_fifo),
+	.data_to_fifo_length (data_to_fifo_length)
 	);
-		
+	
+fifo fifo_inst(
+	.clk  			(clk),
+	.reset_n 		(reset_n),
+	.rd_en 			(tx_en_fifo),
+	.wr_en			(rx_en_fifo),
+	.data_in		(data_to_fifo),
+	.data_out		(data_from_fifo),
+	.length_rd_en 	(tx_en_fifo_length),
+	.length_wr_en	(rx_en_fifo_length),
+	.length_in		(data_to_fifo_length),
+	.length_out		(data_from_fifo_length),
+	.full           (fifo_full),
+	.read_complete  (fifo_read_complete)
+	);
+	
 
   	always #10 clk = ~clk;  
 
@@ -206,48 +233,53 @@ endtask
 	#4 reset_n = 0;
 	#10 MOSI=1'b0;
 	#40 reset_n = 1;
-	$display($time, " << spi_write >>");
-	do_spi_write(16'b0100_1100_1111_1010);
-
+	
+	$display($time, " << spi_write length >>");
+	do_spi_write(16'b0000_1001_0000_0011);
 	MOSI= 1'b1;
-	#50
-	$display($time, " << spi_read >>");
-	do_spi_read(8'b1100_0100, 8'b1111_1010);  // check if 
+	
+	$display($time, " << spi_read length >>");
+	do_spi_read(8'b1000_1001, 8'b0000_0011);
 	MOSI= 1'b1;
-	#50
-	$display($time, " << spi_read >>");
-	do_spi_read(8'b1100_1100, 8'b1111_1010);
+	
+	$display($time, " << 1 spi_write >>");
+	do_spi_write(16'b0000_1000_0000_0001);
 	MOSI= 1'b1;
 	
 	#50
-	$display($time, " << spi_write >>");
-	do_spi_write(16'b0100_1101_1100_0011);
+	$display($time, " << 2 spi_write >>");
+	do_spi_write(16'b0000_1000_0000_0010);
 	MOSI= 1'b1;
 	
 	#50
-	$display($time, " << spi_write >>");
-	do_spi_read(8'b1100_1101, 8'b1100_0011);
+	$display($time, " << 3 spi_write >>");
+	do_spi_write(16'b0000_1000_0000_0011);
+	MOSI= 1'b1;
+	
+	if(fifo_full != 1'b1)
+			$display("ERROR: fifo full is not indicated!");
+		else
+			$display("Success: fifo full is set");
+	
+	#50
+	$display($time, " << 4 spi_read >>");
+	do_spi_read(8'b1000_1000, 8'b0000_0001);
+	MOSI= 1'b1;
+	
+	#50
+	$display($time, " << 5 spi_read >>");
+	do_spi_read(8'b1000_1000, 8'b0000_0010);
 	MOSI= 1'b1;
 	
 	#50 
-	$display($time, " << spi_write >>");
-	do_spi_write(16'b0111_0101_1010_0101);
+	$display($time, " << 6 spi_read >>");
+	do_spi_read(8'b1000_1000, 8'b0000_0011);
 	MOSI= 1'b1;
 	
-	#50
-	$display($time, " << spi_read >>");
-	do_spi_read(8'b1111_0101, 8'b1010_0101);
-	
-	#50 
-	$display($time, " << spi_write >>");
-	do_spi_write(16'b0111_0101_1101_1111);
-	MOSI= 1'b1;
-	
-	#50
-	$display($time, " << spi_read >>");
-	do_spi_read(8'b1111_0101, 8'b1101_1111);
-	MOSI= 1'b1;
-	
+	if(fifo_read_complete != 1'b1)
+			$display("ERROR: read complete is not indicated!");
+		else
+			$display("Success: read complete is set");
 	
 	end
 endmodule

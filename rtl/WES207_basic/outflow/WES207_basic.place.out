@@ -1,7 +1,7 @@
 
 Efinix FPGA Placement and Routing.
-Version: 2022.2.322.4.7 
-Compiled: Apr  7 2023.
+Version: 2022.2.322 
+Compiled: Dec 18 2022.
 
 Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
 
@@ -13,17 +13,17 @@ a free open source code under MIT license.
 Running Placement and Routing for Family "Trion", Device "T20F256" ...
 
 ***** Beginning stage netlist pre-processing ... *****
-Successfully Read in Verific binary Netlist dump file "C:/Efinity/2022.2/project/WES207_basic/WES207_basic.vdb".
+Successfully Read in Verific binary Netlist dump file "C:/Capstone/WES207/rtl/WES207_basic/WES207_basic.vdb".
 ***** Beginning VDB Netlist Checker ... *****
-VDB Netlist Checker took 0.0028862 seconds.
-	VDB Netlist Checker took 0 seconds (approximately) in total CPU time.
-VDB Netlist Checker virtual memory usage: begin = 13.244 MB, end = 13.248 MB, delta = 0.004 MB
-	VDB Netlist Checker peak virtual memory usage = 52.264 MB
-VDB Netlist Checker resident set memory usage: begin = 23.316 MB, end = 23.496 MB, delta = 0.18 MB
-	VDB Netlist Checker peak resident set memory usage = 61.892 MB
+VDB Netlist Checker took 0.0347677 seconds.
+	VDB Netlist Checker took 0.03125 seconds (approximately) in total CPU time.
+VDB Netlist Checker virtual memory usage: begin = 15.22 MB, end = 15.22 MB, delta = 0 MB
+	VDB Netlist Checker peak virtual memory usage = 52.76 MB
+VDB Netlist Checker resident set memory usage: begin = 25.948 MB, end = 26.12 MB, delta = 0.172 MB
+	VDB Netlist Checker peak resident set memory usage = 61.94 MB
 ***** Ending VDB Netlist Checker ... *****
-Reading core interface constraints from 'C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.interface.csv'.
-Successfully processed interface constraints file "C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.interface.csv".
+Reading core interface constraints from 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.interface.csv'.
+Successfully processed interface constraints file "C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.interface.csv".
 Creating interface clock pin tx_fastclk.
 Creating interface clock buffer tx_fastclk~CLKBUF.
 Found 0 constant generator nets.
@@ -31,39 +31,39 @@ Pass 0: Swept away 0 nets with no fanout.
 Pass 0: Swept away 0 blocks with no fanout.
 Swept away 0 nets and 0 blocks in total.
 Removed 0 LUT buffers.
-Successfully created VPR logical netlist from Verific binary DataBase file "C:/Efinity/2022.2/project/WES207_basic/WES207_basic.vdb".
-Netlist pre-processing took 0.0262631 seconds.
-	Netlist pre-processing took 0 seconds (approximately) in total CPU time.
-Netlist pre-processing virtual memory usage: begin = 13.12 MB, end = 13.248 MB, delta = 0.128 MB
-	Netlist pre-processing peak virtual memory usage = 52.264 MB
-Netlist pre-processing resident set memory usage: begin = 22.968 MB, end = 24.072 MB, delta = 1.104 MB
-	Netlist pre-processing peak resident set memory usage = 61.892 MB
+Successfully created VPR logical netlist from Verific binary DataBase file "C:/Capstone/WES207/rtl/WES207_basic/WES207_basic.vdb".
+Netlist pre-processing took 0.0885098 seconds.
+	Netlist pre-processing took 0.09375 seconds (approximately) in total CPU time.
+Netlist pre-processing virtual memory usage: begin = 10.948 MB, end = 19.788 MB, delta = 8.84 MB
+	Netlist pre-processing peak virtual memory usage = 52.76 MB
+Netlist pre-processing resident set memory usage: begin = 21.62 MB, end = 30.784 MB, delta = 9.164 MB
+	Netlist pre-processing peak resident set memory usage = 61.94 MB
 ***** Ending stage netlist pre-processing *****
 
 ***** Beginning stage pre-packing ... *****
 ***** Ending stage pre-packing *****
 
 ***** Beginning stage packing ... *****
-Generate proto netlist for file "C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.001 seconds
-Creating IO constraints file 'C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.io_place'
-Packing took 0.0029861 seconds.
-	Packing took 0 seconds (approximately) in total CPU time.
-Packing virtual memory usage: begin = 19.788 MB, end = 19.788 MB, delta = 0 MB
-	Packing peak virtual memory usage = 52.264 MB
-Packing resident set memory usage: begin = 31.112 MB, end = 31.324 MB, delta = 0.212 MB
-	Packing peak resident set memory usage = 61.892 MB
+Generate proto netlist for file "C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.003 seconds
+Creating IO constraints file 'C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.io_place'
+Packing took 0.0207486 seconds.
+	Packing took 0.015625 seconds (approximately) in total CPU time.
+Packing virtual memory usage: begin = 22.984 MB, end = 24.572 MB, delta = 1.588 MB
+	Packing peak virtual memory usage = 52.76 MB
+Packing resident set memory usage: begin = 34.148 MB, end = 35.824 MB, delta = 1.676 MB
+	Packing peak resident set memory usage = 61.94 MB
 ***** Ending stage packing *****
 
 ***** Beginning stage packed netlist loading ... *****
-Read proto netlist file C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.net_proto
-Read proto netlist for file "C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.006 seconds
-Setup net and block data structure took 0.005 seconds
-Packed netlist loading took 0.0223792 seconds.
-	Packed netlist loading took 0 seconds (approximately) in total CPU time.
-Packed netlist loading virtual memory usage: begin = 19.788 MB, end = 22.44 MB, delta = 2.652 MB
-	Packed netlist loading peak virtual memory usage = 61.616 MB
-Packed netlist loading resident set memory usage: begin = 31.332 MB, end = 34.08 MB, delta = 2.748 MB
-	Packed netlist loading peak resident set memory usage = 73.128 MB
+Read proto netlist file C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.net_proto
+Read proto netlist for file "C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.007 seconds
+Setup net and block data structure took 0.076 seconds
+Packed netlist loading took 0.0989913 seconds.
+	Packed netlist loading took 0.078125 seconds (approximately) in total CPU time.
+Packed netlist loading virtual memory usage: begin = 24.572 MB, end = 49.74 MB, delta = 25.168 MB
+	Packed netlist loading peak virtual memory usage = 88.884 MB
+Packed netlist loading resident set memory usage: begin = 35.832 MB, end = 60.116 MB, delta = 24.284 MB
+	Packed netlist loading peak resident set memory usage = 99.156 MB
 ***** Ending stage packed netlist loading *****
 
 ***** Beginning stage pre-placement ... *****
@@ -72,21 +72,21 @@ Packed netlist loading resident set memory usage: begin = 31.332 MB, end = 34.08
 
 [SDC line 1] create_clock: no pin(s)/port(s)/net(s) specified, only virtual clock 'INPUT_CLK' will be created. If you don't want this, please specify pin(s)/port(s)/net(s) to the command.
 
-SDC file 'C:/Efinity/2022.2/project/WES207_basic/WES207constrain.sdc' parsed successfully.
+SDC file 'C:/Capstone/WES207/rtl/WES207_basic/WES207constrain.sdc' parsed successfully.
 1 clocks (including virtual clocks), 0 inputs and 0 outputs were constrained.
 
 ***** Beginning stage initial placement ... *****
-Reading core interface constraints from 'C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.interface.csv'.
-Successfully processed interface constraints file "C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.interface.csv".
-Writing IO placement constraints to 'C:/Efinity/2022.2/project/WES207_basic/outflow\WES207_basic.interface.io'.
+Reading core interface constraints from 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.interface.csv'.
+Successfully processed interface constraints file "C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.interface.csv".
+Writing IO placement constraints to 'C:/Capstone/WES207/rtl/WES207_basic/outflow\WES207_basic.interface.io'.
 
-Reading placement constraints from 'C:/Efinity/2022.2/project/WES207_basic/outflow\WES207_basic.interface.io'.
+Reading placement constraints from 'C:/Capstone/WES207/rtl/WES207_basic/outflow\WES207_basic.interface.io'.
 
-Reading placement constraints from 'C:/Efinity/2022.2/project/WES207_basic/work_pnr\WES207_basic.io_place'.
+Reading placement constraints from 'C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.io_place'.
 ***** Ending stage initial placement *****
 
 ***** Beginning stage placement ... *****
-Create C:/Efinity/2022.2/project/WES207_basic/outflow\WES207_basic_after_qp.qdelay
+Create C:/Capstone/WES207/rtl/WES207_basic/outflow\WES207_basic_after_qp.qdelay
 WARNING(1): No constrained clocks found. Qplacer will be run with timing driven mode disabled.
 QPLACER STATIC DB USAGE DISABLED
 NumRegions 1
@@ -95,87 +95,89 @@ Starting Global Placer with 16 threads ...
  ----------     -------  --------------     -------
   Iteration       WHPWL Worst Slack (ps) Convergence
  ----------     -------  --------------     -------
-          1        1919     -2147483647        15.2%
-          2        1337     -2147483647        23.7%
-          3        1104     -2147483647        32.2%
-          4        1016     -2147483647        38.8%
-          5        1093     -2147483647        42.0%
-          6        1135     -2147483647        47.2%
-          7        1134     -2147483647        55.8%
-          8        1007     -2147483647        62.8%
-          9         959     -2147483647        70.1%
-         10         851     -2147483647        81.9%
-         11         816     -2147483647        87.0%
-         12         820     -2147483647        89.8%
-         13         831     -2147483647        89.8%
-         14         821     -2147483647        90.6%
-         15         806     -2147483647        90.6%
-         16         842     -2147483647        91.5%
-         17         847     -2147483647        91.5%
-         18         850     -2147483647        92.8%
-         19         835     -2147483647        94.1%
-         20         847     -2147483647        94.3%
-         21         878     -2147483647        95.0%
-         22         788     -2147483647        95.0%
-         23         795     -2147483647        97.2%
-         24         795     -2147483647        99.6%
-         25         798     -2147483647        99.6%
-         26         798     -2147483647       100.1%
-         27         792     -2147483647       100.1%
-         28         792     -2147483647       100.1%
+          1       81953     -2147483647         1.3%
+          2       62994     -2147483647         1.6%
+          3       44587     -2147483647         2.2%
+          4       39473     -2147483647         3.0%
+          5       40886     -2147483647         5.1%
+          6       25451     -2147483647        18.3%
+          7       17879     -2147483647        46.5%
+          8       16735     -2147483647        61.7%
+          9       16602     -2147483647        65.2%
+         10       17947     -2147483647        67.2%
+         11       18783     -2147483647        70.2%
+         12       19771     -2147483647        71.6%
+         13       20107     -2147483647        74.3%
+         14       20426     -2147483647        77.0%
+         15       20631     -2147483647        79.0%
+         16       20774     -2147483647        81.4%
+         17       20902     -2147483647        83.0%
+         18       21180     -2147483647        84.4%
+         19       21408     -2147483647        84.4%
+         20       21495     -2147483647        85.0%
+         21       21719     -2147483647        85.5%
+         22       14891     -2147483647        85.9%
+         23       14830     -2147483647        87.7%
+         24       14703     -2147483647        89.1%
+         25       14771     -2147483647        90.8%
+         26       14898     -2147483647        91.2%
+         27       14978     -2147483647        92.3%
+         28       15005     -2147483647        93.1%
+         29       15050     -2147483647        93.7%
+         30       15020     -2147483647        95.0%
 Starting Annealer
 
  ----------     -------  --------------     -------
   Iteration       WHPWL  Delay Max (ps)     R Limit
  ----------     -------  --------------     -------
-          0         788              NA        30.0
-          1         758              NA        30.0
-          2        1302              NA        30.0
-          3        1298              NA        30.0
-          4        1184              NA        30.0
-          5         954              NA        30.0
-          6         963              NA        30.0
-          7         854              NA        30.0
-          8         915              NA        30.0
-          9         827              NA        30.0
-         10         724              NA        30.0
-         11         733              NA        30.0
-         12         691              NA        30.0
-         13         606              NA        30.0
-         14         675              NA        30.0
-         15         597              NA        30.0
-         16         580              NA        30.0
-         17         537              NA        30.0
-         18         547              NA        30.0
-         19         534              NA        30.0
-         20         522              NA        30.0
-         21         514              NA        30.0
-         22         491              NA        30.0
-         23         484              NA        30.0
-         24         470              NA        30.0
-         25         460              NA        30.0
-         26         475              NA        30.0
-         27         447              NA        30.0
-         28         436              NA        30.0
-         29         442              NA        29.9
-         30         441              NA        29.4
-         31         406              NA        29.0
-         32         385              NA        26.9
-No timing data to generate C:/Efinity/2022.2/project/WES207_basic/outflow\WES207_basic_after_qp.qdelay
-Placement successful: 251 cells are placed
-Peak congestion smeared over 1/4 of the chip is 0.00973977 at 0,0
-Congestion-weighted HPWL per net: 0.929588
+          0       14703              NA        30.0
+          1       14303              NA        30.0
+          2       20087              NA        30.0
+          3       19397              NA        30.0
+          4       18254              NA        30.0
+          5       17057              NA        30.0
+          6       16110              NA        30.0
+          7       15198              NA        30.0
+          8       14750              NA        30.0
+          9       14187              NA        30.0
+         10       13510              NA        30.0
+         11       12980              NA        30.0
+         12       12577              NA        30.0
+         13       12057              NA        30.0
+         14       11755              NA        30.0
+         15       11356              NA        30.0
+         16       11079              NA        30.0
+         17       10688              NA        30.0
+         18       10448              NA        29.9
+         19       10219              NA        30.0
+         20        9969              NA        29.4
+         21        9741              NA        29.1
+         22        9548              NA        28.2
+         23        9231              NA        27.6
+         24        9073              NA        26.4
+         25        8909              NA        25.2
+         26        8664              NA        23.9
+         27        8585              NA        22.8
+         28        8449              NA        21.5
+         29        8297              NA        20.4
+         30        8197              NA        19.2
+         31        7981              NA        18.1
+         32        7825              NA        16.6
+No timing data to generate C:/Capstone/WES207/rtl/WES207_basic/outflow\WES207_basic_after_qp.qdelay
+Placement successful: 2310 cells are placed
+Peak congestion smeared over 1/4 of the chip is 0.0792459 at 65,80
+Congestion-weighted HPWL per net: 2.87085
 
-Reading placement constraints from 'C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.qplace'.
-Finished Realigning Types (40 blocks needed type change)
+Reading placement constraints from 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.qplace'.
+Finished Realigning Types (437 blocks needed type change)
 
 Completed placement consistency check successfully.
-Successfully created FPGA place file 'C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.place'
-Placement took 2.29131 seconds.
-	Placement took 0.921875 seconds (approximately) in total CPU time.
-Placement virtual memory usage: begin = 22.44 MB, end = 41.808 MB, delta = 19.368 MB
-	Placement peak virtual memory usage = 196.056 MB
-Placement resident set memory usage: begin = 34.088 MB, end = 47.856 MB, delta = 13.768 MB
-	Placement peak resident set memory usage = 199.584 MB
+Successfully created FPGA place file 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.place'
+Placement took 5.96739 seconds.
+	Placement took 5.84375 seconds (approximately) in total CPU time.
+Placement virtual memory usage: begin = 49.74 MB, end = 68.22 MB, delta = 18.48 MB
+	Placement peak virtual memory usage = 237.124 MB
+Placement resident set memory usage: begin = 60.124 MB, end = 75.656 MB, delta = 15.532 MB
+	Placement peak resident set memory usage = 241.704 MB
 ***** Ending stage placement *****
 

@@ -1,24 +1,27 @@
 Synthesis report for project WES207_basic
-Generated at: May 12, 2023 18:48:44
+Generated at: May 14, 2023 14:38:34
 Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
 
 ### ### ### ### ### ### ### ### ### ### ### ### ### ### ###
 Top-level Entity Name : WES207_top
 
 ### ### File List (begin) ### ### ###
-C:\Efinity\2022.2\project\WES207_basic\rtl\gpo.sv
-C:\Efinity\2022.2\project\WES207_basic\rtl\led.sv
-C:\Efinity\2022.2\project\WES207_basic\rtl\regwrap.sv
-C:\Efinity\2022.2\project\WES207_basic\rtl\spi_slave.sv
-C:\Efinity\2022.2\project\WES207_basic\rtl\WES207_top.sv
-C:\Efinity\2022.2\project\WES207_basic\rtl\tx_dac_fsm.sv
+C:\Capstone\WES207\rtl\WES207_basic\rtl\gpo.sv
+C:\Capstone\WES207\rtl\WES207_basic\rtl\led.sv
+C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv
+C:\Capstone\WES207\rtl\WES207_basic\rtl\spi_slave.sv
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv
+C:\Capstone\WES207\rtl\WES207_basic\rtl\tx_dac_fsm.sv
+C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv
 ### ### File List (end) ### ### ###
 
+"MEM|SYN-0677" : Zero initialization of uninitialized memory block 'buff'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:16)
+"MEM|SYN-0657" : Mapping into logic memory block 'fifo_inst/buff' (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:16) because read port is not synchronous.
 
 ### ### EFX_FF CE enables (begin) ### ### ###
-Total number of enable signals: 13
-Total number of FFs with enable signals: 55
-CE signal <ceg_net5>, number of controlling flip flops: 3
+Total number of enable signals: 145
+Total number of FFs with enable signals: 1112
+CE signal <ceg_net5>, number of controlling flip flops: 4
 CE signal <ceg_net37>, number of controlling flip flops: 5
 CE signal <ceg_net20>, number of controlling flip flops: 1
 CE signal <ceg_net77>, number of controlling flip flops: 8
@@ -27,16 +30,148 @@ CE signal <ceg_net31>, number of controlling flip flops: 1
 CE signal <ceg_net34>, number of controlling flip flops: 1
 CE signal <rx_en_led>, number of controlling flip flops: 8
 CE signal <led_inst/LessThan_21/n48>, number of controlling flip flops: 2
+CE signal <i11/n128>, number of controlling flip flops: 8
 CE signal <rx_en_gpo>, number of controlling flip flops: 8
+CE signal <i11/n130>, number of controlling flip flops: 8
+CE signal <i11/n131>, number of controlling flip flops: 8
+CE signal <i11/n129>, number of controlling flip flops: 8
 CE signal <tx_dac_fsm_inst/n42>, number of controlling flip flops: 5
 CE signal <tx_dac_fsm_inst/n344>, number of controlling flip flops: 4
 CE signal <rx_en_dac>, number of controlling flip flops: 1
+CE signal <ceg_net146>, number of controlling flip flops: 8
+CE signal <ceg_net164>, number of controlling flip flops: 8
+CE signal <rx_en_fifo_length>, number of controlling flip flops: 8
+CE signal <ceg_net242>, number of controlling flip flops: 8
+CE signal <i11/n132>, number of controlling flip flops: 8
+CE signal <i11/n127>, number of controlling flip flops: 8
+CE signal <i11/n126>, number of controlling flip flops: 8
+CE signal <i11/n125>, number of controlling flip flops: 8
+CE signal <i11/n124>, number of controlling flip flops: 8
+CE signal <i11/n123>, number of controlling flip flops: 8
+CE signal <i11/n122>, number of controlling flip flops: 8
+CE signal <i11/n121>, number of controlling flip flops: 8
+CE signal <i11/n120>, number of controlling flip flops: 8
+CE signal <i11/n119>, number of controlling flip flops: 8
+CE signal <i11/n118>, number of controlling flip flops: 8
+CE signal <i11/n117>, number of controlling flip flops: 8
+CE signal <i11/n116>, number of controlling flip flops: 8
+CE signal <i11/n115>, number of controlling flip flops: 8
+CE signal <i11/n114>, number of controlling flip flops: 8
+CE signal <i11/n113>, number of controlling flip flops: 8
+CE signal <i11/n112>, number of controlling flip flops: 8
+CE signal <i11/n111>, number of controlling flip flops: 8
+CE signal <i11/n110>, number of controlling flip flops: 8
+CE signal <i11/n109>, number of controlling flip flops: 8
+CE signal <i11/n108>, number of controlling flip flops: 8
+CE signal <i11/n107>, number of controlling flip flops: 8
+CE signal <i11/n106>, number of controlling flip flops: 8
+CE signal <i11/n105>, number of controlling flip flops: 8
+CE signal <i11/n104>, number of controlling flip flops: 8
+CE signal <i11/n103>, number of controlling flip flops: 8
+CE signal <i11/n102>, number of controlling flip flops: 8
+CE signal <i11/n101>, number of controlling flip flops: 8
+CE signal <i11/n100>, number of controlling flip flops: 8
+CE signal <i11/n99>, number of controlling flip flops: 8
+CE signal <i11/n98>, number of controlling flip flops: 8
+CE signal <i11/n97>, number of controlling flip flops: 8
+CE signal <i11/n96>, number of controlling flip flops: 8
+CE signal <i11/n95>, number of controlling flip flops: 8
+CE signal <i11/n94>, number of controlling flip flops: 8
+CE signal <i11/n93>, number of controlling flip flops: 8
+CE signal <i11/n92>, number of controlling flip flops: 8
+CE signal <i11/n91>, number of controlling flip flops: 8
+CE signal <i11/n90>, number of controlling flip flops: 8
+CE signal <i11/n89>, number of controlling flip flops: 8
+CE signal <i11/n88>, number of controlling flip flops: 8
+CE signal <i11/n87>, number of controlling flip flops: 8
+CE signal <i11/n86>, number of controlling flip flops: 8
+CE signal <i11/n85>, number of controlling flip flops: 8
+CE signal <i11/n84>, number of controlling flip flops: 8
+CE signal <i11/n83>, number of controlling flip flops: 8
+CE signal <i11/n82>, number of controlling flip flops: 8
+CE signal <i11/n81>, number of controlling flip flops: 8
+CE signal <i11/n80>, number of controlling flip flops: 8
+CE signal <i11/n79>, number of controlling flip flops: 8
+CE signal <i11/n78>, number of controlling flip flops: 8
+CE signal <i11/n77>, number of controlling flip flops: 8
+CE signal <i11/n76>, number of controlling flip flops: 8
+CE signal <i11/n75>, number of controlling flip flops: 8
+CE signal <i11/n74>, number of controlling flip flops: 8
+CE signal <i11/n73>, number of controlling flip flops: 8
+CE signal <i11/n72>, number of controlling flip flops: 8
+CE signal <i11/n71>, number of controlling flip flops: 8
+CE signal <i11/n70>, number of controlling flip flops: 8
+CE signal <i11/n69>, number of controlling flip flops: 8
+CE signal <i11/n68>, number of controlling flip flops: 8
+CE signal <i11/n67>, number of controlling flip flops: 8
+CE signal <i11/n66>, number of controlling flip flops: 8
+CE signal <i11/n65>, number of controlling flip flops: 8
+CE signal <i11/n64>, number of controlling flip flops: 8
+CE signal <i11/n63>, number of controlling flip flops: 8
+CE signal <i11/n62>, number of controlling flip flops: 8
+CE signal <i11/n61>, number of controlling flip flops: 8
+CE signal <i11/n60>, number of controlling flip flops: 8
+CE signal <i11/n59>, number of controlling flip flops: 8
+CE signal <i11/n58>, number of controlling flip flops: 8
+CE signal <i11/n57>, number of controlling flip flops: 8
+CE signal <i11/n56>, number of controlling flip flops: 8
+CE signal <i11/n55>, number of controlling flip flops: 8
+CE signal <i11/n54>, number of controlling flip flops: 8
+CE signal <i11/n53>, number of controlling flip flops: 8
+CE signal <i11/n52>, number of controlling flip flops: 8
+CE signal <i11/n51>, number of controlling flip flops: 8
+CE signal <i11/n50>, number of controlling flip flops: 8
+CE signal <i11/n49>, number of controlling flip flops: 8
+CE signal <i11/n48>, number of controlling flip flops: 8
+CE signal <i11/n47>, number of controlling flip flops: 8
+CE signal <i11/n46>, number of controlling flip flops: 8
+CE signal <i11/n45>, number of controlling flip flops: 8
+CE signal <i11/n44>, number of controlling flip flops: 8
+CE signal <i11/n43>, number of controlling flip flops: 8
+CE signal <i11/n42>, number of controlling flip flops: 8
+CE signal <i11/n41>, number of controlling flip flops: 8
+CE signal <i11/n40>, number of controlling flip flops: 8
+CE signal <i11/n39>, number of controlling flip flops: 8
+CE signal <i11/n38>, number of controlling flip flops: 8
+CE signal <i11/n37>, number of controlling flip flops: 8
+CE signal <i11/n36>, number of controlling flip flops: 8
+CE signal <i11/n35>, number of controlling flip flops: 8
+CE signal <i11/n34>, number of controlling flip flops: 8
+CE signal <i11/n33>, number of controlling flip flops: 8
+CE signal <i11/n32>, number of controlling flip flops: 8
+CE signal <i11/n31>, number of controlling flip flops: 8
+CE signal <i11/n30>, number of controlling flip flops: 8
+CE signal <i11/n29>, number of controlling flip flops: 8
+CE signal <i11/n28>, number of controlling flip flops: 8
+CE signal <i11/n27>, number of controlling flip flops: 8
+CE signal <i11/n26>, number of controlling flip flops: 8
+CE signal <i11/n25>, number of controlling flip flops: 8
+CE signal <i11/n24>, number of controlling flip flops: 8
+CE signal <i11/n23>, number of controlling flip flops: 8
+CE signal <i11/n22>, number of controlling flip flops: 8
+CE signal <i11/n21>, number of controlling flip flops: 8
+CE signal <i11/n20>, number of controlling flip flops: 8
+CE signal <i11/n19>, number of controlling flip flops: 8
+CE signal <i11/n18>, number of controlling flip flops: 8
+CE signal <i11/n17>, number of controlling flip flops: 8
+CE signal <i11/n16>, number of controlling flip flops: 8
+CE signal <i11/n15>, number of controlling flip flops: 8
+CE signal <i11/n14>, number of controlling flip flops: 8
+CE signal <i11/n13>, number of controlling flip flops: 8
+CE signal <i11/n12>, number of controlling flip flops: 8
+CE signal <i11/n11>, number of controlling flip flops: 8
+CE signal <i11/n10>, number of controlling flip flops: 8
+CE signal <i11/n9>, number of controlling flip flops: 8
+CE signal <i11/n8>, number of controlling flip flops: 8
+CE signal <i11/n7>, number of controlling flip flops: 8
+CE signal <i11/n6>, number of controlling flip flops: 8
+CE signal <i11/n5>, number of controlling flip flops: 8
 ### ### EFX_FF CE enables (end) ### ### ###
 
 ### ### EFX_FF SR set/reset (begin) ### ### ###
 Total number of set/reset signals: 1
-Total number of FFs with set/reset signals: 113
-SR signal <reset_n>, number of controlling flip flops: 113
+Total number of FFs with set/reset signals: 152
+SR signal <reset_n>, number of controlling flip flops: 152
 ### ### EFX_FF SR set/reset (end) ### ### ###
 
 ### ### Module Resource Usage Distribution Estimates (begin) ### ###
@@ -45,12 +180,13 @@ SR signal <reset_n>, number of controlling flip flops: 113
 
 Module                                FFs        ADDs        LUTs      RAMs DSP/MULTs
 -----------------------------         ---        ----        ----      ---- ---------
-WES207_top:WES207_top              113(0)       48(0)      186(0)      0(0)      0(0)
- +spi_slave_inst:spi_slave         37(37)        4(4)      46(46)      0(0)      0(0)
- +led_inst:led                     42(42)      23(23)      43(43)      0(0)      0(0)
+WES207_top:WES207_top             1176(0)       55(0)     1220(0)      0(0)      0(0)
+ +spi_slave_inst:spi_slave         38(38)        4(4)      61(61)      0(0)      0(0)
+ +led_inst:led                     42(42)      23(23)      42(42)      0(0)      0(0)
  +gpo_inst:gpo                       8(8)        0(0)        7(7)      0(0)      0(0)
- +regwrap_inst:regwrap               0(0)        0(0)      21(21)      0(0)      0(0)
- +tx_dac_fsm_inst:tx_dac_fsm       26(26)      21(21)      69(69)      0(0)      0(0)
+ +regwrap_inst:regwrap               0(0)        0(0)      44(44)      0(0)      0(0)
+ +tx_dac_fsm_inst:tx_dac_fsm       28(28)      21(21)      68(68)      0(0)      0(0)
+ +fifo_inst:fifo               1060(1060)        7(7)    998(998)      0(0)      0(0)
 
 ### ### Module Resource Usage Distribution Estimates (end) ### ###
 
@@ -59,8 +195,8 @@ WES207_top:WES207_top              113(0)       48(0)      186(0)      0(0)     
 
       Clock     Flip-Flops   Memory Ports    Multipliers
       -----     ----------   ------------    -----------
-    pll_clk             87              0              0
- tx_slowclk             26              0              0
+    pll_clk           1148              0              0
+ tx_slowclk             28              0              0
 
 ### ### Clock Load Distribution Report (end) ### ###
 
@@ -69,13 +205,13 @@ WES207_top:WES207_top              113(0)       48(0)      186(0)      0(0)     
 family : Trion
 device : T20F256
 project : WES207_basic
-project-xml : C:/Efinity/2022.2/project/WES207_basic/WES207_basic.xml
+project-xml : C:/Capstone/WES207/rtl/WES207_basic/WES207_basic.xml
 root : WES207_top
-I : C:/Efinity/2022.2/project/WES207_basic
-output-dir : C:/Efinity/2022.2/project/WES207_basic/outflow
-work-dir : C:/Efinity/2022.2/project/WES207_basic/work_syn
-write-efx-verilog : C:/Efinity/2022.2/project/WES207_basic/outflow/WES207_basic.map.v
-binary-db : C:/Efinity/2022.2/project/WES207_basic/WES207_basic.vdb
+I : C:/Capstone/WES207/rtl/WES207_basic
+output-dir : C:/Capstone/WES207/rtl/WES207_basic/outflow
+work-dir : C:/Capstone/WES207/rtl/WES207_basic/work_syn
+write-efx-verilog : C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.map.v
+binary-db : C:/Capstone/WES207/rtl/WES207_basic/WES207_basic.vdb
 insert-ios : 0
 max-carry-cascade : 240
 max_mult : -1
@@ -89,14 +225,14 @@ veri_options : verilog_mode=sv_09,vhdl_mode=vhdl_2008
 INPUT  PORTS    : 	6
 OUTPUT PORTS    : 	12
 
-EFX_ADD         : 	48
-EFX_LUT4        : 	186
-   1-2  Inputs  : 	106
-   3    Inputs  : 	37
-   4    Inputs  : 	43
-EFX_FF          : 	113
+EFX_ADD         : 	55
+EFX_LUT4        : 	1220
+   1-2  Inputs  : 	250
+   3    Inputs  : 	266
+   4    Inputs  : 	704
+EFX_FF          : 	1176
 EFX_GBUFCE      : 	2
 ### ### Resource Summary (end) ### ### ###
 
-Plain synthesis (without verilog dump and post-map checks) time : 11s
-Elapsed synthesis time : 11s
+Plain synthesis (without verilog dump and post-map checks) time : 18s
+Elapsed synthesis time : 18s

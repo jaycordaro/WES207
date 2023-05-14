@@ -1,4 +1,4 @@
-constexpr uint32_t SPICLOCKRATE = 4000000;
+constexpr uint32_t SPICLOCKRATE = 1000000;
 
 constexpr uint16_t readRF = 0x0000;
 constexpr uint16_t writeRF = 0x8000;

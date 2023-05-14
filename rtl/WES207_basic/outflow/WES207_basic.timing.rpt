@@ -1,13 +1,13 @@
 
 Efinix Static Timing Analysis Report
-Version: 2022.2.322.4.7
-Date: Fri May 12 18:49:15 2023
+Version: 2022.2.322
+Date: Sun May 14 14:39:25 2023
 
 Copyright (C) 2013 - 2022 Efinix Inc. All rights reserved.
 
 Top-level Entity Name: WES207_basic
 
-SDC Filename: C:/Efinity/2022.2/project/WES207_basic/WES207constrain.sdc
+SDC Filename: C:/Capstone/WES207/rtl/WES207_basic/WES207constrain.sdc
 
 Timing Model: I4
 	temperature : -40C to 100C

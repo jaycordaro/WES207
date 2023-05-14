@@ -28,6 +28,10 @@ module WES207_top(
 	logic [7:0] data_to_gpo;
 	logic [7:0] data_to_led;
 	logic [7:0] data_from_led;
+	logic [7:0] data_from_fifo;
+	logic [7:0] data_to_fifo;
+	logic [7:0] data_from_fifo_length;
+	logic [7:0] data_to_fifo_length;
 	
 	logic tx_slowclk;
 	
@@ -95,6 +99,8 @@ regwrap regwrap_inst (
 	.rx_en_rx_packet	 (rx_en_rx_packet),
 	.rx_en_led		(rx_en_led),
 	.rx_en_dac		(rx_en_dac),
+	.rx_en_fifo     (rx_en_fifo),
+	.rx_en_fifo_length (rx_en_fifo_length),
 	.tx_en_gpo		(tx_en_gpo),
 	.tx_en_status	(tx_en_status),
 	.tx_en_tx_packet_len (tx_en_tx_packet_len),
@@ -103,6 +109,8 @@ regwrap regwrap_inst (
 	.tx_en_rx_packet	 (tx_en_rx_packet),
 	.tx_en_led		(tx_en_led),
 	.tx_en_dac		(tx_en_dac),
+	.tx_en_fifo     (tx_en_fifo),
+	.tx_en_fifo_length (tx_en_fifo_length),
 	.tx_d			(tx_d),
 	.tx_en			(tx_en),
 	.reg_addr		(reg_addr),
@@ -118,6 +126,8 @@ regwrap regwrap_inst (
 	.data_from_rx_packet_reg 	 (data_from_rx_packet_reg),
 	.data_from_led	(data_from_led),
 	.data_from_dac	(data_from_dac),
+	.data_from_fifo (data_from_fifo),
+	.data_from_fifo_length (data_from_fifo_length),
 	.data_to_gpo	(data_to_gpo),
 	.data_to_status_reg (data_to_status_reg),
 	.data_to_tx_packet_len_reg	(data_to_tx_packet_len_reg),
@@ -125,7 +135,9 @@ regwrap regwrap_inst (
 	.data_to_rx_packet_len_reg	(data_to_rx_packet_len_reg),
 	.data_to_rx_packet_reg		(data_to_rx_packet_reg),
 	.data_to_led	(data_to_led),
-	.data_to_dac	(data_to_dac)
+	.data_to_dac	(data_to_dac),
+	.data_to_fifo   (data_to_fifo),
+	.data_to_fifo_length (data_to_fifo_length)
 	);
 	
 tx_dac_fsm tx_dac_fsm_inst (
@@ -136,6 +148,21 @@ tx_dac_fsm tx_dac_fsm_inst (
 	.dacreg_data_in		(data_to_dac),
 	.dacreg_data_out	(data_from_dac),
 	.to_lvds			(to_lvds)
+	);
+	
+fifo fifo_inst(
+	.clk  			(clk),
+	.reset_n 		(reset_n),
+	.rd_en 			(tx_en_fifo),
+	.wr_en			(rx_en_fifo),
+	.data_in		(data_to_fifo),
+	.data_out		(data_from_fifo),
+	.length_rd_en 	(tx_en_fifo_length),
+	.length_wr_en	(rx_en_fifo_length),
+	.length_in		(data_to_fifo_length),
+	.length_out		(data_from_fifo_length),
+	.full           (fifo_full),
+	.read_complete  (fifo_read_complete)
 	);
 	
 	

@@ -1,7 +1,7 @@
 
 // Efinity Top-level template
-// Version: 2022.2.322.4.7
-// Date: 2023-05-12 18:49
+// Version: 2022.2.322
+// Date: 2023-05-14 14:39
 
 // Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved.
 
@@ -11,7 +11,7 @@
 
 // To use this:
 //     #1)  Save this file with a different name to a different directory, where source files are kept.
-//              Example: you may wish to save as C:\Efinity\2022.2\project\WES207_basic\WES207_basic.v
+//              Example: you may wish to save as C:\Capstone\WES207\rtl\WES207_basic\WES207_basic.v
 //     #2)  Add the newly saved file into Efinity project as design file
 //     #3)  Edit the top level entity in Efinity project to:  WES207_basic
 //     #4)  Insert design content.

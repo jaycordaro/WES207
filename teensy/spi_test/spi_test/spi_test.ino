@@ -2,7 +2,7 @@
 #include <SPI.h>
 #include <string>
 
-constexpr uint32_t SPICLOCKRATE = 4000000;
+constexpr uint32_t SPICLOCKRATE = 1000000;
 
 const int chipSelectPin = 0;
 

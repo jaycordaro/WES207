@@ -35,6 +35,8 @@ module regwrap(
 		output logic rx_en_rx_packet,
 		output logic rx_en_led,
 		output logic rx_en_dac,
+		output logic rx_en_fifo,
+		output logic rx_en_fifo_length,
 		output logic tx_en_gpo,
 		output logic tx_en_status,
 		output logic tx_en_tx_packet_len,
@@ -43,6 +45,8 @@ module regwrap(
 		output logic tx_en_rx_packet,
 		output logic tx_en_led,
 		output logic tx_en_dac,
+		output logic tx_en_fifo,
+		output logic tx_en_fifo_length,
 		output logic [7:0] tx_d,
 		input logic [6:0] reg_addr,
 		input logic addr_dv,
@@ -57,6 +61,8 @@ module regwrap(
 		input logic [7:0] data_from_rx_packet_reg,
 		input logic [7:0] data_from_led,
 		input logic [7:0] data_from_dac,
+		input logic [7:0] data_from_fifo,
+		input logic [7:0] data_from_fifo_length,
 		output logic [7:0] data_to_gpo,
 		output logic [7:0] data_to_status_reg,
 		output logic [7:0] data_to_tx_packet_len_reg,
@@ -65,9 +71,10 @@ module regwrap(
 		output logic [7:0] data_to_rx_packet_reg,
 		output logic [7:0] data_to_led,
 		output logic [7:0] data_to_dac,
+		output logic [7:0] data_to_fifo,
+		output logic [7:0] data_to_fifo_length,
 		output logic tx_en
 		);
-
 
 /* send data from master to slave 
 0 == send data from master to the slave RW==0. write from host to target*/
@@ -80,6 +87,8 @@ assign rx_en_gpo = 			(addr_dv && rxdv && reg_addr[2:0]==3'b000 && ~rw_out) ? 1'
 assign rx_en_led = 			(addr_dv && rxdv && reg_addr[2:0]==3'b110 && ~rw_out) ? 1'b1 : 1'b0;
 // DAC register read
 assign rx_en_dac = (addr_dv && rxdv && reg_addr[2:0]==3'b111 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_fifo = (addr_dv && rxdv && reg_addr[3:0]==4'b1000 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_fifo_length = (addr_dv && rxdv && reg_addr[3:0]==4'b1001 && ~rw_out) ? 1'b1 : 1'b0;
 
 /* req data from slave (RW == 1, READ to host)*/
 assign tx_en_gpo = 			(addr_dv && reg_addr[2:0]==3'b000 && rw_out) ? 1'b1 : 1'b0;
@@ -91,6 +100,8 @@ assign tx_en_rx_packet = 	(addr_dv && reg_addr[2:0]==3'b101 && rw_out) ? 1'b1 : 
 assign tx_en_led = 			(addr_dv && reg_addr[2:0]==3'b110 && rw_out) ? 1'b1 : 1'b0;
 //DAC control
 assign tx_en_dac = 			(addr_dv && reg_addr[2:0]==3'b111 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_fifo =       (addr_dv && reg_addr[3:0]==4'b1000 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_fifo_length =       (addr_dv && reg_addr[3:0]==4'b1001 && rw_out) ? 1'b1 : 1'b0;
 
 
 
@@ -136,6 +147,16 @@ always_comb
 				tx_d = data_from_dac;
 				tx_en= 1'b1;
 			end
+		else if (tx_en_fifo)
+			begin
+				tx_d = data_from_fifo;
+				tx_en = 1'b1;
+			end
+		else if (tx_en_fifo_length)
+			begin
+				tx_d = data_from_fifo_length;
+				tx_en = 1'b1;
+			end
 		else
 			begin
 				tx_en = 1'b0;
@@ -151,5 +172,7 @@ assign data_to_rx_packet_len_reg = (rx_en_rx_packet_len) ? rx_d : 8'b0000_0000;
 assign data_to_rx_packet_reg = 	   (rx_en_rx_packet) ? rx_d : 8'b0000_0000;
 assign data_to_led = 		       (rx_en_led) ? rx_d : 8'b0000_0000;
 assign data_to_dac = 		       (rx_en_dac) ? rx_d : 8'b0000_0000;
+assign data_to_fifo = 		   	   (rx_en_fifo) ? rx_d : 8'b0000_0000;
+assign data_to_fifo_length = 	   (rx_en_fifo_length) ? rx_d : 8'b0000_0000;
 
 endmodule : regwrap
