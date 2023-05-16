@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<efx:tool_report xmlns:efx="http://www.efinixinc.com/tool_report" date="2023-05-14 14:39" project="WES207_basic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/tool_report tool_report.xsd">
+<efx:tool_report xmlns:efx="http://www.efinixinc.com/tool_report" date="2023-05-15 12:27" project="WES207_basic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/tool_report tool_report.xsd">
   <efx:group name="Periphery Resource">
     <efx:group_data name="GPIO" severity="info" value="15 / 141"/>
     <efx:group_data name="JTAG User TAP" severity="info" value="0 / 2"/>

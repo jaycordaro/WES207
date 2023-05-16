@@ -1,14 +1,16 @@
 sep=\t
 Module Resource Usage Distribution Estimates
-Generated at: May 14, 2023 14:38:34
+Generated at: May 15, 2023 12:26:56
 
 Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
 
 Module	         FFs	        ADDs	        LUTs	      RAMs	 DSP/MULTs
-WES207_top:WES207_top        	    1176(0)	      55(0)	    1220(0)	     0(0)	     0(0)	
- +spi_slave_inst:spi_slave   	     38(38)	       4(4)	     61(61)	     0(0)	     0(0)	
- +led_inst:led               	     42(42)	     23(23)	     42(42)	     0(0)	     0(0)	
- +gpo_inst:gpo               	       8(8)	       0(0)	       7(7)	     0(0)	     0(0)	
- +regwrap_inst:regwrap       	       0(0)	       0(0)	     44(44)	     0(0)	     0(0)	
- +tx_dac_fsm_inst:tx_dac_fsm 	     28(28)	     21(21)	     68(68)	     0(0)	     0(0)	
- +fifo_inst:fifo             	 1060(1060)	       7(7)	   998(998)	     0(0)	     0(0)	
+WES207_top:WES207_top        	    3297(0)	      69(0)	    3484(0)	     0(0)	     0(0)	
+ +spi_slave_inst:spi_slave   	     41(41)	       4(4)	     73(73)	     0(0)	     0(0)	
+ +led_inst:led               	     42(42)	     23(23)	     48(48)	     0(0)	     0(0)	
+ +gpo_inst:gpo               	       8(8)	       0(0)	     14(14)	     0(0)	     0(0)	
+ +regwrap_inst:regwrap       	       0(0)	       0(0)	   102(102)	     0(0)	     0(0)	
+ +tx_dac_fsm_inst:tx_dac_fsm 	     26(26)	     21(21)	     68(68)	     0(0)	     0(0)	
+ +fifo_inst:fifo             	 1060(1060)	       7(7)	 1062(1062)	     0(0)	     0(0)	
+ +tx_fifo:fifo               	 1060(1060)	       7(7)	 1056(1056)	     0(0)	     0(0)	
+ +rx_fifo:fifo               	 1060(1060)	       7(7)	 1061(1061)	     0(0)	     0(0)	

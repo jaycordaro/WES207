@@ -78,30 +78,28 @@ module regwrap(
 
 /* send data from master to slave 
 0 == send data from master to the slave RW==0. write from host to target*/
-assign rx_en_status = 		(addr_dv && rxdv && reg_addr[2:0]==3'b001 && ~rw_out) ? 1'b1 : 1'b0;
-assign rx_en_tx_packet_len =(addr_dv && rxdv && reg_addr[2:0]==3'b010 && ~rw_out) ? 1'b1 : 1'b0;
-assign rx_en_tx_packet = 	(addr_dv && rxdv && reg_addr[2:0]==3'b011 && ~rw_out) ? 1'b1 : 1'b0;
-assign rx_en_rx_packet_len =(addr_dv && rxdv && reg_addr[2:0]==3'b100 && ~rw_out) ? 1'b1 : 1'b0;
-assign rx_en_rx_packet = 	(addr_dv && rxdv && reg_addr[2:0]==3'b101 && ~rw_out) ? 1'b1 : 1'b0;
-assign rx_en_gpo = 			(addr_dv && rxdv && reg_addr[2:0]==3'b000 && ~rw_out) ? 1'b1 : 1'b0;
-assign rx_en_led = 			(addr_dv && rxdv && reg_addr[2:0]==3'b110 && ~rw_out) ? 1'b1 : 1'b0;
-// DAC register read
-assign rx_en_dac = (addr_dv && rxdv && reg_addr[2:0]==3'b111 && ~rw_out) ? 1'b1 : 1'b0;
-assign rx_en_fifo = (addr_dv && rxdv && reg_addr[3:0]==4'b1000 && ~rw_out) ? 1'b1 : 1'b0;
-assign rx_en_fifo_length = (addr_dv && rxdv && reg_addr[3:0]==4'b1001 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_gpo = 			(addr_dv && rxdv && reg_addr==7'b0000000 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_status = 		(addr_dv && rxdv && reg_addr==7'b0000001 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_tx_packet_len =(addr_dv && rxdv && reg_addr==7'b0000010 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_tx_packet = 	(addr_dv && rxdv && reg_addr==7'b0000011 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_rx_packet_len =(addr_dv && rxdv && reg_addr==7'b0000100 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_rx_packet = 	(addr_dv && rxdv && reg_addr==7'b0000101 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_led = 			(addr_dv && rxdv && reg_addr==7'b0000110 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_dac = (addr_dv && rxdv && reg_addr==7'b0000111 && ~rw_out) ? 1'b1 : 1'b0; // DAC register read
+assign rx_en_fifo = (addr_dv && rxdv && reg_addr==7'b0001000 && ~rw_out) ? 1'b1 : 1'b0;
+assign rx_en_fifo_length = (addr_dv && rxdv && reg_addr==7'b0001001 && ~rw_out) ? 1'b1 : 1'b0;
 
 /* req data from slave (RW == 1, READ to host)*/
-assign tx_en_gpo = 			(addr_dv && reg_addr[2:0]==3'b000 && rw_out) ? 1'b1 : 1'b0;
-assign tx_en_status = 		(addr_dv && reg_addr[2:0]==3'b001 && rw_out) ? 1'b1 : 1'b0;
-assign tx_en_tx_packet_len =(addr_dv && reg_addr[2:0]==3'b010 && rw_out) ? 1'b1 : 1'b0;
-assign tx_en_tx_packet = 	(addr_dv && reg_addr[2:0]==3'b011 && rw_out) ? 1'b1 : 1'b0;
-assign tx_en_rx_packet_len =(addr_dv && reg_addr[2:0]==3'b100 && rw_out) ? 1'b1 : 1'b0;
-assign tx_en_rx_packet = 	(addr_dv && reg_addr[2:0]==3'b101 && rw_out) ? 1'b1 : 1'b0;
-assign tx_en_led = 			(addr_dv && reg_addr[2:0]==3'b110 && rw_out) ? 1'b1 : 1'b0;
-//DAC control
-assign tx_en_dac = 			(addr_dv && reg_addr[2:0]==3'b111 && rw_out) ? 1'b1 : 1'b0;
-assign tx_en_fifo =       (addr_dv && reg_addr[3:0]==4'b1000 && rw_out) ? 1'b1 : 1'b0;
-assign tx_en_fifo_length =       (addr_dv && reg_addr[3:0]==4'b1001 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_gpo = 			(addr_dv && reg_addr==7'b0000000 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_status = 		(addr_dv && reg_addr==7'b0000001 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_tx_packet_len =(addr_dv && reg_addr==7'b0000010 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_tx_packet = 	(addr_dv && reg_addr==7'b0000011 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_rx_packet_len =(addr_dv && reg_addr==7'b0000100 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_rx_packet = 	(addr_dv && reg_addr==7'b0000101 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_led = 			(addr_dv && reg_addr==7'b0000110 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_dac = 			(addr_dv && reg_addr==7'b0000111 && rw_out) ? 1'b1 : 1'b0; //DAC control
+assign tx_en_fifo =       	(addr_dv && reg_addr==7'b0001000 && rw_out) ? 1'b1 : 1'b0;
+assign tx_en_fifo_length =  (addr_dv && reg_addr==7'b0001001 && rw_out) ? 1'b1 : 1'b0;
 
 
 
@@ -112,27 +110,27 @@ always_comb
 				tx_d = data_from_gpo;
 				tx_en = 1'b1;
 			end
-		if (tx_en_status)
+		else if (tx_en_status)
 			begin
 				tx_d = data_from_status_reg;
 				tx_en = 1'b1;
 			end
-		if (tx_en_tx_packet_len)
+		else if (tx_en_tx_packet_len)
 			begin
 				tx_d = data_from_tx_packet_len_reg;
 				tx_en = 1'b1;
 			end
-		if (tx_en_tx_packet)
+		else if (tx_en_tx_packet)
 			begin
 				tx_d = data_from_tx_packet_reg;
 				tx_en = 1'b1;
 			end
-		if (tx_en_rx_packet_len)
+		else if (tx_en_rx_packet_len)
 			begin
 				tx_d = data_from_rx_packet_len_reg;
 				tx_en = 1'b1;
 			end
-		if (tx_en_rx_packet)
+		else if (tx_en_rx_packet)
 			begin
 				tx_d = data_from_rx_packet_reg;
 				tx_en = 1'b1;

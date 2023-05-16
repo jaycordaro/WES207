@@ -15,12 +15,12 @@ Running Placement and Routing for Family "Trion", Device "T20F256" ...
 ***** Beginning stage netlist pre-processing ... *****
 Successfully Read in Verific binary Netlist dump file "C:/Capstone/WES207/rtl/WES207_basic/WES207_basic.vdb".
 ***** Beginning VDB Netlist Checker ... *****
-VDB Netlist Checker took 0.0347677 seconds.
-	VDB Netlist Checker took 0.03125 seconds (approximately) in total CPU time.
-VDB Netlist Checker virtual memory usage: begin = 15.22 MB, end = 15.22 MB, delta = 0 MB
-	VDB Netlist Checker peak virtual memory usage = 52.76 MB
-VDB Netlist Checker resident set memory usage: begin = 25.948 MB, end = 26.12 MB, delta = 0.172 MB
-	VDB Netlist Checker peak resident set memory usage = 61.94 MB
+VDB Netlist Checker took 0.0993806 seconds.
+	VDB Netlist Checker took 0.09375 seconds (approximately) in total CPU time.
+VDB Netlist Checker virtual memory usage: begin = 24.332 MB, end = 24.332 MB, delta = 0 MB
+	VDB Netlist Checker peak virtual memory usage = 52.724 MB
+VDB Netlist Checker resident set memory usage: begin = 34.64 MB, end = 34.812 MB, delta = 0.172 MB
+	VDB Netlist Checker peak resident set memory usage = 61.98 MB
 ***** Ending VDB Netlist Checker ... *****
 Reading core interface constraints from 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.interface.csv'.
 Successfully processed interface constraints file "C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.interface.csv".
@@ -32,38 +32,38 @@ Pass 0: Swept away 0 blocks with no fanout.
 Swept away 0 nets and 0 blocks in total.
 Removed 0 LUT buffers.
 Successfully created VPR logical netlist from Verific binary DataBase file "C:/Capstone/WES207/rtl/WES207_basic/WES207_basic.vdb".
-Netlist pre-processing took 0.0885098 seconds.
-	Netlist pre-processing took 0.09375 seconds (approximately) in total CPU time.
-Netlist pre-processing virtual memory usage: begin = 10.948 MB, end = 19.788 MB, delta = 8.84 MB
-	Netlist pre-processing peak virtual memory usage = 52.76 MB
-Netlist pre-processing resident set memory usage: begin = 21.62 MB, end = 30.784 MB, delta = 9.164 MB
-	Netlist pre-processing peak resident set memory usage = 61.94 MB
+Netlist pre-processing took 0.244338 seconds.
+	Netlist pre-processing took 0.21875 seconds (approximately) in total CPU time.
+Netlist pre-processing virtual memory usage: begin = 10.92 MB, end = 34.96 MB, delta = 24.04 MB
+	Netlist pre-processing peak virtual memory usage = 52.724 MB
+Netlist pre-processing resident set memory usage: begin = 21.66 MB, end = 45.368 MB, delta = 23.708 MB
+	Netlist pre-processing peak resident set memory usage = 61.98 MB
 ***** Ending stage netlist pre-processing *****
 
 ***** Beginning stage pre-packing ... *****
 ***** Ending stage pre-packing *****
 
 ***** Beginning stage packing ... *****
-Generate proto netlist for file "C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.003 seconds
+Generate proto netlist for file "C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.01 seconds
 Creating IO constraints file 'C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.io_place'
-Packing took 0.0207486 seconds.
-	Packing took 0.015625 seconds (approximately) in total CPU time.
-Packing virtual memory usage: begin = 22.984 MB, end = 24.572 MB, delta = 1.588 MB
-	Packing peak virtual memory usage = 52.76 MB
-Packing resident set memory usage: begin = 34.148 MB, end = 35.824 MB, delta = 1.676 MB
-	Packing peak resident set memory usage = 61.94 MB
+Packing took 0.0572776 seconds.
+	Packing took 0.0625 seconds (approximately) in total CPU time.
+Packing virtual memory usage: begin = 31.288 MB, end = 35.492 MB, delta = 4.204 MB
+	Packing peak virtual memory usage = 52.724 MB
+Packing resident set memory usage: begin = 40.528 MB, end = 46.196 MB, delta = 5.668 MB
+	Packing peak resident set memory usage = 61.98 MB
 ***** Ending stage packing *****
 
 ***** Beginning stage packed netlist loading ... *****
 Read proto netlist file C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.net_proto
-Read proto netlist for file "C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.007 seconds
-Setup net and block data structure took 0.076 seconds
-Packed netlist loading took 0.0989913 seconds.
-	Packed netlist loading took 0.078125 seconds (approximately) in total CPU time.
-Packed netlist loading virtual memory usage: begin = 24.572 MB, end = 49.74 MB, delta = 25.168 MB
-	Packed netlist loading peak virtual memory usage = 88.884 MB
-Packed netlist loading resident set memory usage: begin = 35.832 MB, end = 60.116 MB, delta = 24.284 MB
-	Packed netlist loading peak resident set memory usage = 99.156 MB
+Read proto netlist for file "C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.net_proto" took 0.009 seconds
+Setup net and block data structure took 0.227 seconds
+Packed netlist loading took 0.255674 seconds.
+	Packed netlist loading took 0.21875 seconds (approximately) in total CPU time.
+Packed netlist loading virtual memory usage: begin = 35.492 MB, end = 106.628 MB, delta = 71.136 MB
+	Packed netlist loading peak virtual memory usage = 145.804 MB
+Packed netlist loading resident set memory usage: begin = 46.204 MB, end = 114.476 MB, delta = 68.272 MB
+	Packed netlist loading peak resident set memory usage = 153.504 MB
 ***** Ending stage packed netlist loading *****
 
 ***** Beginning stage pre-placement ... *****
@@ -95,89 +95,97 @@ Starting Global Placer with 16 threads ...
  ----------     -------  --------------     -------
   Iteration       WHPWL Worst Slack (ps) Convergence
  ----------     -------  --------------     -------
-          1       81953     -2147483647         1.3%
-          2       62994     -2147483647         1.6%
-          3       44587     -2147483647         2.2%
-          4       39473     -2147483647         3.0%
-          5       40886     -2147483647         5.1%
-          6       25451     -2147483647        18.3%
-          7       17879     -2147483647        46.5%
-          8       16735     -2147483647        61.7%
-          9       16602     -2147483647        65.2%
-         10       17947     -2147483647        67.2%
-         11       18783     -2147483647        70.2%
-         12       19771     -2147483647        71.6%
-         13       20107     -2147483647        74.3%
-         14       20426     -2147483647        77.0%
-         15       20631     -2147483647        79.0%
-         16       20774     -2147483647        81.4%
-         17       20902     -2147483647        83.0%
-         18       21180     -2147483647        84.4%
-         19       21408     -2147483647        84.4%
-         20       21495     -2147483647        85.0%
-         21       21719     -2147483647        85.5%
-         22       14891     -2147483647        85.9%
-         23       14830     -2147483647        87.7%
-         24       14703     -2147483647        89.1%
-         25       14771     -2147483647        90.8%
-         26       14898     -2147483647        91.2%
-         27       14978     -2147483647        92.3%
-         28       15005     -2147483647        93.1%
-         29       15050     -2147483647        93.7%
-         30       15020     -2147483647        95.0%
+          1      490687     -2147483647         0.5%
+          2      407463     -2147483647         0.6%
+          3      404621     -2147483647         1.0%
+          4      329970     -2147483647         1.7%
+          5      214252     -2147483647         4.4%
+          6      118921     -2147483647        17.3%
+          7       83413     -2147483647        39.2%
+          8       79887     -2147483647        50.2%
+          9       81923     -2147483647        52.0%
+         10       90973     -2147483647        53.3%
+         11      101661     -2147483647        53.9%
+         12      112029     -2147483647        55.5%
+         13      122090     -2147483647        57.0%
+         14      128516     -2147483647        59.2%
+         15      134705     -2147483647        61.6%
+         16      131115     -2147483647        63.2%
+         17      126952     -2147483647        66.6%
+         18      126306     -2147483647        67.4%
+         19      124413     -2147483647        68.9%
+         20      123365     -2147483647        70.4%
+         21       70781     -2147483647        73.5%
+         22       69987     -2147483647        75.1%
+         23       69772     -2147483647        76.8%
+         24       70090     -2147483647        78.0%
+         25       69145     -2147483647        79.3%
+         26       68839     -2147483647        81.1%
+         27       69084     -2147483647        81.7%
+         28       69271     -2147483647        82.5%
+         29       69499     -2147483647        82.8%
+         30       69555     -2147483647        83.9%
+         31       69676     -2147483647        85.1%
+         32       70218     -2147483647        86.2%
+         33       70261     -2147483647        86.9%
+         34       70505     -2147483647        87.2%
+         35       70270     -2147483647        87.7%
+         36       70401     -2147483647        88.7%
+         37       70355     -2147483647        90.0%
+         38       70570     -2147483647        90.6%
 Starting Annealer
 
  ----------     -------  --------------     -------
   Iteration       WHPWL  Delay Max (ps)     R Limit
  ----------     -------  --------------     -------
-          0       14703              NA        30.0
-          1       14303              NA        30.0
-          2       20087              NA        30.0
-          3       19397              NA        30.0
-          4       18254              NA        30.0
-          5       17057              NA        30.0
-          6       16110              NA        30.0
-          7       15198              NA        30.0
-          8       14750              NA        30.0
-          9       14187              NA        30.0
-         10       13510              NA        30.0
-         11       12980              NA        30.0
-         12       12577              NA        30.0
-         13       12057              NA        30.0
-         14       11755              NA        30.0
-         15       11356              NA        30.0
-         16       11079              NA        30.0
-         17       10688              NA        30.0
-         18       10448              NA        29.9
-         19       10219              NA        30.0
-         20        9969              NA        29.4
-         21        9741              NA        29.1
-         22        9548              NA        28.2
-         23        9231              NA        27.6
-         24        9073              NA        26.4
-         25        8909              NA        25.2
-         26        8664              NA        23.9
-         27        8585              NA        22.8
-         28        8449              NA        21.5
-         29        8297              NA        20.4
-         30        8197              NA        19.2
-         31        7981              NA        18.1
-         32        7825              NA        16.6
+          0       68839              NA        30.0
+          1       56192              NA        30.0
+          2       67135              NA        30.0
+          3       69208              NA        30.0
+          4       59933              NA        30.0
+          5       57275              NA        30.0
+          6       51662              NA        30.0
+          7       50753              NA        30.0
+          8       47316              NA        30.0
+          9       46929              NA        30.0
+         10       44098              NA        30.0
+         11       43010              NA        30.0
+         12       39861              NA        30.0
+         13       38669              NA        30.0
+         14       36437              NA        30.0
+         15       35340              NA        29.8
+         16       33919              NA        29.3
+         17       33358              NA        28.7
+         18       32251              NA        27.7
+         19       31543              NA        26.8
+         20       30410              NA        25.6
+         21       29562              NA        24.4
+         22       28942              NA        23.1
+         23       28184              NA        21.9
+         24       27611              NA        20.6
+         25       27242              NA        19.4
+         26       26615              NA        18.2
+         27       26174              NA        17.0
+         28       25717              NA        15.9
+         29       25216              NA        14.8
+         30       24780              NA        13.8
+         31       24200              NA        12.8
+         32       23568              NA        11.7
 No timing data to generate C:/Capstone/WES207/rtl/WES207_basic/outflow\WES207_basic_after_qp.qdelay
-Placement successful: 2310 cells are placed
-Peak congestion smeared over 1/4 of the chip is 0.0792459 at 65,80
-Congestion-weighted HPWL per net: 2.87085
+Placement successful: 6624 cells are placed
+Peak congestion smeared over 1/4 of the chip is 0.113023 at 71,9
+Congestion-weighted HPWL per net: 3.22073
 
 Reading placement constraints from 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.qplace'.
-Finished Realigning Types (437 blocks needed type change)
+Finished Realigning Types (1256 blocks needed type change)
 
 Completed placement consistency check successfully.
 Successfully created FPGA place file 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.place'
-Placement took 5.96739 seconds.
-	Placement took 5.84375 seconds (approximately) in total CPU time.
-Placement virtual memory usage: begin = 49.74 MB, end = 68.22 MB, delta = 18.48 MB
-	Placement peak virtual memory usage = 237.124 MB
-Placement resident set memory usage: begin = 60.124 MB, end = 75.656 MB, delta = 15.532 MB
-	Placement peak resident set memory usage = 241.704 MB
+Placement took 10.3127 seconds.
+	Placement took 17.4219 seconds (approximately) in total CPU time.
+Placement virtual memory usage: begin = 106.628 MB, end = 137.804 MB, delta = 31.176 MB
+	Placement peak virtual memory usage = 334.896 MB
+Placement resident set memory usage: begin = 114.484 MB, end = 140.368 MB, delta = 25.884 MB
+	Placement peak resident set memory usage = 335.352 MB
 ***** Ending stage placement *****
 

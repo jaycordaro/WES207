@@ -24,10 +24,6 @@ logic [7:0] length;
 logic [1:0] sync_wr;
 logic [1:0] sync_rd;
 
-logic [7:0] wr_hist;
-logic [7:0] rd_hist;
-
-
 always_ff @(posedge clk or negedge reset_n)
 	begin
 		if (~reset_n)
@@ -38,15 +34,11 @@ always_ff @(posedge clk or negedge reset_n)
 				length <= 8'b0000_0000;
 				sync_wr <= 2'b00;
 				sync_rd <= 2'b00;
-				wr_hist <= 8'b0000_0000;
-				rd_hist <= 8'b0000_0000;
 			end
 		else
 			begin
 				sync_wr <= {sync_wr[0], wr_en};
 				sync_rd <= {sync_rd[0], rd_en};
-				wr_hist <= {wr_hist[6:0], wr_en};
-				rd_hist <= {rd_hist[6:0], rd_en};
 		
 				if (sync_wr == 2'b01)
 					begin
@@ -91,6 +83,6 @@ assign length_out = (length_rd_en) ? length : 8'b0000_0000;
 
 assign full = wr_index >= length;
 
-assign read_complete = rd_index >= length - 1;
+assign read_complete = rd_index >= length;
 		
 endmodule : fifo

@@ -33,6 +33,18 @@ module WES207_top(
 	logic [7:0] data_from_fifo_length;
 	logic [7:0] data_to_fifo_length;
 	
+	logic [7:0] data_from_status_reg;
+	logic [7:0] data_from_tx_packet_len_reg;
+	logic [7:0] data_from_tx_packet_reg;
+	logic [7:0] data_from_rx_packet_len_reg;
+	logic [7:0] data_from_rx_packet_reg;
+	logic [7:0] data_to_status_reg;
+	logic [7:0] data_to_tx_packet_len_reg;
+	logic [7:0] data_to_tx_packet_reg;
+	logic [7:0] data_to_rx_packet_len_reg;
+	logic [7:0] data_to_rx_packet_reg;
+
+	
 	logic tx_slowclk;
 	
 	assign clk = pll_clk;
@@ -163,6 +175,36 @@ fifo fifo_inst(
 	.length_out		(data_from_fifo_length),
 	.full           (fifo_full),
 	.read_complete  (fifo_read_complete)
+	);
+
+fifo tx_fifo(
+	.clk  			(clk),
+	.reset_n 		(reset_n),
+	.rd_en 			(tx_en_tx_packet),
+	.wr_en			(rx_en_tx_packet),
+	.data_in		(data_to_tx_packet_reg),
+	.data_out		(data_from_tx_packet_reg),
+	.length_rd_en 	(tx_en_tx_packet_len),
+	.length_wr_en	(rx_en_tx_packet_len),
+	.length_in		(data_to_tx_packet_len_reg),
+	.length_out		(data_from_tx_packet_len_reg),
+	.full           (tx_fifo_full),
+	.read_complete  (tx_fifo_read_complete)
+	);
+	
+fifo rx_fifo(
+	.clk  			(clk),
+	.reset_n 		(reset_n),
+	.rd_en 			(tx_en_rx_packet),
+	.wr_en			(rx_en_rx_packet),
+	.data_in		(data_to_rx_packet_reg),
+	.data_out		(data_from_rx_packet_reg),
+	.length_rd_en 	(tx_en_rx_packet_len),
+	.length_wr_en	(rx_en_rx_packet_len),
+	.length_in		(data_to_rx_packet_len_reg),
+	.length_out		(data_from_rx_packet_len_reg),
+	.full           (rx_fifo_full),
+	.read_complete  (rx_fifo_read_complete)
 	);
 	
 	

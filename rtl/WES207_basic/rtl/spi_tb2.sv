@@ -30,6 +30,16 @@ logic [7:0] check_data;
 	logic [7:0] data_to_fifo;
 	logic [7:0] data_from_fifo_length;
 	logic [7:0] data_to_fifo_length;
+	logic [7:0] data_from_status_reg;
+	logic [7:0] data_from_tx_packet_len_reg;
+	logic [7:0] data_from_tx_packet_reg;
+	logic [7:0] data_from_rx_packet_len_reg;
+	logic [7:0] data_from_rx_packet_reg;
+	logic [7:0] data_to_status_reg;
+	logic [7:0] data_to_tx_packet_len_reg;
+	logic [7:0] data_to_tx_packet_reg;
+	logic [7:0] data_to_rx_packet_len_reg;
+	logic [7:0] data_to_rx_packet_reg;
 
 logic [6:0] gpo_pins;
 spi_slave #(
@@ -80,15 +90,25 @@ regwrap regwrap_inst (
     .clk     		(clk),
     .reset_n 		(reset_n),
 	.rx_en_gpo		(rx_en_gpo),
+	.rx_en_status		 (rx_en_status),
+	.rx_en_tx_packet_len (rx_en_tx_packet_len),
+	.rx_en_tx_packet	 (rx_en_tx_packet),
+	.rx_en_rx_packet_len (rx_en_rx_packet_len),
+	.rx_en_rx_packet	 (rx_en_rx_packet),
 	.rx_en_led		(rx_en_led),
 	.rx_en_dac		(rx_en_dac),
-	.rx_en_fifo   (rx_en_fifo),
-	.rx_en_fifo_length   (rx_en_fifo_length),
+	.rx_en_fifo     (rx_en_fifo),
+	.rx_en_fifo_length (rx_en_fifo_length),
 	.tx_en_gpo		(tx_en_gpo),
+	.tx_en_status	(tx_en_status),
+	.tx_en_tx_packet_len (tx_en_tx_packet_len),
+	.tx_en_tx_packet	 (tx_en_tx_packet),
+	.tx_en_rx_packet_len (tx_en_rx_packet_len),
+	.tx_en_rx_packet	 (tx_en_rx_packet),
 	.tx_en_led		(tx_en_led),
 	.tx_en_dac		(tx_en_dac),
-	.tx_en_fifo   (tx_en_fifo),
-	.tx_en_fifo_length   (tx_en_fifo_length),
+	.tx_en_fifo     (tx_en_fifo),
+	.tx_en_fifo_length (tx_en_fifo_length),
 	.tx_d			(tx_d),
 	.tx_en			(tx_en),
 	.reg_addr		(reg_addr),
@@ -97,16 +117,27 @@ regwrap regwrap_inst (
 	.rw_out			(rw_out),
 	.rx_d			(rx_d),
 	.data_from_gpo	(data_from_gpo),
+	.data_from_status_reg 		 (data_from_status_reg),
+	.data_from_tx_packet_len_reg (data_from_tx_packet_len_reg),
+	.data_from_tx_packet_reg 	 (data_from_tx_packet_reg),
+	.data_from_rx_packet_len_reg (data_from_rx_packet_len_reg),
+	.data_from_rx_packet_reg 	 (data_from_rx_packet_reg),
 	.data_from_led	(data_from_led),
 	.data_from_dac	(data_from_dac),
 	.data_from_fifo (data_from_fifo),
 	.data_from_fifo_length (data_from_fifo_length),
 	.data_to_gpo	(data_to_gpo),
+	.data_to_status_reg (data_to_status_reg),
+	.data_to_tx_packet_len_reg	(data_to_tx_packet_len_reg),
+	.data_to_tx_packet_reg		(data_to_tx_packet_reg),
+	.data_to_rx_packet_len_reg	(data_to_rx_packet_len_reg),
+	.data_to_rx_packet_reg		(data_to_rx_packet_reg),
 	.data_to_led	(data_to_led),
 	.data_to_dac	(data_to_dac),
-	.data_to_fifo (data_to_fifo),
+	.data_to_fifo   (data_to_fifo),
 	.data_to_fifo_length (data_to_fifo_length)
 	);
+	
 	
 fifo fifo_inst(
 	.clk  			(clk),
@@ -189,10 +220,12 @@ task do_spi_write;
 			#55 SCLK = 1'b1;
 		end
 		
-		if (reg_addr != check_data[7:1])
-			$display("ERROR: ADDRESS for WRITE expected %b, got %b", check_data[7:1], reg_addr);
+		#55
+		
+		if (reg_addr != check_data[6:0])
+			$display("ERROR: ADDRESS for WRITE expected %b, got %b", check_data[6:0], reg_addr);
 		else
-			$display("Success: ADDRESS for WRITE expected %b, got %b", check_data[7:1], reg_addr);
+			$display("Success: ADDRESS for WRITE expected %b, got %b", check_data[6:0], reg_addr);
 		check_data = 0;
 		for (i=8;i<=15;i++)
 		begin
@@ -275,6 +308,8 @@ endtask
 	$display($time, " << 6 spi_read >>");
 	do_spi_read(8'b1000_1000, 8'b0000_0011);
 	MOSI= 1'b1;
+	
+	#55
 	
 	if(fifo_read_complete != 1'b1)
 			$display("ERROR: read complete is not indicated!");

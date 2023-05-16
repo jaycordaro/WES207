@@ -151,7 +151,7 @@ begin
 		addr_dv <= 1'b0;
 	else if (spi_start || spi_end)
 		addr_dv <= 1'b0;
-	else if (bitcnt > header - 2)
+	else if (bitcnt > header - 1)
 		addr_dv <= 1'b1;
 end
 
