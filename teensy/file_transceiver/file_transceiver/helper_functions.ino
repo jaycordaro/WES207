@@ -254,6 +254,11 @@ void handle_transmit()
     }
     Serial.println("Tx compelte.");
     transmitting = false;
+
+    if(rx_count <= 0)
+    {
+      rx_complete();
+    }
   }
 }
 

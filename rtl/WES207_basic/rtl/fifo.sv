@@ -1,11 +1,11 @@
 module fifo(input logic clk,     
 			input logic reset_n,
-			input logic rd_en,
-			input logic wr_en,
+			input logic output_en,
+			input logic input_en,
 			input logic [7:0] data_in,
 			output  [7:0] data_out,
-			input logic length_rd_en,
-			input logic length_wr_en,
+			input logic length_output_en,
+			input logic length_input_en,
 			input logic [7:0] length_in,
 			output [7:0] length_out,
 			output full,
@@ -21,8 +21,8 @@ logic [7:0] rd_index;
 
 logic [7:0] length;
 
-logic [1:0] sync_wr;
-logic [1:0] sync_rd;
+logic sync_input;
+logic sync_output;
 
 always_ff @(posedge clk or negedge reset_n)
 	begin
@@ -32,15 +32,15 @@ always_ff @(posedge clk or negedge reset_n)
 				wr_index <= 8'b0000_0000;
 				rd_index <= 8'b0000_0000;
 				length <= 8'b0000_0000;
-				sync_wr <= 2'b00;
-				sync_rd <= 2'b00;
+				sync_input <= 2'b00;
+				sync_output <= 2'b00;
 			end
 		else
 			begin
-				sync_wr <= {sync_wr[0], wr_en};
-				sync_rd <= {sync_rd[0], rd_en};
+				sync_input <= input_en;
+				sync_output <= output_en;
 		
-				if (sync_wr == 2'b01)
+				if (sync_input == 1'b0 && input_en == 1'b1)
 					begin
 						buff[wr_index] <= data_in;
 						if (rd_index == wr_index)
@@ -51,7 +51,7 @@ always_ff @(posedge clk or negedge reset_n)
 						wr_index <= wr_index + 1;
 						
 					end
-				else if (sync_rd == 2'b10)
+				else if (sync_output == 1'b1 && output_en == 1'b0)
 					begin
 						if (rd_index != wr_index)
 							begin
@@ -64,7 +64,7 @@ always_ff @(posedge clk or negedge reset_n)
 							end
 					end
 					
-				if (length_wr_en == 1'b1)
+				if (length_input_en == 1'b1)
 				begin
 					length <= length_in;
 					
@@ -77,12 +77,12 @@ always_ff @(posedge clk or negedge reset_n)
 	end
 
 	
-assign data_out = (rd_en) ? buff_head : 8'b0001_1111;
+assign data_out = (output_en) ? buff_head : 8'b0001_1111;
 
-assign length_out = (length_rd_en) ? length : 8'b0000_0000;
+assign length_out = (length_output_en) ? length : 8'b0000_0000;
 
-assign full = wr_index >= length;
+assign full = wr_index >= length && !input_en && wr_index > 0;
 
-assign read_complete = rd_index >= length;
+assign read_complete = rd_index >= length && !output_en;
 		
 endmodule : fifo

@@ -1,0 +1,8 @@
+2023-05-17 18:53:27,356 DEBUG: efx_dbg.jtag.jcf (643): read_dr(): read_dr(32): 32: 00000000 00100001 00001010 01111001
+2023-05-17 18:53:27,644 DEBUG: efx_dbg.jtag.jcf (588): write_ir(): write_ir: 4: 0011
+2023-05-17 18:53:27,660 DEBUG: efx_dbg.jtag.jcf (643): read_dr(): read_dr(32): 32: 00000000 00100001 00001010 01111001
+2023-05-17 18:53:27,963 DEBUG: efx_dbg.jtag.jcf (643): read_dr(): read_dr(32): 32: 00000000 00100001 00001010 01111001
+2023-05-17 18:53:28,252 DEBUG: efx_dbg.jtag.jcf (588): write_ir(): write_ir: 4: 0011
+2023-05-17 18:53:28,268 DEBUG: efx_dbg.jtag.jcf (643): read_dr(): read_dr(32): 32: 00000000 00100001 00001010 01111001
+2023-05-17 18:53:28,572 DEBUG: efx_dbg.jtag.jcf (643): read_dr(): read_dr(32): 32: 00000000 00100001 00001010 01111001
+2023-05-17 18:53:28,876 DEBUG: efx_dbg.jtag.jcf (588): write_ir(): write_ir: 5: 11111

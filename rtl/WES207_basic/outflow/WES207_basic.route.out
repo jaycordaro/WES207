@@ -16,26 +16,26 @@ Running Placement and Routing for Family "Trion", Device "T20F256" ...
 Read ipin pattern from C:/Efinity/2022.2/arch/./ipin_oph.xml
 Finished parsing ipin pattern file 'C:/Efinity/2022.2/arch/./ipin_oph.xdb'.
 Finished parsing switch_block file 'C:/Efinity/2022.2/arch/.\sb_connectivity_subset.xdb'.
-BuildGraph process took 5.64805 seconds.
-	BuildGraph process took 5.57812 seconds (approximately) in total CPU time.
-BuildGraph process virtual memory usage: begin = 139.192 MB, end = 509.312 MB, delta = 370.12 MB
-	BuildGraph process peak virtual memory usage = 515.72 MB
-BuildGraph process resident set memory usage: begin = 141.256 MB, end = 500.116 MB, delta = 358.86 MB
-	BuildGraph process peak resident set memory usage = 505.76 MB
-check rr_graph process took 0.137303 seconds.
+BuildGraph process took 5.57267 seconds.
+	BuildGraph process took 5.5 seconds (approximately) in total CPU time.
+BuildGraph process virtual memory usage: begin = 141.004 MB, end = 513.708 MB, delta = 372.704 MB
+	BuildGraph process peak virtual memory usage = 518.32 MB
+BuildGraph process resident set memory usage: begin = 142.336 MB, end = 504.452 MB, delta = 362.116 MB
+	BuildGraph process peak resident set memory usage = 508.796 MB
+check rr_graph process took 0.135884 seconds.
 	check rr_graph process took 0.140625 seconds (approximately) in total CPU time.
-check rr_graph process virtual memory usage: begin = 547.068 MB, end = 547.068 MB, delta = 0 MB
-	check rr_graph process peak virtual memory usage = 557.384 MB
-check rr_graph process resident set memory usage: begin = 537.836 MB, end = 537.896 MB, delta = 0.06 MB
-	check rr_graph process peak resident set memory usage = 548.18 MB
-Generated 1169353 RR nodes and 4436975 RR edges
+check rr_graph process virtual memory usage: begin = 551.492 MB, end = 551.492 MB, delta = 0 MB
+	check rr_graph process peak virtual memory usage = 561.828 MB
+check rr_graph process resident set memory usage: begin = 542.172 MB, end = 542.232 MB, delta = 0.06 MB
+	check rr_graph process peak resident set memory usage = 552.516 MB
+Generated 1169353 RR nodes and 4436902 RR edges
 This design has 0 global control net(s). See C:/Capstone/WES207/rtl/WES207_basic/outflow\WES207_basic.route.rpt for details.
-Routing graph took 5.89684 seconds.
-	Routing graph took 5.79688 seconds (approximately) in total CPU time.
-Routing graph virtual memory usage: begin = 137.804 MB, end = 508.16 MB, delta = 370.356 MB
-	Routing graph peak virtual memory usage = 557.384 MB
-Routing graph resident set memory usage: begin = 140.368 MB, end = 499.136 MB, delta = 358.768 MB
-	Routing graph peak resident set memory usage = 548.18 MB
+Routing graph took 5.82107 seconds.
+	Routing graph took 5.71875 seconds (approximately) in total CPU time.
+Routing graph virtual memory usage: begin = 139.648 MB, end = 512.588 MB, delta = 372.94 MB
+	Routing graph peak virtual memory usage = 561.828 MB
+Routing graph resident set memory usage: begin = 141.544 MB, end = 503.468 MB, delta = 361.924 MB
+	Routing graph peak resident set memory usage = 552.516 MB
 ***** Ending stage routing graph generation *****
 
 ***** Beginning stage routing ... *****
@@ -48,29 +48,29 @@ SDC file 'C:/Capstone/WES207/rtl/WES207_basic/WES207constrain.sdc' parsed succes
  ---------      -------     --------------      -------------
  Iteration      Overuse     Crit Path (ns)      Calc Time (s)
  ---------      -------     --------------      -------------
-         1        18707             -1e+09               1.95
-         2         1927             -1e+09               3.15
-         3          380             -1e+09               1.59
-         4            3             -1e+09              0.467
-         5            0             -1e+09              0.186
+         1        19119             -1e+09               2.04
+         2         1959             -1e+09               3.38
+         3          408             -1e+09               1.59
+         4            1             -1e+09              0.595
+         5            0             -1e+09              0.495
 
-Successfully routed netlist after 5 routing iterations and 39731784 heapops
+Successfully routed netlist after 5 routing iterations and 40113873 heapops
 Completed net delay value cross check successfully.
 
 ***** Beginning stage routing check ... *****
 ***** Ending stage routing check *****
 
 
-Serial number (magic cookie) for the routing is: 1152358801
+Serial number (magic cookie) for the routing is: 345144401
 Netlist fully routed.
 
 Successfully created FPGA route file 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.route'
-Routing took 8.37391 seconds.
-	Routing took 8.32812 seconds (approximately) in total CPU time.
-Routing virtual memory usage: begin = 508.16 MB, end = 536.768 MB, delta = 28.608 MB
-	Routing peak virtual memory usage = 648.58 MB
-Routing resident set memory usage: begin = 499.14 MB, end = 529.684 MB, delta = 30.544 MB
-	Routing peak resident set memory usage = 624.072 MB
+Routing took 9.18558 seconds.
+	Routing took 9.09375 seconds (approximately) in total CPU time.
+Routing virtual memory usage: begin = 512.588 MB, end = 550.688 MB, delta = 38.1 MB
+	Routing peak virtual memory usage = 668.388 MB
+Routing resident set memory usage: begin = 503.472 MB, end = 539.716 MB, delta = 36.244 MB
+	Routing peak resident set memory usage = 639.98 MB
 ***** Ending stage routing *****
 
 ***** Beginning stage final timing analysis ... *****
@@ -80,29 +80,29 @@ Maximum possible analyzed clocks frequency
 
 
 Write Timing Report to "C:/Capstone/WES207/rtl/WES207_basic/outflow\WES207_basic.timing.rpt" ...
-final timing analysis took 0.562908 seconds.
-	final timing analysis took 0.5625 seconds (approximately) in total CPU time.
-final timing analysis virtual memory usage: begin = 534.516 MB, end = 539.9 MB, delta = 5.384 MB
-	final timing analysis peak virtual memory usage = 648.58 MB
-final timing analysis resident set memory usage: begin = 527.448 MB, end = 533.088 MB, delta = 5.64 MB
-	final timing analysis peak resident set memory usage = 624.072 MB
+final timing analysis took 0.590193 seconds.
+	final timing analysis took 0.578125 seconds (approximately) in total CPU time.
+final timing analysis virtual memory usage: begin = 548.084 MB, end = 551.892 MB, delta = 3.808 MB
+	final timing analysis peak virtual memory usage = 668.388 MB
+final timing analysis resident set memory usage: begin = 537.116 MB, end = 541.452 MB, delta = 4.336 MB
+	final timing analysis peak resident set memory usage = 639.98 MB
 ***** Ending stage final timing analysis *****
 
 ***** Beginning stage bitstream generation ... *****
 Reading core interface constraints from 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.interface.csv'.
 Successfully processed interface constraints file "C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.interface.csv".
 Finished writing bitstream file C:/Capstone/WES207/rtl/WES207_basic/work_pnr\WES207_basic.lbf.
-Bitstream generation took 0.667439 seconds.
-	Bitstream generation took 0.671875 seconds (approximately) in total CPU time.
-Bitstream generation virtual memory usage: begin = 539.9 MB, end = 574.504 MB, delta = 34.604 MB
-	Bitstream generation peak virtual memory usage = 648.58 MB
-Bitstream generation resident set memory usage: begin = 533.12 MB, end = 566.908 MB, delta = 33.788 MB
-	Bitstream generation peak resident set memory usage = 624.072 MB
+Bitstream generation took 0.692266 seconds.
+	Bitstream generation took 0.6875 seconds (approximately) in total CPU time.
+Bitstream generation virtual memory usage: begin = 551.892 MB, end = 584.344 MB, delta = 32.452 MB
+	Bitstream generation peak virtual memory usage = 668.388 MB
+Bitstream generation resident set memory usage: begin = 541.484 MB, end = 572.724 MB, delta = 31.24 MB
+	Bitstream generation peak resident set memory usage = 639.98 MB
 ***** Ending stage bitstream generation *****
 
-The entire flow of EFX_PNR took 32.2336 seconds.
-	The entire flow of EFX_PNR took 37.5 seconds (approximately) in total CPU time.
-The entire flow of EFX_PNR virtual memory usage: begin = 5.392 MB, end = 76.964 MB, delta = 71.572 MB
-	The entire flow of EFX_PNR peak virtual memory usage = 648.58 MB
-The entire flow of EFX_PNR resident set memory usage: begin = 11.76 MB, end = 83.42 MB, delta = 71.66 MB
-	The entire flow of EFX_PNR peak resident set memory usage = 624.072 MB
+The entire flow of EFX_PNR took 34.6072 seconds.
+	The entire flow of EFX_PNR took 39.2344 seconds (approximately) in total CPU time.
+The entire flow of EFX_PNR virtual memory usage: begin = 5.416 MB, end = 84.36 MB, delta = 78.944 MB
+	The entire flow of EFX_PNR peak virtual memory usage = 668.388 MB
+The entire flow of EFX_PNR resident set memory usage: begin = 11.76 MB, end = 86.532 MB, delta = 74.772 MB
+	The entire flow of EFX_PNR peak resident set memory usage = 639.98 MB

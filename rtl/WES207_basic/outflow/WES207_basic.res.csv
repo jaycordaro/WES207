@@ -1,16 +1,17 @@
 sep=\t
 Module Resource Usage Distribution Estimates
-Generated at: May 15, 2023 12:26:56
+Generated at: May 17, 2023 20:26:52
 
 Note: some resources maybe grouped under different hierarchy due to optimization and LUT mapping
 
 Module	         FFs	        ADDs	        LUTs	      RAMs	 DSP/MULTs
-WES207_top:WES207_top        	    3297(0)	      69(0)	    3484(0)	     0(0)	     0(0)	
- +spi_slave_inst:spi_slave   	     41(41)	       4(4)	     73(73)	     0(0)	     0(0)	
- +led_inst:led               	     42(42)	     23(23)	     48(48)	     0(0)	     0(0)	
- +gpo_inst:gpo               	       8(8)	       0(0)	     14(14)	     0(0)	     0(0)	
- +regwrap_inst:regwrap       	       0(0)	       0(0)	   102(102)	     0(0)	     0(0)	
- +tx_dac_fsm_inst:tx_dac_fsm 	     26(26)	     21(21)	     68(68)	     0(0)	     0(0)	
- +fifo_inst:fifo             	 1060(1060)	       7(7)	 1062(1062)	     0(0)	     0(0)	
- +tx_fifo:fifo               	 1060(1060)	       7(7)	 1056(1056)	     0(0)	     0(0)	
- +rx_fifo:fifo               	 1060(1060)	       7(7)	 1061(1061)	     0(0)	     0(0)	
+WES207_top:WES207_top              	    3320(0)	      69(0)	    3534(0)	     0(0)	     0(0)	
+ +spi_slave_inst:spi_slave         	     41(41)	       4(4)	     70(70)	     0(0)	     0(0)	
+ +led_inst:led                     	     42(42)	     23(23)	     49(49)	     0(0)	     0(0)	
+ +gpo_inst:gpo                     	       8(8)	       0(0)	     14(14)	     0(0)	     0(0)	
+ +regwrap_inst:regwrap             	       0(0)	       0(0)	     73(73)	     0(0)	     0(0)	
+ +tx_dac_fsm_inst:tx_dac_fsm       	     26(26)	     21(21)	     66(66)	     0(0)	     0(0)	
+ +fifo_inst:fifo                   	 1058(1058)	       7(7)	 1069(1069)	     0(0)	     0(0)	
+ +tx_fifo:fifo                     	 1058(1058)	       7(7)	 1093(1093)	     0(0)	     0(0)	
+ +rx_fifo:fifo                     	 1058(1058)	       7(7)	 1084(1084)	     0(0)	     0(0)	
+ +fifo_transfer_inst:fifo_transfer 	     29(29)	       0(0)	     16(16)	     0(0)	     0(0)	

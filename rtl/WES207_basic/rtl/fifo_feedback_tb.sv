@@ -91,20 +91,20 @@ regwrap regwrap_inst (
     .reset_n 		(reset_n),
 	.rx_en_gpo		(rx_en_gpo),
 	.rx_en_status		 (rx_en_status),
-	.rx_en_tx_packet_len (rx_en_tx_packet_len),
-	.rx_en_tx_packet	 (rx_en_tx_packet),
-	.rx_en_rx_packet_len (rx_en_rx_packet_len),
-	.rx_en_rx_packet	 (rx_en_rx_packet),
+	.input_en_tx_packet_len (input_en_tx_packet_len),
+	.input_en_tx_packet	 (input_en_tx_packet),
+	.input_en_rx_packet_len (input_en_rx_packet_len_null),
+	.input_en_rx_packet	 (input_en_rx_packet_null),
 	.rx_en_led		(rx_en_led),
 	.rx_en_dac		(rx_en_dac),
 	.rx_en_fifo     (rx_en_fifo),
 	.rx_en_fifo_length (rx_en_fifo_length),
 	.tx_en_gpo		(tx_en_gpo),
 	.tx_en_status	(tx_en_status),
-	.tx_en_tx_packet_len (tx_en_tx_packet_len),
-	.tx_en_tx_packet	 (tx_en_tx_packet),
-	.tx_en_rx_packet_len (tx_en_rx_packet_len),
-	.tx_en_rx_packet	 (tx_en_rx_packet),
+	.output_en_tx_packet_len (output_en_tx_packet_len_null),
+	.output_en_tx_packet	 (output_en_tx_packet_null),
+	.output_en_rx_packet_len (output_en_rx_packet_len),
+	.output_en_rx_packet	 (output_en_rx_packet),
 	.tx_en_led		(tx_en_led),
 	.tx_en_dac		(tx_en_dac),
 	.tx_en_fifo     (tx_en_fifo),
@@ -118,8 +118,8 @@ regwrap regwrap_inst (
 	.rx_d			(rx_d),
 	.data_from_gpo	(data_from_gpo),
 	.data_from_status_reg 		 (data_from_status_reg),
-	.data_from_tx_packet_len_reg (data_from_tx_packet_len_reg),
-	.data_from_tx_packet_reg 	 (data_from_tx_packet_reg),
+	.data_from_tx_packet_len_reg (data_from_tx_packet_len_reg_null),
+	.data_from_tx_packet_reg 	 (data_from_tx_packet_reg_null),
 	.data_from_rx_packet_len_reg (data_from_rx_packet_len_reg),
 	.data_from_rx_packet_reg 	 (data_from_rx_packet_reg),
 	.data_from_led	(data_from_led),
@@ -130,23 +130,26 @@ regwrap regwrap_inst (
 	.data_to_status_reg (data_to_status_reg),
 	.data_to_tx_packet_len_reg	(data_to_tx_packet_len_reg),
 	.data_to_tx_packet_reg		(data_to_tx_packet_reg),
-	.data_to_rx_packet_len_reg	(data_to_rx_packet_len_reg),
-	.data_to_rx_packet_reg		(data_to_rx_packet_reg),
+	.data_to_rx_packet_len_reg	(data_to_rx_packet_len_reg_null),
+	.data_to_rx_packet_reg		(data_to_rx_packet_reg_null),
 	.data_to_led	(data_to_led),
 	.data_to_dac	(data_to_dac),
 	.data_to_fifo   (data_to_fifo),
-	.data_to_fifo_length (data_to_fifo_length)
+	.data_to_fifo_length (data_to_fifo_length),
+	.tx_rdy         (tx_fifo_read_complete),
+	.rx_rdy			(rx_fifo_full),
+	.rx_n_rdy		(rx_fifo_read_complete)
 	);
 	
 fifo fifo_inst(
 	.clk  			(clk),
 	.reset_n 		(reset_n),
-	.rd_en 			(tx_en_fifo),
-	.wr_en			(rx_en_fifo),
+	.output_en 		(tx_en_fifo),
+	.input_en		(rx_en_fifo),
 	.data_in		(data_to_fifo),
 	.data_out		(data_from_fifo),
-	.length_rd_en 	(tx_en_fifo_length),
-	.length_wr_en	(rx_en_fifo_length),
+	.length_output_en (tx_en_fifo_length),
+	.length_input_en (rx_en_fifo_length),
 	.length_in		(data_to_fifo_length),
 	.length_out		(data_from_fifo_length),
 	.full           (fifo_full),
@@ -156,12 +159,12 @@ fifo fifo_inst(
 fifo tx_fifo(
 	.clk  			(clk),
 	.reset_n 		(reset_n),
-	.rd_en 			(tx_en_tx_packet),
-	.wr_en			(rx_en_tx_packet),
+	.output_en 		(output_en_tx_packet),
+	.input_en		(input_en_tx_packet),
 	.data_in		(data_to_tx_packet_reg),
 	.data_out		(data_from_tx_packet_reg),
-	.length_rd_en 	(tx_en_tx_packet_len),
-	.length_wr_en	(rx_en_tx_packet_len),
+	.length_output_en (output_en_tx_packet_len),
+	.length_input_en (input_en_tx_packet_len),
 	.length_in		(data_to_tx_packet_len_reg),
 	.length_out		(data_from_tx_packet_len_reg),
 	.full           (tx_fifo_full),
@@ -171,18 +174,32 @@ fifo tx_fifo(
 fifo rx_fifo(
 	.clk  			(clk),
 	.reset_n 		(reset_n),
-	.rd_en 			(tx_en_rx_packet),
-	.wr_en			(rx_en_rx_packet),
+	.output_en 		(output_en_rx_packet),
+	.input_en		(input_en_rx_packet),
 	.data_in		(data_to_rx_packet_reg),
 	.data_out		(data_from_rx_packet_reg),
-	.length_rd_en 	(tx_en_rx_packet_len),
-	.length_wr_en	(rx_en_rx_packet_len),
+	.length_output_en (output_en_rx_packet_len),
+	.length_input_en (input_en_rx_packet_len),
 	.length_in		(data_to_rx_packet_len_reg),
 	.length_out		(data_from_rx_packet_len_reg),
 	.full           (rx_fifo_full),
 	.read_complete  (rx_fifo_read_complete)
 	);
 	
+fifo_transfer fifo_transfer_inst(
+	.clk           (clk),
+	.reset_n       (reset_n),
+	.output_en     (input_en_rx_packet),
+	.input_en      (output_en_tx_packet),
+	.data_in       (data_from_tx_packet_reg),
+	.data_out      (data_to_rx_packet_reg),
+	.length_output_en (input_en_rx_packet_len),
+	.length_input_en (output_en_tx_packet_len),
+	.length_in     (data_from_tx_packet_len_reg),
+	.length_out     (data_to_rx_packet_len_reg),
+	.start         (tx_fifo_full),
+	.stop          (tx_fifo_read_complete)
+	);
 
   	always #10 clk = ~clk;  
 
@@ -284,7 +301,8 @@ endtask
 	
   initial begin   // 
   
-  
+	int i;
+	
  // create 50MHz clock
     $dumpfile("clk_tb.vcd");
 	$display($time, " << Starting the Simulation >>");
@@ -295,54 +313,78 @@ endtask
 	#10 MOSI=1'b0;
 	#40 reset_n = 1;
 	
-	$display($time, " << spi_write length >>");
-	do_spi_write(16'b0000_0100_0000_0011);
-	MOSI= 1'b1;
 	
-	$display($time, " << spi_read length >>");
-	do_spi_read(8'b1000_0100, 8'b0000_0011);
-	MOSI= 1'b1;
-	
-	$display($time, " << 1 spi_write >>");
-	do_spi_write(16'b0000_0101_0000_0001);
-	MOSI= 1'b1;
-	
-	#50
-	$display($time, " << 2 spi_write >>");
-	do_spi_write(16'b0000_0101_0000_0010);
-	MOSI= 1'b1;
-	
-	#50
-	$display($time, " << 3 spi_write >>");
-	do_spi_write(16'b0000_0101_0000_0011);
-	MOSI= 1'b1;
-	
-	if(tx_fifo_full != 1'b1)
-			$display("ERROR: fifo full is not indicated!");
-		else
-			$display("Success: fifo full is set");
-	
-	#50
-	$display($time, " << 4 spi_read >>");
-	do_spi_read(8'b1000_0101, 8'b0000_0001);
-	MOSI= 1'b1;
-	
-	#50
-	$display($time, " << 5 spi_read >>");
-	do_spi_read(8'b1000_0101, 8'b0000_0010);
-	MOSI= 1'b1;
-	
-	#50 
-	$display($time, " << 6 spi_read >>");
-	do_spi_read(8'b1000_0101, 8'b0000_0011);
-	MOSI= 1'b1;
-	
-	#55
-	
-	if(tx_fifo_read_complete != 1'b1)
-			$display("ERROR: read complete is not indicated!");
-		else
-			$display("Success: read complete is set");
-	
-	end
+	//for (i=8;i<=15;i++)
+	//begin
+		#50
+	$display($time, " << status spi_read >>");
+		do_spi_read(8'b1000_0001, 8'b1000_0000);
+		MOSI= 1'b1;
+		
+		#50
+		
+		$display($time, " << spi_write length >>");
+		do_spi_write(16'b0000_0010_0000_0011);
+		MOSI= 1'b1;
+		
+		#50
+		
+		$display($time, " << 1 spi_write >>");
+		do_spi_write(16'b0000_0011_0000_0001);
+		MOSI= 1'b1;
+		
+		#50
+		$display($time, " << 2 spi_write >>");
+		do_spi_write(16'b0000_0011_0000_0010);
+		MOSI= 1'b1;
+		
+		#50
+		$display($time, " << 3 spi_write >>");
+		do_spi_write(16'b0000_0011_0000_0011);
+		MOSI= 1'b1;
+		
+		#100
+		if(tx_fifo_full != 1'b1)
+				$display("ERROR: fifo full is not indicated!");
+			else
+				$display("Success: fifo full is set");
+		
+		#500
+		
+		#50
+		$display($time, " << status spi_read >>");
+		do_spi_read(8'b1000_0001, 8'b0100_0000);
+		MOSI= 1'b1;
+		
+		
+		#50
+		$display($time, " << length spi_read >>");
+		do_spi_read(8'b1000_0100, 8'b0000_0011);
+		MOSI= 1'b1;
+		
+		
+		#50
+		$display($time, " << 4 spi_read >>");
+		do_spi_read(8'b1000_0101, 8'b0000_0001);
+		MOSI= 1'b1;
+		
+		#50
+		$display($time, " << 5 spi_read >>");
+		do_spi_read(8'b1000_0101, 8'b0000_0010);
+		MOSI= 1'b1;
+		
+		#50 
+		$display($time, " << 6 spi_read >>");
+		do_spi_read(8'b1000_0101, 8'b0000_0011);
+		MOSI= 1'b1;
+		
+		#55
+		
+		if(tx_fifo_read_complete != 1'b1)
+				$display("ERROR: read complete is not indicated!");
+			else
+				$display("Success: read complete is set");
+		
+		end
+	//end
 endmodule

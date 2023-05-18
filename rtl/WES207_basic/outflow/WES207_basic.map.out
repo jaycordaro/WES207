@@ -25,37 +25,46 @@ C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(86): INFO: undeclared symb
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(96): INFO: undeclared symbol 'tx_en_gpo', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(97): INFO: undeclared symbol 'rx_en_gpo', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(107): INFO: undeclared symbol 'rx_en_status', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(108): INFO: undeclared symbol 'rx_en_tx_packet_len', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(109): INFO: undeclared symbol 'rx_en_tx_packet', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(110): INFO: undeclared symbol 'rx_en_rx_packet_len', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(111): INFO: undeclared symbol 'rx_en_rx_packet', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(108): INFO: undeclared symbol 'input_en_tx_packet_len', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(109): INFO: undeclared symbol 'input_en_tx_packet', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(110): INFO: undeclared symbol 'input_en_rx_packet_len_null', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(111): INFO: undeclared symbol 'input_en_rx_packet_null', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(113): INFO: undeclared symbol 'rx_en_dac', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(114): INFO: undeclared symbol 'rx_en_fifo', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(115): INFO: undeclared symbol 'rx_en_fifo_length', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(117): INFO: undeclared symbol 'tx_en_status', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(118): INFO: undeclared symbol 'tx_en_tx_packet_len', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(119): INFO: undeclared symbol 'tx_en_tx_packet', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(120): INFO: undeclared symbol 'tx_en_rx_packet_len', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(121): INFO: undeclared symbol 'tx_en_rx_packet', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(118): INFO: undeclared symbol 'output_en_tx_packet_len_null', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(119): INFO: undeclared symbol 'output_en_tx_packet_null', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(120): INFO: undeclared symbol 'output_en_rx_packet_len', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(121): INFO: undeclared symbol 'output_en_rx_packet', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(123): INFO: undeclared symbol 'tx_en_dac', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(124): INFO: undeclared symbol 'tx_en_fifo', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(125): INFO: undeclared symbol 'tx_en_fifo_length', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(135): INFO: undeclared symbol 'data_from_tx_packet_len_reg_null', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(136): INFO: undeclared symbol 'data_from_tx_packet_reg_null', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(140): INFO: undeclared symbol 'data_from_dac', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(147): INFO: undeclared symbol 'data_to_rx_packet_len_reg_null', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(148): INFO: undeclared symbol 'data_to_rx_packet_reg_null', assumed default net type 'wire' (VERI-2561)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(150): INFO: undeclared symbol 'data_to_dac', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(176): INFO: undeclared symbol 'fifo_full', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(177): INFO: undeclared symbol 'fifo_read_complete', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(191): INFO: undeclared symbol 'tx_fifo_full', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(192): INFO: undeclared symbol 'tx_fifo_read_complete', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(206): INFO: undeclared symbol 'rx_fifo_full', assumed default net type 'wire' (VERI-2561)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(207): INFO: undeclared symbol 'rx_fifo_read_complete', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(153): INFO: undeclared symbol 'tx_fifo_read_complete', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(154): INFO: undeclared symbol 'rx_fifo_full', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(155): INFO: undeclared symbol 'rx_fifo_read_complete', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(179): INFO: undeclared symbol 'fifo_full', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(180): INFO: undeclared symbol 'fifo_read_complete', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(186): INFO: undeclared symbol 'output_en_tx_packet', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(190): INFO: undeclared symbol 'output_en_tx_packet_len', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(194): INFO: undeclared symbol 'tx_fifo_full', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(202): INFO: undeclared symbol 'input_en_rx_packet', assumed default net type 'wire' (VERI-2561)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(206): INFO: undeclared symbol 'input_en_rx_packet_len', assumed default net type 'wire' (VERI-2561)
 -- Analyzing Verilog file 'C:\Capstone\WES207\rtl\WES207_basic\rtl\tx_dac_fsm.sv' (VERI-1482)
 -- Analyzing Verilog file 'C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv' (VERI-1482)
-INFO: Analysis took 0.0453214 seconds.
+-- Analyzing Verilog file 'C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo_transfer.sv' (VERI-1482)
+INFO: Analysis took 0.0169454 seconds.
 INFO: 	Analysis took 0.015625 seconds (approximately) in total CPU time.
-INFO: Analysis virtual memory usage: begin = 55.092 MB, end = 55.428 MB, delta = 0.336 MB
-INFO: 	Analysis peak virtual memory usage = 55.436 MB
-INFO: Analysis resident set memory usage: begin = 55.9 MB, end = 58.336 MB, delta = 2.436 MB
-INFO: 	Analysis peak resident set memory usage = 58.34 MB
+INFO: Analysis virtual memory usage: begin = 55.136 MB, end = 55.476 MB, delta = 0.34 MB
+INFO: 	Analysis peak virtual memory usage = 55.484 MB
+INFO: Analysis resident set memory usage: begin = 55.856 MB, end = 58.296 MB, delta = 2.44 MB
+INFO: 	Analysis peak resident set memory usage = 58.3 MB
 INFO: ***** Ending Analysis ... *****
 INFO: ***** Beginning Elaboration ... *****
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(1): INFO: compiling module 'WES207_top' (VERI-1018)
@@ -65,7 +74,11 @@ C:\Capstone\WES207\rtl\WES207_basic\rtl\led.sv(25): INFO: compiling module 'led'
 C:\Capstone\WES207\rtl\WES207_basic\rtl\led.sv(78): WARNING: expression size 26 truncated to fit in target size 25 (VERI-1209)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\gpo.sv(1): INFO: compiling module 'gpo' (VERI-1018)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv(27): INFO: compiling module 'regwrap' (VERI-1018)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(135): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_len_reg' (VERI-1330)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(136): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_from_tx_packet_reg' (VERI-1330)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(140): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_from_dac' (VERI-1330)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(147): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_len_reg' (VERI-1330)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(148): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_to_rx_packet_reg' (VERI-1330)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(150): WARNING: actual bit length 1 differs from formal bit length 8 for port 'data_to_dac' (VERI-1330)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\tx_dac_fsm.sv(26): INFO: compiling module 'tx_dac_fsm' (VERI-1018)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\tx_dac_fsm.sv(95): WARNING: expression size 6 truncated to fit in target size 5 (VERI-1209)
@@ -76,19 +89,22 @@ C:\Capstone\WES207\rtl\WES207_basic\rtl\tx_dac_fsm.sv(190): WARNING: latch infer
 C:\Capstone\WES207\rtl\WES207_basic\rtl\tx_dac_fsm.sv(190): WARNING: 'ld_sym' inside always_comb block does not represent combinational logic (VERI-1899)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\tx_dac_fsm.sv(197): WARNING: expression size 7 truncated to fit in target size 6 (VERI-1209)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\tx_dac_fsm.sv(208): WARNING: expression size 7 truncated to fit in target size 6 (VERI-1209)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(160): WARNING: actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_in' (VERI-1330)
-C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(161): WARNING: actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_out' (VERI-1330)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(163): WARNING: actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_in' (VERI-1330)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(164): WARNING: actual bit length 1 differs from formal bit length 8 for port 'dacreg_data_out' (VERI-1330)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv(1): INFO: compiling module 'fifo' (VERI-1018)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv(16): INFO: extracting RAM for identifier 'buff' (VERI-2571)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv(51): WARNING: expression size 9 truncated to fit in target size 8 (VERI-1209)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv(59): WARNING: expression size 9 truncated to fit in target size 8 (VERI-1209)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo_transfer.sv(1): INFO: compiling module 'fifo_transfer' (VERI-1018)
 C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(36): WARNING: net 'data_from_status_reg[7]' does not have a driver (VDB-1002)
-INFO: Elaboration took 0.0180563 seconds.
-INFO: 	Elaboration took 0.03125 seconds (approximately) in total CPU time.
-INFO: Elaboration virtual memory usage: begin = 55.428 MB, end = 57.028 MB, delta = 1.6 MB
-INFO: 	Elaboration peak virtual memory usage = 57.028 MB
-INFO: Elaboration resident set memory usage: begin = 58.356 MB, end = 61.276 MB, delta = 2.92 MB
-INFO: 	Elaboration peak resident set memory usage = 61.28 MB
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(135): WARNING: net 'data_from_tx_packet_len_reg_null' does not have a driver (VDB-1002)
+C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv(136): WARNING: net 'data_from_tx_packet_reg_null' does not have a driver (VDB-1002)
+INFO: Elaboration took 0.0211716 seconds.
+INFO: 	Elaboration took 0.015625 seconds (approximately) in total CPU time.
+INFO: Elaboration virtual memory usage: begin = 55.476 MB, end = 57.144 MB, delta = 1.668 MB
+INFO: 	Elaboration peak virtual memory usage = 57.144 MB
+INFO: Elaboration resident set memory usage: begin = 58.316 MB, end = 61.312 MB, delta = 2.996 MB
+INFO: 	Elaboration peak resident set memory usage = 61.316 MB
 INFO: ***** Ending Elaboration ... *****
 [EFX-0000 INFO] Setting Synthesis Option: mode=speed
 INFO: ***** Beginning Reading Mapping Library ... *****
@@ -113,16 +129,24 @@ C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(601): INFO: compiling module
 C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(693): INFO: compiling module 'EFX_RAM10' (VERI-1018)
 C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(794): INFO: compiling module 'EFX_DPRAM10' (VERI-1018)
 C:/Efinity/2022.2/sim_models/maplib/efinix_maplib.v(924): INFO: compiling module 'EFX_SRL8' (VERI-1018)
-INFO: Reading Mapping Library took 0.0146396 seconds.
+INFO: Reading Mapping Library took 0.0153293 seconds.
 INFO: 	Reading Mapping Library took 0.015625 seconds (approximately) in total CPU time.
-INFO: Reading Mapping Library virtual memory usage: begin = 57.312 MB, end = 57.724 MB, delta = 0.412 MB
-INFO: 	Reading Mapping Library peak virtual memory usage = 57.724 MB
-INFO: Reading Mapping Library resident set memory usage: begin = 61.808 MB, end = 62.204 MB, delta = 0.396 MB
-INFO: 	Reading Mapping Library peak resident set memory usage = 62.208 MB
+INFO: Reading Mapping Library virtual memory usage: begin = 57.428 MB, end = 57.908 MB, delta = 0.48 MB
+INFO: 	Reading Mapping Library peak virtual memory usage = 57.908 MB
+INFO: Reading Mapping Library resident set memory usage: begin = 61.856 MB, end = 62.312 MB, delta = 0.456 MB
+INFO: 	Reading Mapping Library peak resident set memory usage = 62.316 MB
 INFO: ***** Ending Reading Mapping Library ... *****
 [EFX-0000 INFO] ... Pre-synthesis checks begin
 [EFX-0200 WARNING] Removing redundant signal : clk. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:28)
 [EFX-0200 WARNING] Removing redundant signal : reset_n. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:29)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[7]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:57)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[6]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:57)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[5]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:57)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[4]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:57)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[3]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:57)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[2]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:57)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[1]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:57)
+[EFX-0200 WARNING] Removing redundant signal : data_from_status_reg[0]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\regwrap.sv:57)
 [EFX-0677 INFO] Zero initialization of uninitialized memory block 'buff'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:16)
 [EFX-0000 INFO] ... Pre-synthesis checks end (Real time : 0s)
 [EFX-0000 INFO] ... NameSpace init begin
@@ -135,8 +159,20 @@ INFO: ***** Ending Reading Mapping Library ... *****
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" begin
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "gpo" end (Real time : 0s)
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" begin
-[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" end (Real time : 0s)
-[EFX-0000 INFO] ... Hierarchical pre-synthesis "tx_dac_fsm" begin
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_len_reg[7]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[1]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[2]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[3]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[4]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[5]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[6]=0).
+[EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_tx_packet_reg[7]=0).
 [EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[1]=0).
 [EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[2]=0).
 [EFX-0266 WARNING] Module Instance 'regwrap_inst' input pin tied to constant (data_from_dac[3]=0).
@@ -161,12 +197,7 @@ INFO: ***** Ending Reading Mapping Library ... *****
 [EFX-0200 WARNING] Removing redundant signal : data_in[0]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:26)
 [EFX-0200 WARNING] Removing redundant signal : data_out[7]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:27)
 [EFX-0200 WARNING] Removing redundant signal : data_out[6]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:27)
-[EFX-0200 WARNING] Removing redundant signal : data_out[5]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:27)
-[EFX-0200 WARNING] Removing redundant signal : data_out[4]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:27)
-[EFX-0200 WARNING] Removing redundant signal : data_out[3]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:27)
-[EFX-0200 WARNING] Removing redundant signal : data_out[2]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:27)
-[EFX-0200 WARNING] Removing redundant signal : data_out[1]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:27)
-[EFX-0200 WARNING] Removing redundant signal : data_out[0]. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:27)
+[EFX-0200 WARNING] The above message was generated too many times, subsequent similar messages will be muted.
 [EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg[7]'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:36)
 [EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg[6]'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:36)
 [EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg[5]'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:36)
@@ -175,15 +206,22 @@ INFO: ***** Ending Reading Mapping Library ... *****
 [EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg[2]'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:36)
 [EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg[1]'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:36)
 [EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_status_reg[0]'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:36)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_len_reg_null'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:135)
+[EFX-0201 WARNING] Re-wiring to GND non-driven net 'data_from_tx_packet_reg_null'. (C:\Capstone\WES207\rtl\WES207_basic\rtl\WES207_top.sv:136)
+[EFX-0201 WARNING] The above message was generated too many times, subsequent similar messages will be muted.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "regwrap" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "tx_dac_fsm" begin
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "tx_dac_fsm" end (Real time : 0s)
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "fifo" begin
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "fifo" end (Real time : 0s)
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fifo_transfer" begin
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "fifo_transfer" end (Real time : 0s)
 [EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" begin
 [EFX-0657 WARNING] Mapping into logic memory block 'fifo_inst/buff' (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:16) because read port is not synchronous.
 [EFX-0657 WARNING] Mapping into logic memory block 'tx_fifo/buff' (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:16) because read port is not synchronous.
 [EFX-0657 WARNING] Mapping into logic memory block 'rx_fifo/buff' (C:\Capstone\WES207\rtl\WES207_basic\rtl\fifo.sv:16) because read port is not synchronous.
-[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 135 flops.
-[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" end (Real time : 0s)
+[EFX-0000 INFO] ... Clock Enable Synthesis Performed on 140 flops.
+[EFX-0000 INFO] ... Hierarchical pre-synthesis "WES207_top" end (Real time : 1s)
 [EFX-0000 INFO] ... Flat optimizations begin
 [EFX-0000 INFO] ... Flat optimizations end (Real time : 0s)
 [EFX-0000 INFO] ... Flat synthesis begin
@@ -193,37 +231,37 @@ INFO: ***** Ending Reading Mapping Library ... *****
 [EFX-0000 INFO] ... Check and break combinational loops begin
 [EFX-0000 INFO] ... Check and break combinational loops end (Real time : 0s)
 [EFX-0000 INFO] ... Sequential Optimization begin
-[EFX-0000 INFO] ... Clock Network pll_clk with 3272 loads will be considered for sequential optimization.
+[EFX-0000 INFO] ... Clock Network pll_clk with 3295 loads will be considered for sequential optimization.
 [EFX-0000 INFO] ... Clock Network tx_slowclk with 26 loads will be considered for sequential optimization.
-[EFX-0000 INFO] ... Sequential Optimization deduced 67 equivalent points.
+[EFX-0000 INFO] ... Sequential Optimization deduced 76 equivalent points.
 [EFX-0000 INFO] ... Sequential Optimization end (Real time : 17s)
 [EFX-0000 INFO] ... SOP modeling begin
 [EFX-0000 INFO] ... SOP modeling end (Real time : 0s)
 [EFX-0000 INFO] ... LUT mapping begin
-[EFX-0000 INFO] ... LS, strategy: 3, nd: 3477, ed: 12124, lv: 6, pw: 5449.98
-[EFX-0000 INFO] ... LUT mapping end (Real time : 19s)
+[EFX-0000 INFO] ... LS, strategy: 3, nd: 3528, ed: 12367, lv: 6, pw: 5649.39
+[EFX-0000 INFO] ... LUT mapping end (Real time : 21s)
 [EFX-0000 INFO] ... Post-synthesis Verific netlist creation begin
 [EFX-0000 INFO] ... Post-synthesis Verific netlist creation end (Real time : 0s)
 [EFX-0000 INFO] ... Postmap Retiming Optimization begin
-[EFX-0000 INFO] ... Clock Network n3 with 3271 loads will be considered for retiming optimization.
+[EFX-0000 INFO] ... Clock Network n3 with 3294 loads will be considered for retiming optimization.
 [EFX-0000 INFO] ... Clock Network n5 with 26 loads will be considered for retiming optimization.
 [EFX-0000 INFO] ... Performed 0 retime moves.
-[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 0s)
+[EFX-0000 INFO] ... Postmap Retiming Optimization end (Real time : 1s)
 [EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing begin
-[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 1s)
+[EFX-0000 INFO] ... Post-synthesis Verific netlist unification/params processing end (Real time : 0s)
 INFO: ***** Beginning VDB Netlist Checker ... *****
-INFO: VDB Netlist Checker took 0.0993983 seconds.
+INFO: VDB Netlist Checker took 0.0995923 seconds.
 INFO: 	VDB Netlist Checker took 0.09375 seconds (approximately) in total CPU time.
-INFO: VDB Netlist Checker virtual memory usage: begin = 124.568 MB, end = 124.568 MB, delta = 0 MB
-INFO: 	VDB Netlist Checker peak virtual memory usage = 150.824 MB
-INFO: VDB Netlist Checker resident set memory usage: begin = 129.648 MB, end = 129.688 MB, delta = 0.04 MB
-INFO: 	VDB Netlist Checker peak resident set memory usage = 153.936 MB
+INFO: VDB Netlist Checker virtual memory usage: begin = 123.648 MB, end = 123.648 MB, delta = 0 MB
+INFO: 	VDB Netlist Checker peak virtual memory usage = 151.456 MB
+INFO: VDB Netlist Checker resident set memory usage: begin = 128.864 MB, end = 128.904 MB, delta = 0.04 MB
+INFO: 	VDB Netlist Checker peak resident set memory usage = 154.564 MB
 INFO: ***** Ending VDB Netlist Checker ... *****
 -- Writing netlist 'WES207_top' to Verilog file 'C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.map.v' (VDB-1030)
 [EFX-0000 INFO] Resource Summary 
 [EFX-0000 INFO] =============================== 
 [EFX-0000 INFO] EFX_ADD         : 	69
-[EFX-0000 INFO] EFX_LUT4        : 	3484
-[EFX-0000 INFO] EFX_FF          : 	3297
+[EFX-0000 INFO] EFX_LUT4        : 	3534
+[EFX-0000 INFO] EFX_FF          : 	3320
 [EFX-0000 INFO] EFX_GBUFCE      : 	2
 [EFX-0000 INFO] =============================== 

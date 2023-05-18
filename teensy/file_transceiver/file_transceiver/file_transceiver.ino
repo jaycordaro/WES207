@@ -75,14 +75,15 @@ void loop() {
   bool tx_ready, rx_ready;
 
   fpga_status(tx_ready, rx_ready);
-  if(transmitting && tx_ready)
-  {
-    handle_transmit();
-  }
 
   if(receiving && rx_ready)
   {
     handle_receive();
+  }
+
+  if(transmitting && tx_ready)
+  {
+    handle_transmit();
   }
 
   if(prompt == NONE && !receiving && !transmitting)

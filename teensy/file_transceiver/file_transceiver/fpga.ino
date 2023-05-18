@@ -38,6 +38,8 @@ uint8_t fpga_receive(unsigned char* rx_buff)
 
 #else
 
+TODO
+
 void fpga_status(bool& tx_ready, bool& rx_ready)
 {
   tx_ready = true;

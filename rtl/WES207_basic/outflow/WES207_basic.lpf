@@ -2,7 +2,7 @@
 <efxpt:periphery design="WES207_basic" device="T20F256" xmlns:efxpt="http://www.efinixinc.com/peri_device_db" xmlns:efxutil="http://www.efinixinc.com/peri_tool" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.efinixinc.com/peri_device_db lpf.xsd">
   <!-- Efinity Logical Peripheral File -->
   <!-- Version: 2022.2.322 -->
-  <!-- Date: 2023-05-15 12:27 -->
+  <!-- Date: 2023-05-17 20:27 -->
   <!-- Copyright (C) 2017 - 2022 Efinix Inc. All rights reserved. -->
   <efxpt:sequence size="198">
     <efxpt:instance id="GPIOL_00" index="0" type="gpio"/>

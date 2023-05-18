@@ -16,9 +16,9 @@ HEX Generation Options Summary:
 	io_weak_pullup                           = on
 	release_tri_then_reset                   = on
 Finished generating "C:/Capstone/WES207/rtl/WES207_basic/outflow/WES207_basic.hex"
-Efinity Bitstream Generator took 5.90236 seconds.
-	Efinity Bitstream Generator took 4.375 seconds (approximately) in total CPU time.
-Efinity Bitstream Generator virtual memory usage: begin = 2.388 MB, end = 5.772 MB, delta = 3.384 MB
-	Efinity Bitstream Generator peak virtual memory usage = 44.792 MB
-Efinity Bitstream Generator resident set memory usage: begin = 7.52 MB, end = 14.004 MB, delta = 6.484 MB
-	Efinity Bitstream Generator peak resident set memory usage = 49.744 MB
+Efinity Bitstream Generator took 6.17834 seconds.
+	Efinity Bitstream Generator took 4.73438 seconds (approximately) in total CPU time.
+Efinity Bitstream Generator virtual memory usage: begin = 2.396 MB, end = 5.792 MB, delta = 3.396 MB
+	Efinity Bitstream Generator peak virtual memory usage = 44.808 MB
+Efinity Bitstream Generator resident set memory usage: begin = 7.508 MB, end = 14 MB, delta = 6.492 MB
+	Efinity Bitstream Generator peak resident set memory usage = 49.776 MB
