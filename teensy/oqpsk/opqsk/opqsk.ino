@@ -26,6 +26,7 @@ void loop()
 {
   Serial.println("enter command:");
   String cmd = getCommand();
+  Serial.println(cmd);
   if(cmd == "read")
   {
     Serial.println("read address:");
