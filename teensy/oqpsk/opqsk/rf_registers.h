@@ -421,8 +421,8 @@ union RF09_EDD
 {
   struct
   {
-    unsigned char DTB : 1;
-    unsigned char DF : 7;
+    unsigned char DTB : 2;
+    unsigned char DF : 6;
   };
 
   uint8_t value;
@@ -748,6 +748,102 @@ union BBC0_FBTXE
   uint8_t value;
 
   static const uint16_t address = 0x2FFE;
+};
+
+union BBC0_OQPSKC0
+{
+  struct
+  {
+    unsigned char FCHIP : 2;
+    unsigned char : 1;
+    unsigned char MOD : 1;
+    unsigned char DM : 1;
+    unsigned char : 3;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0310;
+};
+
+union BBC0_OQPSKC1
+{
+  struct
+  {
+    unsigned char PDT0 : 3;
+    unsigned char PDT1 : 3;
+    unsigned char RXOLEG : 1;
+    unsigned char RXO : 1;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0311;
+};
+
+union BBC0_OQPSKC2
+{
+  struct
+  {
+    unsigned char RXM : 2;
+    unsigned char FCSTLEG : 1;
+    unsigned char ENPROP : 1;
+    unsigned char RPC : 1;
+    unsigned char SPC : 1;
+    unsigned char : 2;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0312;
+};
+
+union BBC0_OQPSKC3
+{
+  struct
+  {
+    unsigned char : 2;
+    unsigned char NSFD : 2;
+    unsigned char : 1;
+    unsigned char HRLEG : 1;
+    unsigned char : 2;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0313;
+};
+
+union BBC0_OQPSKPHRTX
+{
+  struct
+  {
+    unsigned char LEG : 1;
+    unsigned char MOD : 3;
+    unsigned char RB0 : 1;
+    unsigned char PPDUT : 1;
+    unsigned char : 2;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0314;
+};
+
+union BBC0_OQPSKPHRRX
+{
+  struct
+  {
+    unsigned char LEG : 1;
+    unsigned char MOD : 3;
+    unsigned char RB0 : 1;
+    unsigned char PPDUT : 1;
+    unsigned char : 2;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0315;
 };
 
 #endif

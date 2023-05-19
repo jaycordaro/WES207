@@ -36,6 +36,85 @@ void rf_init()
   pc0.BBEN = 1;
   pc0.PT = 0x3;
   spiWrite(pc0.address, pc0.value);
+
+  BBC0_OQPSKC0 opqsk_c0;
+  opqsk_c0.DM = 0;
+  opqsk_c0.MOD = 0;
+  opqsk_c0.FCHIP = 2;
+  spiWrite(opqsk_c0.address, opqsk_c0.value);
+
+  BBC0_OQPSKC1 opqsk_c1;
+  opqsk_c1.RXO = 1;
+  opqsk_c1.RXOLEG = 1;
+  opqsk_c1.PDT0 = 1;
+  opqsk_c1.PDT1 = 1;
+  spiWrite(opqsk_c1.address, opqsk_c1.value);
+
+  BBC0_OQPSKC2 opqsk_c2;
+  opqsk_c2.SPC = 0;
+  opqsk_c2.RPC = 0;
+  opqsk_c2.ENPROP = 0;
+  opqsk_c2.FCSTLEG = 1;
+  opqsk_c2.RXM = 1;
+  spiWrite(opqsk_c2.address, opqsk_c2.value);
+
+  BBC0_OQPSKC3 opqsk_c3;
+  opqsk_c3.HRLEG = 0;
+  opqsk_c3.NSFD = 3;
+  spiWrite(opqsk_c3.address, opqsk_c3.value);
+
+  BBC0_OQPSKPHRTX tx;
+  tx.LEG = 1;
+  tx.MOD = 0;
+  tx.PPDUT = 0;
+  tx.RB0 = 0;
+  spiWrite(tx.address, tx.value);
+
+  BBC0_OQPSKPHRRX rx;
+  rx.LEG = 1;
+  rx.MOD = 0;
+  rx.PPDUT = 0;
+  rx.RB0 = 0;
+  spiWrite(rx.address, rx.value);
+
+  RF09_TXCUTC txcutc;
+  txcutc.PARAMP = 0;
+  txcutc.LPFCUT = 0xB;
+  spiWrite(txcutc.address, txcutc.value);
+
+  RF09_TXDFE dfe;
+  dfe.RCUT = 3;
+  dfe.SR = 1;
+  dfe.DM = 0;
+  spiWrite(dfe.address, dfe.value);
+
+  RF09_RXBWC rxbwc;
+  rxbwc.BW = 8;
+  rxbwc.IFS = 0;
+  rxbwc.IFI = 0;
+  spiWrite(rxbwc.address, rxbwc.value);
+
+  RF09_RXDFE rxdfe;
+  rxdfe.SR = 1;
+  rxdfe.RCUT = 0;
+  spiWrite(rxdfe.address, rxdfe.value);
+  
+  RF09_EDD edd;
+  edd.DTB = 3;
+  edd.DF = 4;
+  spiWrite(edd.address, edd.value);
+
+  RF09_AGCC agcc;
+  agcc.AGCI = 0;
+  agcc.AVGS = 0;
+  agcc.EN = 0;
+  agcc.FRZC = 0;
+  agcc.FRZS = 0;
+  agcc.RST = 0;
+  spiWrite(agcc.address, agcc.value);
+
+  
+
 }
 
 void trx_off()
@@ -117,7 +196,8 @@ void load_tx(int length)
   Serial.printf("length: %d\n", read_tx_length());
   for(int i = 0; i < length; i++)
   {
-    spiWrite(BBC0_FBTXS::address + i, i+1);
+    //spiWrite(BBC0_FBTXS::address + i, i+1);
+    spiWrite(BBC0_FBTXS::address + i, 0xFF);
   }
 }
 
