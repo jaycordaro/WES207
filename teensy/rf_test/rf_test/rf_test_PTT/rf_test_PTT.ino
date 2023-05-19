@@ -7,7 +7,7 @@ constexpr uint32_t SPICLOCKRATE = 4000000;
 
 // define the pin used to select the device:
 const int chipSelectPin = 10;
-const int analogPin = A13; 
+const int analogPin = A17; 
 
 // define the macro for assertion checking:
 #define MY_ASSERT(cond, message) (my_assert((cond), __LINE__, __FILE__, message))
@@ -142,7 +142,7 @@ void loop()
   Serial.println(analogValue);
   delay(100); // Add a small delay before taking another reading
   /////////////////////////////////////////////////////////////////
-  if ( analogValue > 300)
+  if ( analogValue > 800)
   {
       RF09_CMD cmd;
     cmd.CMD = 0x3;
