@@ -16,7 +16,6 @@ void rf_init()
 
   spiWrite(RF09_CNM::address, 0x0);
 
-  // loopback
   RF_IQIFC0 c0;
   c0.EXTLB = 0;
   c0.SF = 0;
@@ -40,7 +39,7 @@ void rf_init()
   BBC0_OQPSKC0 opqsk_c0;
   opqsk_c0.DM = 0;
   opqsk_c0.MOD = 0;
-  opqsk_c0.FCHIP = 2;
+  opqsk_c0.FCHIP = 0;
   spiWrite(opqsk_c0.address, opqsk_c0.value);
 
   BBC0_OQPSKC1 opqsk_c1;
@@ -78,43 +77,40 @@ void rf_init()
   spiWrite(rx.address, rx.value);
 
   RF09_TXCUTC txcutc;
-  txcutc.PARAMP = 0;
-  txcutc.LPFCUT = 0xB;
+  txcutc.PARAMP = 0x3;
+  txcutc.LPFCUT = 0x7;
   spiWrite(txcutc.address, txcutc.value);
 
   RF09_TXDFE dfe;
-  dfe.RCUT = 3;
-  dfe.SR = 1;
+  dfe.SR = 0xA;
+  dfe.RCUT = 0x3;
   dfe.DM = 0;
   spiWrite(dfe.address, dfe.value);
 
   RF09_RXBWC rxbwc;
-  rxbwc.BW = 8;
+  rxbwc.BW = 0;
   rxbwc.IFS = 0;
   rxbwc.IFI = 0;
   spiWrite(rxbwc.address, rxbwc.value);
 
   RF09_RXDFE rxdfe;
-  rxdfe.SR = 1;
-  rxdfe.RCUT = 0;
+  rxdfe.SR = 0xA;
+  rxdfe.RCUT = 0x1;
   spiWrite(rxdfe.address, rxdfe.value);
-  
+
   RF09_EDD edd;
-  edd.DTB = 3;
-  edd.DF = 4;
+  edd.DTB = 0x3;
+  edd.DF = 0xA;
   spiWrite(edd.address, edd.value);
 
   RF09_AGCC agcc;
   agcc.AGCI = 0;
-  agcc.AVGS = 0;
+  agcc.AVGS = 2;
   agcc.EN = 0;
   agcc.FRZC = 0;
   agcc.FRZS = 0;
   agcc.RST = 0;
   spiWrite(agcc.address, agcc.value);
-
-  
-
 }
 
 void trx_off()
