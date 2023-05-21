@@ -75,6 +75,10 @@ void loop()
   {
     Serial.printf("length: %d\n", read_tx_length());
   }
+  else if (cmd == "version")
+  {
+    Serial.printf("4\n");
+  }
   else
   {
     Serial.println("invalid command");

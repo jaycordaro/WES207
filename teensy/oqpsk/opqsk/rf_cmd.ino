@@ -6,26 +6,46 @@ void rf_init()
   spiWrite(reset_cmd.address, reset_cmd.value);
 
   // channel config
-  spiWrite(RF09_CS::address, 0x50);
+  spiWrite(RF09_IRQM::address, 0x1F);
+  spiWrite(RF09_CS::address, 0x30);
+  spiWrite(RF09_CCF0L::address, 0x20);
+  spiWrite(RF09_CCF0H::address, 0x8D);
+  spiWrite(RF09_CNL::address, 0x03);
+  spiWrite(RF09_CNM::address, 0x00);
 
-  spiWrite(RF09_CCF0H::address, 0x8C);
+  RF09_RXBWC rxbwc;
+  rxbwc.BW = 8;
+  rxbwc.IFS = 0;
+  rxbwc.IFI = 0;
+  spiWrite(rxbwc.address, rxbwc.value);
 
-  spiWrite(RF09_CCF0L::address, 0xF0);
+  RF09_RXDFE rxdfe;
+  rxdfe.SR = 1;
+  rxdfe.RCUT = 0;
+  Serial.printf("value: %d\n", rxdfe.value);
+  spiWrite(rxdfe.address, rxdfe.value);
 
-  spiWrite(RF09_CNL::address, 0x1); 
+  RF09_EDD edd;
+  edd.DTB = 3;
+  edd.DF = 4;
+  spiWrite(edd.address, edd.value);
 
-  spiWrite(RF09_CNM::address, 0x0);
+  spiWrite(RF09_RNDV::address, 0x11);
+  
+  RF09_TXCUTC txcutc;
+  txcutc.PARAMP = 0;
+  txcutc.LPFCUT = 0xB;
+  spiWrite(txcutc.address, txcutc.value);
 
-  RF_IQIFC0 c0;
-  c0.EXTLB = 0;
-  c0.SF = 0;
-  c0.DRV = 1;
-  c0.CMV1V2 = 1;
-  c0.CMV = 1;
-  c0.ECC = 0;
+  RF09_TXDFE dfe;
+  dfe.RCUT = 3;
+  dfe.SR = 1;
+  dfe.DM = 0;
+  spiWrite(dfe.address, dfe.value);
 
-  spiWrite(c0.address, c0.value);
-
+  spiWrite(RF09_PAC::address, 0x7C);
+  spiWrite(0x300, 0x1F);
+  
   BBC0_PC pc0;
   pc0.CTX = 0;
   pc0.FCSFE = 0;
@@ -39,7 +59,7 @@ void rf_init()
   BBC0_OQPSKC0 opqsk_c0;
   opqsk_c0.DM = 0;
   opqsk_c0.MOD = 0;
-  opqsk_c0.FCHIP = 0;
+  opqsk_c0.FCHIP = 2;
   spiWrite(opqsk_c0.address, opqsk_c0.value);
 
   BBC0_OQPSKC1 opqsk_c1;
@@ -75,42 +95,6 @@ void rf_init()
   rx.PPDUT = 0;
   rx.RB0 = 0;
   spiWrite(rx.address, rx.value);
-
-  RF09_TXCUTC txcutc;
-  txcutc.PARAMP = 0x3;
-  txcutc.LPFCUT = 0x7;
-  spiWrite(txcutc.address, txcutc.value);
-
-  RF09_TXDFE dfe;
-  dfe.SR = 0xA;
-  dfe.RCUT = 0x3;
-  dfe.DM = 0;
-  spiWrite(dfe.address, dfe.value);
-
-  RF09_RXBWC rxbwc;
-  rxbwc.BW = 0;
-  rxbwc.IFS = 0;
-  rxbwc.IFI = 0;
-  spiWrite(rxbwc.address, rxbwc.value);
-
-  RF09_RXDFE rxdfe;
-  rxdfe.SR = 0xA;
-  rxdfe.RCUT = 0x1;
-  spiWrite(rxdfe.address, rxdfe.value);
-
-  RF09_EDD edd;
-  edd.DTB = 0x3;
-  edd.DF = 0xA;
-  spiWrite(edd.address, edd.value);
-
-  RF09_AGCC agcc;
-  agcc.AGCI = 0;
-  agcc.AVGS = 2;
-  agcc.EN = 0;
-  agcc.FRZC = 0;
-  agcc.FRZS = 0;
-  agcc.RST = 0;
-  spiWrite(agcc.address, agcc.value);
 }
 
 void trx_off()
@@ -192,8 +176,8 @@ void load_tx(int length)
   Serial.printf("length: %d\n", read_tx_length());
   for(int i = 0; i < length; i++)
   {
-    //spiWrite(BBC0_FBTXS::address + i, i+1);
-    spiWrite(BBC0_FBTXS::address + i, 0xFF);
+    spiWrite(BBC0_FBTXS::address + i, i+1);
+    //spiWrite(BBC0_FBTXS::address + i, 0xFF);
   }
 }
 
