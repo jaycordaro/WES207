@@ -77,7 +77,7 @@ void loop()
   }
   else if (cmd == "version")
   {
-    Serial.printf("4\n");
+    Serial.printf("11\n");
   }
   else
   {

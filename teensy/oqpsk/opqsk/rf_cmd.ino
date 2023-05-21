@@ -7,10 +7,10 @@ void rf_init()
 
   // channel config
   spiWrite(RF09_IRQM::address, 0x1F);
-  spiWrite(RF09_CS::address, 0x30);
-  spiWrite(RF09_CCF0L::address, 0x20);
-  spiWrite(RF09_CCF0H::address, 0x8D);
-  spiWrite(RF09_CNL::address, 0x03);
+  spiWrite(RF09_CS::address, 0x50);
+  spiWrite(RF09_CCF0L::address, 0xF0);
+  spiWrite(RF09_CCF0H::address, 0x8C);
+  spiWrite(RF09_CNL::address, 0x01);
   spiWrite(RF09_CNM::address, 0x00);
 
   RF09_RXBWC rxbwc;
@@ -19,10 +19,11 @@ void rf_init()
   rxbwc.IFI = 0;
   spiWrite(rxbwc.address, rxbwc.value);
 
+  delay(10);
   RF09_RXDFE rxdfe;
   rxdfe.SR = 1;
   rxdfe.RCUT = 0;
-  Serial.printf("value: %d\n", rxdfe.value);
+  //Serial.printf("value: %d\n", rxdfe.value);
   spiWrite(rxdfe.address, rxdfe.value);
 
   RF09_EDD edd;
