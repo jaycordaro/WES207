@@ -65,7 +65,7 @@ union RF_CLKO
 { 
   struct
   {  
-	  unsigned char OS : 3;  // 0x0 is off, 0x1 is 26MHz (default)
+	  unsigned char OS : 2;  // 0x0 is off, 0x1 is 26MHz (default), 0x2 is 32MHz
     unsigned char DRV : 2; // drive strength
   };
 
