@@ -115,6 +115,34 @@ void handleCommands()
         mode = OPUS;
         prompt = PROMPT_FOR_CMD;
       }
+      else if (cmd == "OQPSK")
+      {
+        Serial.println("Moudlation set to OQPSK!");
+        oqpsk_init();
+        modulation = OQPSK;
+        prompt = PROMPT_FOR_CMD;
+      }
+      else if (cmd == "BPSK")
+      {
+        Serial.println("Moudlation set to BPSK!");
+        bpsk_init();
+        modulation = BPSK;
+        prompt = PROMPT_FOR_CMD;
+      }
+      else if (cmd == "STATE")
+      {
+        oqpsk_read_state();
+        prompt = PROMPT_FOR_CMD;
+      }
+      else if (cmd == "READ")
+      {
+        Serial.println("read address:");
+        int address = getValue();
+        Serial.printf("Address set to %d\n", address);
+        int result = spiReadRF(address);
+        Serial.printf("Value read is %d\n", result);
+        prompt = PROMPT_FOR_CMD;
+      }
 
       break;
     }
@@ -215,6 +243,18 @@ void handleCommands()
   }
 }
 
+int transmit(unsigned char* cbits, int payload_len)
+{
+  if(modulation == BPSK)
+  {
+    return fpga_transmit(cbits, payload_len);
+  }
+  else
+  {
+    return oqpsk_transmit(cbits, payload_len);
+  }
+}
+
 void handle_transmit()
 {
   int payload_len = 0;
@@ -241,7 +281,7 @@ void handle_transmit()
 
   if(payload_len != 0)
   {
-    int amount_txed = fpga_transmit(cbits, payload_len);
+    int amount_txed = transmit(cbits, payload_len);
     Serial.printf("Tx'd %d bytes\n", amount_txed);
     tx_count += payload_len;
     rx_count += amount_txed;
@@ -276,6 +316,18 @@ void rx_complete()
   receiving = false;
 }
 
+uint8_t receive(unsigned char* rx_buff)
+{
+  if(modulation == BPSK)
+  {
+    return fpga_receive(rx_buff);
+  }
+  else
+  {
+    return oqpsk_receive(rx_buff);
+  }
+}
+
 void handle_receive()
 {
   if(rx_count <= 0 && !transmitting)
@@ -284,7 +336,7 @@ void handle_receive()
     return;
   }
 
-  int length = fpga_receive(rx_buff);
+  int length = receive(rx_buff);
 
   Serial.printf("Rx'd %d/%d bytes\n", length, rx_count);
 

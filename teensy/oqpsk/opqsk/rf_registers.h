@@ -23,6 +23,28 @@ union RF09_IRQS
 // ensure size is one byte
 static_assert(sizeof(RF09_IRQS) == 1);
 
+union BBC0_IRQS
+{
+  struct
+  {  
+    unsigned char RXFS : 1;
+    unsigned char RXFE : 1;
+    unsigned char RXAM : 1;
+    unsigned char RXEM : 1;
+    unsigned char TXFE : 1;
+    unsigned char AGCH : 1;
+    unsigned char AGCR : 1;
+    unsigned char FBLI : 1;
+  };
+
+  uint8_t value;
+	
+	static const uint16_t address =  0x0002;
+};
+
+// ensure size is one byte
+static_assert(sizeof(BBC0_IRQS) == 1);
+
 // Reset Register 
 union RF_RST
 {

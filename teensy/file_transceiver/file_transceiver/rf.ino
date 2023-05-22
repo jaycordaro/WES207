@@ -1,6 +1,4 @@
-#include "rf_registers.h"
-
-void init_rf_device()
+void bpsk_init()
 {
   RF_RST reset_cmd;
   reset_cmd.CMD = CHIP_RESET;

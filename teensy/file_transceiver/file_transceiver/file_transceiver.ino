@@ -9,6 +9,7 @@
 #include "fpga.h"
 #include "BerTester.h"
 #include <bitset>
+#include "rf_registers.h"
 
 #include <utility/imxrt_hw.h> 
 #include <play_sd_opus.h>
@@ -19,7 +20,6 @@
 
 constexpr int MAX_PACKET_SIZE = 120;
 constexpr int MAX_RX_PACKET_SIZE = 127;
-
 
 bool transmitting;
 bool receiving;
@@ -42,9 +42,16 @@ enum operating_mode_t
   BERT
 };
 
+enum modulation_t
+{
+  BPSK,
+  OQPSK
+};
+
 prompt_t prompt;
 operating_mode_t mode;
 BerTester::pattern_t pattern;
+modulation_t modulation;
 
 int tx_limit = 0;
 
@@ -61,12 +68,26 @@ void setup() {
   transmitting = false;
   receiving = false;
   prompt = PROMPT_FOR_CMD;
-  mode = OPUS;
+  mode = BERT;
+  pattern = BerTester::ONE_ONE;
+  modulation = OQPSK;
 
   spi_init();
   sd_init();
 
-  init_rf_device();
+  bpsk_init();
+}
+
+void tx_rx_status(bool& tx_ready, bool& rx_ready)
+{
+  if(modulation == BPSK)
+  {
+    fpga_status(tx_ready, rx_ready);
+  }
+  else
+  {
+    oqpsk_status(tx_ready, rx_ready);
+  }
 }
 
 void loop() {
@@ -74,7 +95,7 @@ void loop() {
 
   bool tx_ready, rx_ready;
 
-  fpga_status(tx_ready, rx_ready);
+  tx_rx_status(tx_ready, rx_ready);
 
   if(receiving && rx_ready)
   {
