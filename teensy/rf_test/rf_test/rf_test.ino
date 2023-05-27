@@ -4,8 +4,10 @@
 #include "rf_registers.h"
 
 constexpr uint32_t SPICLOCKRATE = 4000000;
+constexpr uint32_t SPICLOCKRATE_FPGA = 1000000;
 
 const int chipSelectPin = 10;
+const int chipSelectPin_FPGA = 0;
 
 #define MY_ASSERT(cond, message) (my_assert((cond), __LINE__, __FILE__, message))
 void my_assert(bool cond, int line, const char* file, const char* message)
@@ -38,11 +40,15 @@ void setup() {
   pinMode(chipSelectPin, OUTPUT);
   digitalWrite(chipSelectPin, HIGH);
   SPI.begin();
+  SPI1.begin();
 
   RF_RST reset_cmd;
   reset_cmd.CMD = CHIP_RESET;
 
   spiWrite(reset_cmd.address, reset_cmd.value);
+  
+  // Set CLK output of Atmel chip to 32MHz (connect to FPGA J3)
+  spiWrite(RF_CLKO::address, 0x0A);
 
   spiWrite(RF09_CS::address, 0x50);
 
@@ -109,23 +115,41 @@ void loop() {
 
   Serial.println("enter command:");
   String cmd = getCommand();
-  if(cmd == "read")
+  if(cmd == "aread")
   {
-    Serial.println("read address:");
+    Serial.println("Atmel read address:");
     int address = getValue();
     Serial.printf("Address set to %d\n", address);
     int result = spiRead(address);
     Serial.printf("Value read is %d\n", result);
   }
-  else if (cmd == "write")
+  else if (cmd == "awrite")
   {
-    Serial.println("write address:");
+    Serial.println("Atmel write address:");
     int address = getValue();
     Serial.printf("Address set to %d\n", address);
     Serial.println("write value:");
     int value = getValue();
     Serial.printf("Value set to %d\n", value);
     spiWrite(address, value);
+  } 
+  else if(cmd == "fread")
+  {
+    Serial.println("FPGA read address:");
+    int faddress = getValue();
+    Serial.printf("Address set to %d\n", faddress);
+    int fresult = spiRead_FPGA(faddress);
+    Serial.printf("Value read is %d\n", fresult);
+  }
+  else if (cmd == "fwrite")
+  {
+    Serial.println("FPGA write address:");
+    int faddress = getValue();
+    Serial.printf("Address set to %d\n", faddress);
+    Serial.println("write value:");
+    int fvalue = getValue();
+    Serial.printf("Value set to %d\n", fvalue);
+    spiWrite_FPGA(faddress, fvalue);
   }
   else
   {
@@ -163,6 +187,40 @@ uint8_t spiRead(uint16_t address) {
 
   digitalWrite(chipSelectPin, HIGH);
   SPI.endTransaction();
+
+  return res;
+}
+
+constexpr uint8_t write_FPGA = 0x00;
+constexpr uint8_t read_FPGA = 0x80;
+
+void spiWrite_FPGA(uint16_t address, uint8_t value) {
+  SPI1.beginTransaction(SPISettings(SPICLOCKRATE_FPGA, MSBFIRST, SPI_MODE0));
+
+  digitalWrite(chipSelectPin_FPGA, LOW);
+
+  uint8_t res = SPI1.transfer(write | address);
+  MY_ASSERT(res == 0, make_string("Received %d on writing write address!", res));
+
+  res = SPI1.transfer(value);
+  MY_ASSERT(res == 0, make_string("Received %d on writing data!", res));
+
+  digitalWrite(chipSelectPin_FPGA, HIGH);
+  SPI1.endTransaction();
+}
+
+uint8_t spiRead_FPGA(uint16_t address) {
+  SPI1.beginTransaction(SPISettings(SPICLOCKRATE_FPGA, MSBFIRST, SPI_MODE0));
+
+  digitalWrite(chipSelectPin_FPGA, LOW);
+
+  uint8_t res = SPI1.transfer(read | address);
+  MY_ASSERT(res == 0, make_string("Received %d on writing write address!", res));
+
+  res = SPI1.transfer(0);
+
+  digitalWrite(chipSelectPin_FPGA, HIGH);
+  SPI1.endTransaction();
 
   return res;
 }
