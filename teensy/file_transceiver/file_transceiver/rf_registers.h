@@ -23,6 +23,28 @@ union RF09_IRQS
 // ensure size is one byte
 static_assert(sizeof(RF09_IRQS) == 1);
 
+union BBC0_IRQS
+{
+  struct
+  {  
+    unsigned char RXFS : 1;
+    unsigned char RXFE : 1;
+    unsigned char RXAM : 1;
+    unsigned char RXEM : 1;
+    unsigned char TXFE : 1;
+    unsigned char AGCH : 1;
+    unsigned char AGCR : 1;
+    unsigned char FBLI : 1;
+  };
+
+  uint8_t value;
+	
+	static const uint16_t address =  0x0002;
+};
+
+// ensure size is one byte
+static_assert(sizeof(BBC0_IRQS) == 1);
+
 // Reset Register 
 union RF_RST
 {
@@ -421,8 +443,8 @@ union RF09_EDD
 {
   struct
   {
-    unsigned char DTB : 1;
-    unsigned char DF : 7;
+    unsigned char DTB : 2;
+    unsigned char DF : 6;
   };
 
   uint8_t value;
@@ -633,5 +655,217 @@ union RF09_TXDACQ
 };
 // ensure size is one byte
 static_assert(sizeof(RF09_TXDACQ) == 1);
+
+union BBC0_PC
+{
+  struct
+  {
+    unsigned char PT : 2;
+    unsigned char BBEN : 1;
+    unsigned char FCST : 1;
+    unsigned char TXAFCS : 1;
+    unsigned char FCSOK : 1;
+    unsigned char FCSFE : 1;
+    unsigned char CTX : 1;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0301;
+};
+
+union BBC0_TXFLH
+{
+  struct
+  {
+    unsigned char TXFLH : 3;
+    unsigned char : 5;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0307;
+};
+
+union BBC0_TXFLL
+{
+  struct
+  {
+    unsigned char TXFLL : 8;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0306;
+};
+
+union BBC0_RXFLH
+{
+  struct
+  {
+    unsigned char TXFLH : 3;
+    unsigned char : 5;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0305;
+};
+
+union BBC0_RXFLL
+{
+  struct
+  {
+    unsigned char TXFLL : 8;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0304;
+};
+
+union BBC0_FBRXS
+{
+  struct
+  {
+    unsigned char FBRXS : 8;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x2000;
+};
+
+union BBC0_FBRXE
+{
+  struct
+  {
+    unsigned char FBRXE : 8;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x27FE;
+};
+
+union BBC0_FBTXS
+{
+  struct
+  {
+    unsigned char FBRXS : 8;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x2800;
+};
+
+union BBC0_FBTXE
+{
+  struct
+  {
+    unsigned char FBRXE : 8;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x2FFE;
+};
+
+union BBC0_OQPSKC0
+{
+  struct
+  {
+    unsigned char FCHIP : 2;
+    unsigned char : 1;
+    unsigned char MOD : 1;
+    unsigned char DM : 1;
+    unsigned char : 3;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0310;
+};
+
+union BBC0_OQPSKC1
+{
+  struct
+  {
+    unsigned char PDT0 : 3;
+    unsigned char PDT1 : 3;
+    unsigned char RXOLEG : 1;
+    unsigned char RXO : 1;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0311;
+};
+
+union BBC0_OQPSKC2
+{
+  struct
+  {
+    unsigned char RXM : 2;
+    unsigned char FCSTLEG : 1;
+    unsigned char ENPROP : 1;
+    unsigned char RPC : 1;
+    unsigned char SPC : 1;
+    unsigned char : 2;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0312;
+};
+
+union BBC0_OQPSKC3
+{
+  struct
+  {
+    unsigned char : 2;
+    unsigned char NSFD : 2;
+    unsigned char : 1;
+    unsigned char HRLEG : 1;
+    unsigned char : 2;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0313;
+};
+
+union BBC0_OQPSKPHRTX
+{
+  struct
+  {
+    unsigned char LEG : 1;
+    unsigned char MOD : 3;
+    unsigned char RB0 : 1;
+    unsigned char PPDUT : 1;
+    unsigned char : 2;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0314;
+};
+
+union BBC0_OQPSKPHRRX
+{
+  struct
+  {
+    unsigned char LEG : 1;
+    unsigned char MOD : 3;
+    unsigned char RB0 : 1;
+    unsigned char PPDUT : 1;
+    unsigned char : 2;
+  };
+
+  uint8_t value;
+
+  static const uint16_t address = 0x0315;
+};
 
 #endif
