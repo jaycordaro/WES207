@@ -1,4 +1,4 @@
-# MATLAB files
+# RF Test
 Tests connectivity to the RF board by outputting a carrier wave in channel 1 of the 802.15.4 915 MHz band.
 
 ## Usage:
