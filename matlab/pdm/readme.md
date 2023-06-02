@@ -15,5 +15,5 @@ play(p)
 ```
 
 ## hb_check: 
-matlab implementation of the fixed-point 27-tap half band filter FIR filter.  
+matlab implementation of fixed-point 27-tap half band filter FIR filter calculated using sd_decimation 
 Uses Q15 format
