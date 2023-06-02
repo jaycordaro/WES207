@@ -11,3 +11,7 @@ load ('samp1.mat')
 p=audioplayer(aud1, Fs)
 play(p)
 ```
+
+## hb_check: 
+matlab implementation of the fixed-point 27-tap half band filter FIR filter.  
+Uses Q15 format
