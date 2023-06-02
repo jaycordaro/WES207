@@ -1,4 +1,4 @@
-# MATLAB files
+# OQPSK Test
 Tests OPQSK Tx and Rx using the SPI interface to the RF board.
 
 ## Usage:
