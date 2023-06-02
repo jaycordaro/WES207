@@ -1,4 +1,4 @@
-# Baseband Demodulator
+# BPSK Demodulator
 Used to simulate demodulation of the pulse-shaped BPSK.
 
 ## Usage:
