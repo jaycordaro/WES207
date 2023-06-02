@@ -1,4 +1,4 @@
-# MATLAB files
+# Simple Serial Test
 Verfies the serial connection is working to the Teensy.
 
 ## Usage:
