@@ -1,6 +1,8 @@
 # File-based transceiver
 This transceiver can be commanded through the Teensy serial interface. Rather than sending and receiving data from a microphone/speaker, it reads and writes files to an SD card.
 
+<img src="../../../images/file_demo.png">
+
 ## Build Instructions
 install the Arduino-Teensy-Codec-lib: 
 ```
