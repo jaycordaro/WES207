@@ -85,9 +85,11 @@ figure(1);
 subplot(2, 1, 1);
 plot(real(signal));
 title('I');
+xlim([1 70]);
 subplot(2, 1, 2);
 plot(imag(signal));
 title('Q');
+xlim([1 70]);
 
 % compare the OQPSK against the Zigbee Toolbox Libaray:
 % https://www.mathworks.com/matlabcentral/fileexchange/62845-communications-toolbox-library-for-zigbee-and-uwb
