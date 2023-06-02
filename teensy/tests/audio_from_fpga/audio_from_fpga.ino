@@ -24,6 +24,8 @@ void setup() {
   Serial.println("Starting program...");
   spi_init();
 
+  MY_ASSERT(SD.begin(BUILTIN_SDCARD), "Cannot init SD card");
+
   fin = SD.open(input_file_name, FILE_READ);
   MY_ASSERT(fin != 0, "failed to open input file");
 
