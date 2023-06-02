@@ -14,6 +14,11 @@ Audio data is encoded using Skype’s Opus codec. The Opus codec is made for los
 Component | Model 
 --- | ---
 Microcontroller | Teensy 4.1
+FPGA            | Efinix Trion T20256DK
+RF Front End    | Microchip REB215-XPRO
+PDM Board       | FAN3852 Analog to PDM Board
+Audio DAC       | MAX98357 Board
+
 
 ## Component Connections:
 ### Teensy to FPGA
