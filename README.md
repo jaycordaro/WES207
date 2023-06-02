@@ -25,3 +25,12 @@ MOSI | 11 | 16
 SCK | 13 | 18
 POWER | 3.3V | 19
 GND | GND | 20
+
+### PDMBRD to FPGA
+PDMBRD connects to FPGA.  FPGA sends PDMCLK to PDMBRD, PDMBRD sends PDAT to FPGA
+see: https://github.com/jaycordaro/pdmbrd for pdmbrd
+Name | FPGA Pin | PDMBRD board Pin 
+PDAT | H2.32    | J6.1
+PCLK | H2.34    | J8.1
+GND  | H2.36    | GND_TP
+connect USB-micro to J2 to power PDMBRD
