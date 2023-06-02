@@ -1,8 +1,0 @@
-F:/Jay/Electronics/MAX10_08/i2s_rom/i2s_ctr_tb.sv {1 {vlog -work work -sv -stats=none F:/Jay/Electronics/MAX10_08/i2s_rom/i2s_ctr_tb.sv
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module i2s_ctr_tb
-
-Top level modules:
-	i2s_ctr_tb
-
-} {} {}}
