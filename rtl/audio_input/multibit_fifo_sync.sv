@@ -65,7 +65,7 @@ module multibit_fifo_sync #(
 endmodule
 
 module multibit_fifo_dpram #(
-  parameter DATA_WIDTH = 8
+  parameter DATA_WIDTH = 32
 ) (
   input  logic                  clk,
   input  logic                  wen,
