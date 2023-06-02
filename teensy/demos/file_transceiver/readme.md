@@ -16,7 +16,8 @@ Set the USE_SPI macro to 0 is SPI is not hooked up to the FGPA.
 3. Flash code onto teensy with Arduino IDE if not done yet.
 4. Open serial monitor on Arduino IDE
 5. You can then control the Teensy with the following commands:
-
+- OQPSK: Sets modulation mode to OQPSK
+- BPSK: Sets modulation mode to BPSK (via the FPGA- not complete)
 - OPUS: Commands the Teensy to Opus mode:
 	- on transmit it will encode Input.bin with the opus codec
 	- on receive it will decode the rx data with the opus codec and write to an out bin file (file name will be printed on serial log)
