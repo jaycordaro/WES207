@@ -1,9 +1,11 @@
 # PDM Decimator
-Decimator for Pulse Density Modulation (PDM) microphones 
+MATLAB code for Pulse Density Modulation (PDM) microphones 
+
+## sd_decimation
 
 3 stage decimation: polyphase FIR followed by two halfband filters to decimate from the sigma-delta modulated audio down to PCM.  Followed by an optional 1st order high-pass filter.  
 
-## Usage: 
+### Usage: 
 
 ```matlab
 load ('samp1.mat')
