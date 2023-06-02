@@ -1,4 +1,4 @@
-# WES207
+# 802.15.4 Walkie Talkie
 Repo for our WES207 project, a Walkie Talkie using 802.15.4 with Opus Codec. The project is componsed of a FPGA, microcontroller, and RF board components.  
   
 <img src="./images/block_diagram.png">
