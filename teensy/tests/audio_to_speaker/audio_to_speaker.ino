@@ -1,48 +1,19 @@
 #include <Audio.h>
 #include <Wire.h>
-#include <SPI.h>
 #include <SD.h>
 #include <SerialFlash.h>
 
-AudioPlaySdWav           play_sd;
-AudioFilterFIR           rate_change_fir;
-AudioOutputI2S           i2s_out;
-//AudioConnection          patchCord1(play_sd, rate_change_fir);
-AudioConnection          patchCord2(play_sd, 0, i2s_out, 0);
-AudioConnection          patchCord3(play_sd, 0, i2s_out, 1);
+// GUItool: begin automatically generated code
+AudioPlaySdRaw           playSdRaw1;     //xy=69.5,269.33330631256104
+AudioFilterFIR           fir1;           //xy=210.33334732055664,258.33330631256104
+AudioOutputI2S           i2s1;           //xy=333.3333282470703,289.3333282470703
+AudioConnection          patchCord1(playSdRaw1, fir1);
+AudioConnection          patchCord2(fir1, 0, i2s1, 0);
+AudioConnection          patchCord3(fir1, 0, i2s1, 1);
+// GUItool: end automatically generated code
 
 #define MY_ASSERT(cond, message) (my_assert((cond), __LINE__, __FILE__, message, true))
 #define MY_ASSERT_NON_FATAL(cond, message) (my_assert((cond), __LINE__, __FILE__, message, false))
-
-File fin;
-File fout;
-
-const char* input_file_name = "Input.bin";
-const char* upsampled_file_name = "Input.wav";
-
-void setup() {
-  Serial.begin(9600);
-  Serial.println("Starting program...");
-  MY_ASSERT(SD.begin(BUILTIN_SDCARD), "Cannot init SD card");
-}
-
-
-String getCommand()
-{
-  String command = "";
-  while(command == "")
-  {
-    command = Serial.readString(1024);
-    delay(1);
-  }
-  return command.trim();
-}
-
-int getValue()
-{
-  String cmd = getCommand();
-  return cmd.toInt();
-}
 
 void my_assert(bool cond, int line, const char* file, const char* message, bool fatal)
 {
@@ -63,6 +34,23 @@ void my_assert(bool cond, int line, const char* file, const char* message, bool 
   }
 }
 
+String getCommand()
+{
+  String command = "";
+  while(command == "")
+  {
+    command = Serial.readString(1024);
+    delay(1);
+  }
+  return command.trim();
+}
+
+int getValue()
+{
+  String cmd = getCommand();
+  return cmd.toInt();
+}
+
 const short filter[] = { 8, 17, 31, 49, 69, 87, 97, 92, 65, 11, -74,
   -189, -325, -469, -601, -696, -727, -669, -502, -216, 190, 698,
   1282, 1901, 2506, 3045, 3471, 3744, 3838, 3744, 3471,3045, 2506,
@@ -70,69 +58,45 @@ const short filter[] = { 8, 17, 31, 49, 69, 87, 97, 92, 65, 11, -74,
   -325, -189, -74, 11, 65, 92, 97, 87, 69, 49, 31, 17, 8, 0
   };
 
-bool readWord(int32_t& word)
-{
-  int read_length = fin.read((uint8_t *) &word, sizeof(int32_t));
-  return read_length == sizeof(int32_t);
-}
-
-void export_if_full(int16_t* data_buff, int& i, int size)
-{
-  if(i == size)
-  {
-    fout.write((uint8_t *) data_buff, sizeof(int32_t)*i);
-    i = 0;
+void setup() {
+  Serial.begin(9600);
+  Serial.println("Starting program...");
+  AudioMemory(8);
+  if (!(SD.begin(BUILTIN_SDCARD))) {
+    while (1) {
+      Serial.println("Unable to access the SD card");
+      delay(500);
+    }
   }
+
+  fir1.begin(filter, 58);
+  //fir2.begin(filter, 58);
 }
 
 void loop() {
   Serial.println("enter command:");
   String cmd = getCommand();
-  if(cmd == "convert")
+
+  if(cmd == "play")
   {
-    fin = SD.open(input_file_name, FILE_READ);
-    MY_ASSERT(fin != 0, "failed to open input file");
-
-    Serial.printf("Output file name: %s\n", upsampled_file_name);
-    SD.remove(upsampled_file_name);
-    fout = SD.open(upsampled_file_name, FILE_WRITE);
-    MY_ASSERT(fout != 0, "failed to open output file");
-
-    int rem = 0;
-    int16_t data_buff[128];
-    int32_t in_data;
-    int i = 0;
-    while(readWord(in_data))
+    Serial.println("playing...");
+    if(!playSdRaw1.isPlaying())
     {
-      for(int sample_i = 0; sample_i < 2; sample_i++)
-      {
-        int16_t sample = in_data & 0xFFFF;
-        data_buff[i++] = sample;
-        export_if_full(data_buff, i, 128);
-        data_buff[i++] = 0;
-        export_if_full(data_buff, i, 128);
-        rem += 121;
-        if(rem > 160)
-        {
-          rem -= 160;
-          data_buff[i++] = 0;
-          export_if_full(&data_buff[0], i, 128);
+      if (!playSdRaw1.play("Output.bin")) {
+        while (1) {
+          Serial.println("Unable to play audio!");
+          delay(500);
         }
-        in_data = in_data >> 16;
+      }
+
+      while (playSdRaw1.isPlaying()) {
+        // wait for file to complete playing
+        delay(10);
       }
     }
-
-    if(i != 0)
-    {
-      fout.write((uint8_t *) &data_buff[0], sizeof(int32_t)*i);
-    }
-
-    fin.close();
-    fout.close();
   }
-  else if(cmd == "play")
+  else if (cmd == "gen")
   {
-    rate_change_fir.begin(filter, 58);
-    play_sd.play(upsampled_file_name);
+    convert();
   }
 }
