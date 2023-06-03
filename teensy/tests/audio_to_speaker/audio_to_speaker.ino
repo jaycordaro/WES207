@@ -4,12 +4,12 @@
 #include <SD.h>
 #include <SerialFlash.h>
 
-AudioPlaySdRaw           play_sd;
+AudioPlaySdWav           play_sd;
 AudioFilterFIR           rate_change_fir;
 AudioOutputI2S           i2s_out;
-AudioConnection          patchCord1(play_sd, rate_change_fir);
-AudioConnection          patchCord2(rate_change_fir, 0, i2s_out, 0);
-AudioConnection          patchCord3(rate_change_fir, 0, i2s_out, 1);
+//AudioConnection          patchCord1(play_sd, rate_change_fir);
+AudioConnection          patchCord2(play_sd, 0, i2s_out, 0);
+AudioConnection          patchCord3(play_sd, 0, i2s_out, 1);
 
 #define MY_ASSERT(cond, message) (my_assert((cond), __LINE__, __FILE__, message, true))
 #define MY_ASSERT_NON_FATAL(cond, message) (my_assert((cond), __LINE__, __FILE__, message, false))
@@ -18,7 +18,7 @@ File fin;
 File fout;
 
 const char* input_file_name = "Input.bin";
-const char* upsampled_file_name = "Upsample.bin";
+const char* upsampled_file_name = "Input.wav";
 
 void setup() {
   Serial.begin(9600);
