@@ -5,7 +5,7 @@
    development enviroment. */
 
 
-constexpr int FRAME_SIZE = 960;
+constexpr int FRAME_SIZE = 1920;
 constexpr int SAMPLE_RATE = 16000;
 constexpr int APPLICATION = OPUS_APPLICATION_AUDIO;
 constexpr int BITRATE = 6000;
