@@ -26,8 +26,10 @@ void handleCommands()
       }
       else if(cmd == "RX")
       {
-        Serial.println("Enter Rx Count:");
-        prompt = PROMPT_FOR_CMD;
+        Serial.println("Rxing...");
+        receiving = true;
+        prompt = NONE;
+        opus_init_rx();
       }
       else if (cmd == "STATE")
       {
