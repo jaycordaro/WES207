@@ -6,7 +6,7 @@ bool oqpsk_rx_rdy = false;
 
 bool rx_set = false;
 
-void oqpsk_init()
+void oqpsk_init(int16_t channel_number)
 {
   // reset
   RF_RST reset_cmd;
@@ -18,7 +18,7 @@ void oqpsk_init()
   spiWriteRF(RF09_CS::address, 0x50);
   spiWriteRF(RF09_CCF0L::address, 0xF0);
   spiWriteRF(RF09_CCF0H::address, 0x8C);
-  spiWriteRF(RF09_CNL::address, 0x01);
+  spiWriteRF(RF09_CNL::address, channel_number);
   spiWriteRF(RF09_CNM::address, 0x00);
 
   RF09_RXBWC rxbwc;

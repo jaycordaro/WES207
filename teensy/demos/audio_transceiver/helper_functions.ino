@@ -66,6 +66,23 @@ void handleCommands()
         Serial.printf("Value read is %d\n", result);
         prompt = PROMPT_FOR_CMD;
       }
+      else if (cmd == "CHANNEL")
+      {
+        Serial.printf("Enter channel number:\n");
+        prompt = CHANNEL_NUMBER;
+      }
+
+      break;
+    }
+
+    case CHANNEL_NUMBER:
+    {
+      int channel = getValue();
+      if(channel > 0)
+      {
+        oqpsk_init(channel);
+        prompt = PROMPT_FOR_CMD;
+      }
 
       break;
     }

@@ -25,6 +25,7 @@ enum prompt_t
 {
   PROMPT_FOR_CMD,
   CMD,
+  CHANNEL_NUMBER,
   NONE
 };
 
@@ -46,7 +47,7 @@ void setup() {
   spi_init();
   sd_init();
   audio_out_init();
-  oqpsk_init();
+  oqpsk_init(1);
 }
 
 void tx_rx_status(bool& tx_ready, bool& rx_ready)
