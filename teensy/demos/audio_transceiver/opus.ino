@@ -123,7 +123,12 @@ void decode(unsigned char* codebits, int payloadlen)
   unsigned char pcm_bytes[sizeof(short)*MAX_FRAME_SIZE*3];
 
   int frame_size = opus_decode(decoder, codebits, payloadlen, out, MAX_FRAME_SIZE, 0);
-  MY_ASSERT(frame_size > 0, "decoder failed");
+  MY_ASSERT_NON_FATAL(frame_size > 0, "decoder failed");
+  if(frame_size > 0)
+  {
+     receiving = false;
+	 return;
+  }
 
   Serial.printf("Frame %d decoded %d bytes \n", itr_count++, frame_size);
 
