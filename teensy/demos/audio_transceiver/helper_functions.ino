@@ -22,13 +22,12 @@ void handleCommands()
         Serial.println("Txing...");
         transmitting = true;
         prompt = NONE;
-        tx_count = 0;
         opus_init_tx();
       }
       else if(cmd == "RX")
       {
         Serial.println("Enter Rx Count:");
-        prompt = RX_COUNT;
+        prompt = PROMPT_FOR_CMD;
       }
       else if (cmd == "STATE")
       {
@@ -43,22 +42,6 @@ void handleCommands()
         int result = spiReadRF(address);
         Serial.printf("Value read is %d\n", result);
         prompt = PROMPT_FOR_CMD;
-      }
-
-      break;
-    }
-
-    case RX_COUNT:
-    {
-      int cmd_count = getValue();
-      if(cmd_count > 0)
-      {
-        Serial.println("Rxing...");
-        receiving = true;
-        rx_count = cmd_count;
-        prompt = NONE;
-
-        opus_init_rx();
       }
 
       break;
@@ -94,20 +77,16 @@ void handle_transmit()
   {
     int amount_txed = transmit(cbits, payload_len);
     Serial.printf("Tx'd %d bytes\n", amount_txed);
-    tx_count += payload_len;
-    rx_count += amount_txed;
   }
   else
   {
+    int amount_txed = transmit(cbits, 0);
+    Serial.printf("Ended TX with %d bytes\n", amount_txed);
+
     opus_tx_complete();
 	
     Serial.println("Tx compelte.");
     transmitting = false;
-
-    if(rx_count <= 0)
-    {
-      rx_complete();
-    }
   }
 }
 
@@ -129,26 +108,22 @@ uint8_t receive(unsigned char* rx_buff)
 
 void handle_receive()
 {
-  if(rx_count <= 0 && !transmitting)
-  {
-    rx_complete();
-    return;
-  }
-
   int length = receive(rx_buff);
 
-  Serial.printf("Rx'd %d/%d bytes\n", length, rx_count);
+  Serial.printf("Rx'd %d bytes\n", length);
 
   RxPacket rx((Packet*)&rx_buff, length);
 
   MY_ASSERT_NON_FATAL(rx.validate_header(), "Invalid header received!");
+  
   MY_ASSERT_NON_FATAL(rx.validate_crc(), "Invalid crc received!");
 
-  decode(rx.payload_begin(), rx.get_payload_len());
-
-  rx_count -= length;
-  if(rx_count <= 0 && !transmitting)
+  if(rx.get_payload_len() != 0)
   {
-     rx_complete();
+    decode(rx.payload_begin(), rx.get_payload_len());
+  }
+  else
+  {
+    rx_complete();
   }
 }

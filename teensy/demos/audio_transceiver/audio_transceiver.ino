@@ -20,14 +20,11 @@ constexpr int MAX_RX_PACKET_SIZE = 127;
 
 bool transmitting;
 bool receiving;
-int tx_count = 0;
-int rx_count;
 
 enum prompt_t
 {
   PROMPT_FOR_CMD,
   CMD,
-  RX_COUNT,
   NONE
 };
 
