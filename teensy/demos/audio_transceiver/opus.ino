@@ -124,7 +124,7 @@ void decode(unsigned char* codebits, int payloadlen)
 
   int frame_size = opus_decode(decoder, codebits, payloadlen, out, MAX_FRAME_SIZE, 0);
   MY_ASSERT_NON_FATAL(frame_size > 0, "decoder failed");
-  if(frame_size > 0)
+  if(frame_size == 0)
   {
      receiving = false;
 	 return;
