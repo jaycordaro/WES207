@@ -22,7 +22,28 @@ void handleCommands()
         Serial.println("Txing...");
         transmitting = true;
         prompt = NONE;
-        opus_init_tx();
+        opus_init_tx("input.bin");
+      }
+      if(cmd == "HELLO")
+      {
+        Serial.println("Txing...");
+        transmitting = true;
+        prompt = NONE;
+        opus_init_tx("hello.bin");
+      }
+      if(cmd == "BYE")
+      {
+        Serial.println("Txing...");
+        transmitting = true;
+        prompt = NONE;
+        opus_init_tx("bye.bin");
+      }
+      if(cmd == "OKAY")
+      {
+        Serial.println("Txing...");
+        transmitting = true;
+        prompt = NONE;
+        opus_init_tx("okay.bin");
       }
       else if(cmd == "RX")
       {

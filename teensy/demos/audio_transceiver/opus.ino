@@ -70,7 +70,7 @@ OpusDecoder* decoder;
 File fin;
 File fout;
 
-void opus_init_tx()
+void opus_init_tx(const char* inFile)
 {
   encoded_bytes = 0;
 
