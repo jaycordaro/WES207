@@ -149,7 +149,7 @@ void decode(unsigned char* codebits, int payloadlen)
   }
 
   /* Write the decoded audio to file. */
-  fout.write(pcm_bytes, sizeof(short)*out_i);
+  fout.write(pcm_bytes, out_i);
 }
 
 void opus_tx_complete()
