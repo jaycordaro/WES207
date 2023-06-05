@@ -48,5 +48,11 @@ void record()
         break;
       }
     }
+    if(total >= complete_count)
+    {
+
+      Serial.printf("exiting to TX\n");
+      break;
+    }
   }
 }
