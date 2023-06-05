@@ -81,36 +81,35 @@ void setup() {
   
 }
 
+int total = 0;
+const int complete_count = 600;
+int16_t outbuff[128];
+int skip_idx = 0;
 void loop() {
-  // put your main code here, to run repeatedly:
-  Serial.printf("packets: %d\n", queue1.available());
   
-  if(queue1.available() >= 200)
+  while(queue1.available() > 0)
   {
-    queue1.end();
-    while(queue1.available() > 0)
+    int16_t* packet = queue1.readBuffer();
+    
+    queue1.freeBuffer();
+    int out_idx = 0;
+    for(int i = 0; i < 128; i++)
     {
-      int16_t* packet = queue1.readBuffer();
-      fout.write(packet, 128*sizeof(int16_t));
-      queue1.freeBuffer();
-    }
-	  fout.close();
-
-    Serial.printf("write complete\n");
-
-    while(true)
-    {
-      String cmd = getCommand();
-
-      if(cmd == "rec")
+      if(skip_idx == 0)
       {
-        SD.remove(outfile);
-        fout = SD.open(outfile, FILE_WRITE);
-        queue1.clear();
-        queue1.begin();
-        break;
+        outbuff[out_idx++] = packet[i];
       }
+      skip_idx = (skip_idx + 1) % 3;
+    }
+    fout.write(packet, out_idx*sizeof(int16_t));
+
+    total++;
+    if(total >= complete_count)
+    {
+      queue1.end();
+      fout.close();
+
+      Serial.printf("write complete\n");
     }
   }
-  delay(1000);
 }
