@@ -66,6 +66,11 @@ void handleCommands()
         Serial.printf("Value read is %d\n", result);
         prompt = PROMPT_FOR_CMD;
       }
+      else if (cmd == "PLAY")
+      {
+        audio_out_play();
+        prompt = PROMPT_FOR_CMD;
+      }
       else if (cmd == "CHANNEL")
       {
         Serial.printf("Enter channel number:\n");

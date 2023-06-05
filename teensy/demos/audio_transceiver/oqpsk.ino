@@ -108,6 +108,8 @@ void oqpsk_init(int16_t channel_number)
   oqpsk_rx_rdy = false;
   tx_timer_set = false;
   rx_set = false;
+
+  oqpsk_tx_prep();
 }
 
 void oqpsk_status(bool& tx_ready, bool& rx_ready)
@@ -170,17 +172,18 @@ void oqpsk_rx()
   }
 }
 
-void oqpsk_tx()
+void oqpsk_tx_prep()
 {
   RF09_CMD cmd;
   cmd.CMD = 0x3;
   spiWriteRF(cmd.address, cmd.value);
+}
 
-  delay(1);
-
+void oqpsk_tx()
+{
+  RF09_CMD cmd;
   cmd.CMD = 0x4;
   spiWriteRF(cmd.address, cmd.value);
-  delay(1);
   oqpsk_read_state();
 
   oqpsk_tx_rdy = false;
