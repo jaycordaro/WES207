@@ -101,7 +101,7 @@ void loop() {
       }
       skip_idx = (skip_idx + 1) % 3;
     }
-    fout.write(packet, out_idx*sizeof(int16_t));
+    fout.write(outbuff, out_idx*sizeof(int16_t));
 
     total++;
     if(total >= complete_count)
