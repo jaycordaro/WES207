@@ -19,10 +19,19 @@ void handleCommands()
       String cmd = getCommand();
       if(cmd == "TX")
       {
+        Serial.println("Recording...");
+        record();
+        transmitting = true;
+        prompt = NONE;
+        Serial.println("Txing...");
+        opus_init_tx("recorded.bin");
+      }
+      if(cmd == "RESEND")
+      {
         Serial.println("Txing...");
         transmitting = true;
         prompt = NONE;
-        opus_init_tx("input.bin");
+        opus_init_tx("recorded.bin");
       }
       if(cmd == "HELLO")
       {

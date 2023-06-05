@@ -16,7 +16,7 @@ const short filter[] = { 8, 17, 31, 49, 69, 87, 97, 92, 65, 11, -74,
 
 void audio_out_init()
 {
-  AudioMemory(8);
+  AudioMemory(200);
   fir1.begin(filter, 58);
 }
 
