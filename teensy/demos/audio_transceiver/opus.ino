@@ -5,7 +5,7 @@
    development enviroment. */
 
 
-constexpr int FRAME_SIZE = 960;
+constexpr int FRAME_SIZE = 1920;
 constexpr int SAMPLE_RATE = 16000;
 constexpr int APPLICATION = OPUS_APPLICATION_AUDIO;
 constexpr int BITRATE = 6000;
@@ -70,7 +70,7 @@ OpusDecoder* decoder;
 File fin;
 File fout;
 
-void opus_init_tx()
+void opus_init_tx(const char* inFile)
 {
   encoded_bytes = 0;
 
@@ -123,7 +123,12 @@ void decode(unsigned char* codebits, int payloadlen)
   unsigned char pcm_bytes[sizeof(short)*MAX_FRAME_SIZE*3];
 
   int frame_size = opus_decode(decoder, codebits, payloadlen, out, MAX_FRAME_SIZE, 0);
-  MY_ASSERT(frame_size > 0, "decoder failed");
+  MY_ASSERT_NON_FATAL(frame_size > 0, "decoder failed");
+  if(frame_size == 0)
+  {
+     receiving = false;
+	 return;
+  }
 
   Serial.printf("Frame %d decoded %d bytes \n", itr_count++, frame_size);
 
@@ -149,7 +154,7 @@ void decode(unsigned char* codebits, int payloadlen)
   }
 
   /* Write the decoded audio to file. */
-  fout.write(pcm_bytes, sizeof(short)*out_i);
+  fout.write(pcm_bytes, out_i);
 }
 
 void opus_tx_complete()

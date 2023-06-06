@@ -19,16 +19,47 @@ void handleCommands()
       String cmd = getCommand();
       if(cmd == "TX")
       {
+        Serial.println("Recording...");
+        record();
+        transmitting = true;
+        prompt = NONE;
+        Serial.println("Txing...");
+        opus_init_tx("recorded.bin");
+      }
+      if(cmd == "RESEND")
+      {
         Serial.println("Txing...");
         transmitting = true;
         prompt = NONE;
-        tx_count = 0;
-        opus_init_tx();
+        opus_init_tx("recorded.bin");
+      }
+      if(cmd == "HELLO")
+      {
+        Serial.println("Txing...");
+        transmitting = true;
+        prompt = NONE;
+        opus_init_tx("hello.bin");
+      }
+      if(cmd == "BYE")
+      {
+        Serial.println("Txing...");
+        transmitting = true;
+        prompt = NONE;
+        opus_init_tx("bye.bin");
+      }
+      if(cmd == "OKAY")
+      {
+        Serial.println("Txing...");
+        transmitting = true;
+        prompt = NONE;
+        opus_init_tx("okay.bin");
       }
       else if(cmd == "RX")
       {
-        Serial.println("Enter Rx Count:");
-        prompt = RX_COUNT;
+        Serial.println("Rxing...");
+        receiving = true;
+        prompt = NONE;
+        opus_init_rx();
       }
       else if (cmd == "STATE")
       {
@@ -44,21 +75,53 @@ void handleCommands()
         Serial.printf("Value read is %d\n", result);
         prompt = PROMPT_FOR_CMD;
       }
+      else if (cmd == "PLAY")
+      {
+        audio_out_play();
+        prompt = PROMPT_FOR_CMD;
+      }
+      else if (cmd == "CHANNEL")
+      {
+        Serial.printf("Enter channel number:\n");
+        prompt = CHANNEL_NUMBER;
+      }
+      else if (cmd == "CRC_FILTER")
+      {
+        crc_filter = !crc_filter;
+        if(crc_filter)
+        {
+          Serial.printf("CRC filter is on!\n");
+        }
+        else
+        {
+          Serial.printf("CRC filter is off!\n");
+        }
+        prompt = PROMPT_FOR_CMD;
+      }
+      else if (cmd == "HEADER_FILTER")
+      {
+        header_filter = !header_filter;
+        if(header_filter)
+        {
+          Serial.printf("Header filter is on!\n");
+        }
+        else
+        {
+          Serial.printf("Header filter is off!\n");
+        }
+        prompt = PROMPT_FOR_CMD;
+      }
 
       break;
     }
 
-    case RX_COUNT:
+    case CHANNEL_NUMBER:
     {
-      int cmd_count = getValue();
-      if(cmd_count > 0)
+      int channel = getValue();
+      if(channel > 0)
       {
-        Serial.println("Rxing...");
-        receiving = true;
-        rx_count = cmd_count;
-        prompt = NONE;
-
-        opus_init_rx();
+        oqpsk_init(channel);
+        prompt = PROMPT_FOR_CMD;
       }
 
       break;
@@ -94,20 +157,16 @@ void handle_transmit()
   {
     int amount_txed = transmit(cbits, payload_len);
     Serial.printf("Tx'd %d bytes\n", amount_txed);
-    tx_count += payload_len;
-    rx_count += amount_txed;
   }
   else
   {
+    int amount_txed = transmit(cbits, 0);
+    Serial.printf("Ended TX with %d bytes\n", amount_txed);
+
     opus_tx_complete();
 	
     Serial.println("Tx compelte.");
     transmitting = false;
-
-    if(rx_count <= 0)
-    {
-      rx_complete();
-    }
   }
 }
 
@@ -129,26 +188,36 @@ uint8_t receive(unsigned char* rx_buff)
 
 void handle_receive()
 {
-  if(rx_count <= 0 && !transmitting)
-  {
-    rx_complete();
-    return;
-  }
-
   int length = receive(rx_buff);
 
-  Serial.printf("Rx'd %d/%d bytes\n", length, rx_count);
+  Serial.printf("Rx'd %d bytes\n", length);
 
   RxPacket rx((Packet*)&rx_buff, length);
 
   MY_ASSERT_NON_FATAL(rx.validate_header(), "Invalid header received!");
+  
   MY_ASSERT_NON_FATAL(rx.validate_crc(), "Invalid crc received!");
 
-  decode(rx.payload_begin(), rx.get_payload_len());
-
-  rx_count -= length;
-  if(rx_count <= 0 && !transmitting)
+  // check header and CRC filters
+  if((header_filter && !rx.validate_header()) ||
+     (crc_filter && !rx.validate_crc()))
   {
-     rx_complete();
+    // we want to err on the side of caution and still
+    // close out the RX on a zero length packet rather
+    // than getting stuck in RX
+    if(rx.get_payload_len() != 0)
+    {
+      rx_complete();
+      return;
+    }
+  }
+
+  if(rx.get_payload_len() != 0)
+  {
+    decode(rx.payload_begin(), rx.get_payload_len());
+  }
+  else
+  {
+    rx_complete();
   }
 }

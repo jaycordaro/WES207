@@ -20,14 +20,14 @@ constexpr int MAX_RX_PACKET_SIZE = 127;
 
 bool transmitting;
 bool receiving;
-int tx_count = 0;
-int rx_count;
+bool header_filter;
+bool crc_filter;
 
 enum prompt_t
 {
   PROMPT_FOR_CMD,
   CMD,
-  RX_COUNT,
+  CHANNEL_NUMBER,
   NONE
 };
 
@@ -44,12 +44,14 @@ void setup() {
 
   transmitting = false;
   receiving = false;
+  header_filter = false;
+  crc_filter = false;
   prompt = PROMPT_FOR_CMD;
 
   spi_init();
   sd_init();
   audio_out_init();
-  oqpsk_init();
+  oqpsk_init(1);
 }
 
 void tx_rx_status(bool& tx_ready, bool& rx_ready)
