@@ -20,6 +20,8 @@ constexpr int MAX_RX_PACKET_SIZE = 127;
 
 bool transmitting;
 bool receiving;
+bool header_filter;
+bool crc_filter;
 
 enum prompt_t
 {
@@ -42,6 +44,8 @@ void setup() {
 
   transmitting = false;
   receiving = false;
+  header_filter = false;
+  crc_filter = false;
   prompt = PROMPT_FOR_CMD;
 
   spi_init();

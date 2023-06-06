@@ -85,6 +85,32 @@ void handleCommands()
         Serial.printf("Enter channel number:\n");
         prompt = CHANNEL_NUMBER;
       }
+      else if (cmd == "CRC_FILTER")
+      {
+        crc_filter = !crc_filter;
+        if(crc_filter)
+        {
+          Serial.printf("CRC filter is on!\n");
+        }
+        else
+        {
+          Serial.printf("CRC filter is off!\n");
+        }
+        prompt = PROMPT_FOR_CMD;
+      }
+      else if (cmd == "HEADER_FILTER")
+      {
+        header_filter = !header_filter;
+        if(header_filter)
+        {
+          Serial.printf("Header filter is on!\n");
+        }
+        else
+        {
+          Serial.printf("Header filter is off!\n");
+        }
+        prompt = PROMPT_FOR_CMD;
+      }
 
       break;
     }
@@ -171,6 +197,20 @@ void handle_receive()
   MY_ASSERT_NON_FATAL(rx.validate_header(), "Invalid header received!");
   
   MY_ASSERT_NON_FATAL(rx.validate_crc(), "Invalid crc received!");
+
+  // check header and CRC filters
+  if((header_filter && !rx.validate_header()) ||
+     (crc_filter && !rx.validate_crc()))
+  {
+    // we want to err on the side of caution and still
+    // close out the RX on a zero length packet rather
+    // than getting stuck in RX
+    if(rx.get_payload_len() != 0)
+    {
+      rx_complete();
+      return;
+    }
+  }
 
   if(rx.get_payload_len() != 0)
   {
