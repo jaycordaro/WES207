@@ -42,6 +42,7 @@ GND | GND | 20
 Component | Model 
 --- | ---
 FPGA            | Efinix Trion T20256DK
+
 FPGA: Handles the heavy digital signal processing tasks, modulating and demodulating signals in accordance with the 802.15.4 PHY. The FPGA will also receive audio data from the microphone and format it in order to be sent to the microcontroller. 
 ### Component Connections:
 
