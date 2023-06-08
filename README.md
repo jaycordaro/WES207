@@ -58,7 +58,7 @@ GND  |G    | GND_TP
 
 connect USB-micro to J2 to power PDMBRD.  J11 and J12 of PDMBRD should be jumpered.
 
-# NEED update
+#( NEED update!!)
 
 
 ## Contents in the Folders
