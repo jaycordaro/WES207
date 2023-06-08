@@ -39,7 +39,7 @@ GND | GND | 20
 The Teensy and audio DAC communicate over an I2S interface.  
 The DAC board's pinout is described here: <img src="./images/audio_DAC.png">
 
-Name | Teensy Pin | RF board Pin 
+Name | Teensy Pin | audio DAC Pin 
 --- | --- | --- 
 POWER | 5V | 1
 GND | GND | 2
