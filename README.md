@@ -47,7 +47,7 @@ OUT1A | 6 | 5
 BCLK1 | 21 | 6
 LRCLK1 | 20 | 7
 
-#### PDMBRD to Teensy
+### PDMBRD to Teensy
 #( NEED update!!)
 
 
