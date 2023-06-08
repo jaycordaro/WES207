@@ -35,6 +35,18 @@ SCK | 13 | 18
 POWER | 3.3V | 19
 GND | GND | 20
 
+### Teensy to audio DAC
+The Teensy and audio DAC communicate over an I2S interface.  
+The RF board's pinout is described here: <img src="./images/audio_DAC.png">
+
+Name | Teensy Pin | RF board Pin 
+--- | --- | --- 
+CS | 10 | 15
+MISO | 12 | 17
+MOSI | 11 | 16
+SCK | 13 | 18
+POWER | 3.3V | 19
+GND | GND | 20
 
 
 
