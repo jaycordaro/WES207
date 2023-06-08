@@ -55,8 +55,8 @@ Name | Teensy Pin | PDMBRD board Pin
 PDAT | 5   | J6.1
 PCLK | 4    | J8.1
 GND  |G    | GND_TP
-connect USB-micro to J2 to power PDMBRD.  J11 and J12 of PDMBRD should be jumpered.
 
+connect USB-micro to J2 to power PDMBRD.  J11 and J12 of PDMBRD should be jumpered.
 
 # NEED update
 
