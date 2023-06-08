@@ -37,16 +37,34 @@ GND | GND | 20
 
 ### Teensy to audio DAC
 The Teensy and audio DAC communicate over an I2S interface.  
-The RF board's pinout is described here: <img src="./images/audio_DAC.png">
+The DAC board's pinout is described here: <img src="./images/audio_DAC.png">
 
 Name | Teensy Pin | RF board Pin 
 --- | --- | --- 
-CS | 10 | 15
-MISO | 12 | 17
-MOSI | 11 | 16
-SCK | 13 | 18
-POWER | 3.3V | 19
-GND | GND | 20
+POWER | 5V | 1
+GND | GND | 2
+OUT1A | 6 | 5
+BCLK1 | 21 | 6
+LRCLK1 | 20 | 7
+
+
+### Teensy to audio ADC
+The Teensy and audio ADC communicate over a PDM interface.  
+
+# NEED update
+
+
+## Contents in the Folders
+Each foler has contents as follows.
+- Presentations	: has all the presentations files presented duriong the classes.
+- RF			: RF front end related documents, linkbudget calculation, related Matlab file and initioal concept related files in the archive folder.  
+- audio			: audio files needed for the demo.
+- images		: image files used for the readme.md.
+- matlab		: Matlab files used for pre-DSP-simulation for the codes implimented in the Teensy and FPGA. 
+- rtl			: FPGA codes
+- standard		: 802.15.4 standard document.
+- teensy        : codes for Teensy related partial tests and final demos.
+
 
 
 
