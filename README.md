@@ -1,5 +1,5 @@
 # 802.15.4 Walkie Talkie
-Repo for our WES207 project, a Walkie Talkie using 802.15.4 with Opus Codec. The project is componsed of microcontrollers, RF boards, audio DACs and audio DACs.  
+Repo for our WES207 project, a Walkie Talkie using 802.15.4 with Opus Codec. The project is componsed of microcontrollers, RF boards, audio DACs and audio ADCs.  
   
 <img src="./images/block_diagram.png">
 The walkie-talkie will be composed of 3 main subsystems:  
@@ -22,16 +22,6 @@ PDM Board       | FAN3852 Analog to PDM Board
 Audio DAC       | MAX98357 Board
 
 
-## Component Connections:
-### Teensy to FPGA
-The Teensy and FPGA communicate over an SPI interface:  
-Name | Teensy Pin | FPGA Pin 
---- | --- | --- 
-CS | 0 | 27
-MISO | 1 | 28
-MOSI | 26 | 30
-SCK | 27 | 29  
-
 Also connect a ground between the boards.  
 
 ### Teensy to RF board
@@ -46,6 +36,20 @@ MOSI | 11 | 16
 SCK | 13 | 18
 POWER | 3.3V | 19
 GND | GND | 20
+
+
+
+
+ref. in case Efinix Trion T20 FPGA board is used)
+## Component Connections:
+### Teensy to FPGA
+The Teensy and FPGA communicate over an SPI interface:  
+Name | Teensy Pin | FPGA Pin 
+--- | --- | --- 
+CS | 0 | 27
+MISO | 1 | 28
+MOSI | 26 | 30
+SCK | 27 | 29  
 
 ### PDMBRD to FPGA
 PDMBRD connects to FPGA.  FPGA sends PDMCLK to PDMBRD, PDMBRD sends PDAT to FPGA
