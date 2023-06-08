@@ -1,9 +1,9 @@
 # 802.15.4 Walkie Talkie presentation files
 
 This presentation files are presented during the WES207 classes from the beginning which has initial concept.
-So, except for the final presentation those has contents which is not used in the final demo.
+So, except for the final presentation others have contents which is not used in the final demo.
 The purpose of this repo is to give some expanded refrence related with this project.
-The files are listed with time order.
+The files are listed with the presented time order.
  
 1. Project Specification Sam Jay Eric.pdf
 2. In-Person Presentation The Northernites.pptx.pdf
