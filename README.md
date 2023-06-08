@@ -12,8 +12,6 @@ Audio data is encoded using Skype’s Opus codec. The Opus codec is made for los
 ## Demo 
 [![Watch the video](./images/WES207-cus3.jpg)](https://youtu.be/dY7u8uQI70k)
 
-;<iframe width="560" height="315" src="https://youtu.be/dY7u8uQI70k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 ## Components
 Component | Model 
 --- | ---
