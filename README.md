@@ -47,9 +47,16 @@ OUT1A | 6 | 5
 BCLK1 | 21 | 6
 LRCLK1 | 20 | 7
 
+#### PDMBRD to FPGA
+PDMBRD connects to Teensy.  Teensy sends PDMCLK to PDMBRD, PDMBRD sends sigma-delta modulated audio on PDAT to Teensy
+see: https://github.com/jaycordaro/pdmbrd for pdmbrd
+Name | Teensy Pin | PDMBRD board Pin 
+--- | --- | --- 
+PDAT | 5   | J6.1
+PCLK | 4    | J8.1
+GND  |G    | GND_TP
 
-### Teensy to audio ADC
-The Teensy and audio ADC communicate over a PDM interface.  
+connect USB-micro to J2 to power PDMBRD.  J11 and J12 of PDMBRD should be jumpered.
 
 # NEED update
 
@@ -85,12 +92,3 @@ MISO | 1 | 28
 MOSI | 26 | 30
 SCK | 27 | 29  
 
-#### PDMBRD to FPGA
-PDMBRD connects to FPGA.  FPGA sends PDMCLK to PDMBRD, PDMBRD sends PDAT to FPGA
-see: https://github.com/jaycordaro/pdmbrd for pdmbrd
-Name | FPGA Pin | PDMBRD board Pin 
---- | --- | --- 
-PDAT | H2.32    | J6.1
-PCLK | H2.34    | J8.1
-GND  | H2.36    | GND_TP
-connect USB-micro to J2 to power PDMBRD
