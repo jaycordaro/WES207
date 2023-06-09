@@ -61,7 +61,7 @@ connect USB-micro to J2 to power PDMBRD.  J11 and J12 of PDMBRD should be jumper
 
 ## Contents in the Folders
 Each foler has contents as follows.
-- Presentations: has all the presentations files presented duriong the classes.
+- presentations: has all the presentations files presented duriong the classes.
 - RF: RF front end related documents, linkbudget calculation, related Matlab file and initioal concept related files in the archive folder.  
 - audio: Audio files needed for the demo.
 - images: Image files used for the readme.md.
