@@ -61,14 +61,14 @@ connect USB-micro to J2 to power PDMBRD.  J11 and J12 of PDMBRD should be jumper
 
 ## Contents in the Folders
 Each foler has contents as follows.
-- Presentations	: has all the presentations files presented duriong the classes.
-- RF			: RF front end related documents, linkbudget calculation, related Matlab file and initioal concept related files in the archive folder.  
-- audio			: audio files needed for the demo.
-- images		: image files used for the readme.md.
-- matlab		: Matlab files used for pre-DSP-simulation for the codes implimented in the Teensy and FPGA. 
-- rtl			: FPGA codes
-- standard		: 802.15.4 standard document.
-- teensy        : codes for Teensy related partial tests and final demos.
+- Presentations: has all the presentations files presented duriong the classes.
+- RF: RF front end related documents, linkbudget calculation, related Matlab file and initioal concept related files in the archive folder.  
+- audio: Audio files needed for the demo.
+- images: Image files used for the readme.md.
+- matlab: Matlab files used for pre-DSP-simulation for the codes implimented in the Teensy and FPGA. 
+- rtl: FPGA code
+- standard: 802.15.4 standard document.
+- teensy: code for Teensy-related partial tests and final demos.
 
 
 
@@ -92,14 +92,15 @@ SCK | 27 | 29
 
 ## Quick Start
 1. Connect the Microcontroller, RF Front Board, PDM Board, and Audio DAC according to the instructions in the "components" section
-2. Install the Arduino IDE on your PC
-3. Install the Teensy plugin for the Arduino IDE: https://www.pjrc.com/teensy/td_download.html
-4. Open the audio_transceiver project from this repo in the IDE
-5. Connect the Teensy board to the PC using a micro-USB cable
-6. Select the Teensy board from the drop down menu at the top of the Aruduino IDE
-7. Click the check mark button to flash the project to Teensy
-8. Open the serial interface in by going to View > Serial monitor
-9. Repeat the previous steps with a second set of components
-10. In the serial monitor of one setup, send the "RX" command
-11. In the serial monitor of the other setup, send the "TX" command and speak into the microphone connected to the PDM board.
-12. After the recorded message is relayed to the other setup, the recorded audio will play automatically
+2. Copy the contents of the audio folder onto an SD card and insert it into the Teensy
+3. Install the Arduino IDE on your PC
+4. Install the Teensy plugin for the Arduino IDE: https://www.pjrc.com/teensy/td_download.html
+5. Open the audio_transceiver project from the teensy folder in the IDE
+6. Connect the Teensy board to the PC using a micro-USB cable
+7. Select the Teensy board from the drop down menu at the top of the Aruduino IDE
+8. Click the check mark button to flash the project to Teensy
+9. Open the serial interface in by going to View > Serial monitor
+10. Repeat the previous steps with a second set of components
+11. In the serial monitor of one setup, send the "RX" command
+12. In the serial monitor of the other setup, send the "TX" command and speak into the microphone connected to the PDM board.
+13. After the recorded message is relayed to the other setup, the recorded audio will play automatically
