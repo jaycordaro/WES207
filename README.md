@@ -90,5 +90,16 @@ MISO | 1 | 28
 MOSI | 26 | 30
 SCK | 27 | 29  
 
-
-
+## Quick Start
+1. Connect the Microcontroller, RF Front Board, PDM Board, and Audio DAC according to the instructions in the "components" section
+2. Install the Arduino IDE on your PC
+3. Install the Teensy plugin for the Arduino IDE: https://www.pjrc.com/teensy/td_download.html
+4. Open the audio_transceiver project from this repo in the IDE
+5. Connect the Teensy board to the PC using a micro-USB cable
+6. Select the Teensy board from the drop down menu at the top of the Aruduino IDE
+7. Click the check mark button to flash the project to Teensy
+8. Open the serial interface in by going to View > Serial monitor
+9. Repeat the previous steps with a second set of components
+10. In the serial monitor of one setup, send the "RX" command
+11. In the serial monitor of the other setup, send the "TX" command and speak into the microphone connected to the PDM board.
+12. After the recorded message is relayed to the other setup, the recorded audio will play automatically
